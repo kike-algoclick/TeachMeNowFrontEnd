@@ -35,9 +35,9 @@ export function Footer() {
                     <div className="footer-section">
                         <h3>Síguenos</h3>
                         <div className="social-icons">
-                            <a href="#" aria-label="Facebook"><img src="" alt="Facebook" /></a>
-                            <a href="#" aria-label="Twitter"><img src="" alt="Twitter" /></a>
-                            <a href="#" aria-label="Instagram"><img src="" alt="Instagram" /></a>
+                            <a href="#" aria-label="Facebook"><img src="R.png" alt="Facebook" /></a>
+                            <a href="#" aria-label="Twitter"><img src="twitter-x-logo-png-9.png" alt="Twitter" /></a>
+                            <a href="#" aria-label="Instagram"><img src="instagram-social-media-icon-symbol-design-element-vector-42845212.jpg" alt="Instagram" /></a>
                         </div>
                         <p><a href="#">Políticas y Privacidad</a></p>
                     </div>
