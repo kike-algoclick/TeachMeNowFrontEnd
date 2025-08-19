@@ -1,7 +1,7 @@
 import React from "react";
-import { Footer } from "./Footer";
-import Login
- from "./Login";
+import { Footer } from "./Footer.jsx";
+import Login from "./Login";
+
 function App() {
     return (
       <>
@@ -9,6 +9,8 @@ function App() {
         <div className="App">
           <Footer />
         </div>
+      
+
       </>
     );
 }
