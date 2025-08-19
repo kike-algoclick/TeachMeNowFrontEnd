@@ -2,8 +2,8 @@ import React from "react";
 import { Footer } from "./Footer.jsx";
 import Login from "./Login";
 import { Test } from "./testEstudiante.jsx";
-import Signup from './SignUp.jsx'
-
+import { Preguntas } from "./Cuestionario.jsx";
+import Signup from './Signup'
 
 function App() {
     return (
@@ -12,6 +12,7 @@ function App() {
         <Signup/>
         <div className="App">
           <Test/>
+          <Preguntas/>
           <Footer />
         </div>
       
