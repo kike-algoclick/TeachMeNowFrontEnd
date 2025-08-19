@@ -8,7 +8,6 @@ import { Navbar } from './navbar'
 createRoot(document.getElementById('root')).render(
   <>
   <Navbar/>
-  <Navbar/>
   <App />
   </>
 )
