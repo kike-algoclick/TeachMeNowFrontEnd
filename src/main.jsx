@@ -5,10 +5,11 @@ import App from './App'
 import { Navbar } from './navbar'
 
 
-createRoot(document.getElementById('root')).render(
+createRoot(document.getElementById("root")).render(
   <>
-  <Navbar/>
-  <App />
-  <Landingpage />
+    <Navbar />
+
+    <Landingpage />
+    <App />
   </>
-)
+);

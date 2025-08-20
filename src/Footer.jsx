@@ -5,10 +5,7 @@ export function Footer() {
     return (
         <div>
             <footer>
-                <div className="footer-logo">
-                    <a href="#"><img src="/Captura de pantalla_13-8-2025_222029_www.figma.com.jpeg" alt="" /></a>
-                </div>
-
+            
                 <div className="footer-content">
                     <div className="footer-section">
                         <h3>¿Qué somos?</h3>

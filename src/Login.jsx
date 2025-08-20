@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import './CSS/Login.css'
+import {Link} from 'react-router-dom'
 
 
 function Login(){
@@ -12,15 +13,15 @@ function Login(){
 
             <div className="mb-4 text-center">
                 <span className="text-gray-600">New to TeachMeNow?</span>
-                <a href="SigUp.jsx" className="text-blue-500 font-semibold hover:underline ml-1" style={{ color: "#1A3D63" }}>Sign up</a>
+                <Link to="/signup" className="text-blue-500 font-semibold hover:underline ml-1" style={{ color: "#1A3D63" }}>Sign up</Link>
             </div>
 
             <form>
                 <div className="mb-4">
-                    <input type="email" placeHolder="Email" className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                    <input type="email" placeholder="Email" className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
                 </div>
                 <div className="mb-6">
-                    <input type="password" placeHolder="Password" className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"/>
+                    <input type="password" placeholder="Password" className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"/>
                 </div>
                 <button
                     type="submit"
