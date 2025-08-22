@@ -1,5 +1,6 @@
 import React from "react";
 import "./CSS/student.css";
+import robot from "./assets/Robot.avif"
 
 export function Test() {
   return (
@@ -48,7 +49,7 @@ export function Test() {
               <p className="welcome">
                 Bienvenido a <a href="#"><img src="/Captura de pantalla_13-8-2025_222029_www.figma.com.jpeg" alt="" /></a>
               </p>
-              <a href="#"><img src="/Robot.avif" alt="" className="robot" /></a>
+              <a href="#"><img src={robot} alt="" className="robot" /></a>
               <button className="start-btn">Empezar Test</button>
             </div>
           </div>

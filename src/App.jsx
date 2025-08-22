@@ -6,12 +6,8 @@ import { Preguntas } from "./Cuestionario.jsx";
 import Signup from './Signup'
 import {MainPage} from './MainPageT.jsx'
 import {BrowserRouter,Routes, Route} from 'react-router-dom'
-import {
-  SignedIn,
-  SignedOut,
-  SignInButton,
-  UserButton,
-} from "@clerk/clerk-react";
+import { Resultados } from "./Resultados.jsx";
+
 
 
 
@@ -27,6 +23,7 @@ function App() {
 
           <Test />
           <Preguntas />
+          <Resultados/>
           <MainPage/>
 
           <Footer />
