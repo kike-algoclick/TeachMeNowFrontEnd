@@ -6,7 +6,7 @@ export function MainPage(){
       <div className="body">
         <div className="left-panel">
           <div className="logo">
-            Teach<span>Me</span>Now
+            Teach<span className="highlight">Me</span><span className="highlight2">Now</span>
           </div>
 
           <div className="chat-box">

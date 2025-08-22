@@ -22,46 +22,60 @@
   margin-bottom: 30px;
 }
 
-.logo span {
-  color: #0056b3;
+.logo .highlight {
+  color: #1A3D63;
+}
+
+.logo .highlight2 {
+  color: #4A7FA7;
 }
 
 .chat-box {
-  background: white;
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
-  display: flex;
+display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 10px;
+  background-color: #fff;
+  padding: 55px 55px;
+  border-radius: 10px;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto 40px;
 }
 
 .chat-box input {
-  border: none;
-  outline: none;
   flex: 1;
-  font-size: 1rem;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  font-size: 16px;
 }
 
 .chat-box button {
-  background: #0056b3;
-  color: white;
+    padding: 10px 20px;
+  margin-left: 10px;
   border: none;
-  border-radius: 20px;
-  padding: 8px 20px;
+  background-color: #0d2d4a;
+  color: white;
+  border-radius: 5px;
   cursor: pointer;
-  transition: 0.3s;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
 }
 
 .chat-box button:hover {
   background: #003d80;
 }
 
+
+
 .right-panel {
   flex: 1;
   background: white;
   padding: 20px;
-  border-left: 2px solid #ddd;
+  border: 2px solid #ddd;
+  border-radius: 10px;
   overflow-y: auto;
 }
 
@@ -72,26 +86,33 @@
 
 .tools {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 12px;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
 }
 
 .tool {
   background: #f7f7f7;
   border: 1px solid #ddd;
   border-radius: 10px;
-  padding: 10px;
+  padding: 15px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
+  text-align: center;
   font-size: 0.95rem;
+  gap: 10px;
+}
+
+.tool img {
+  width: 40px;
+  height: 40px;
 }
 
 .tool button {
   background: #007acc;
   color: white;
   border: none;
-  border-radius: 10px;
+  border-radius: 8px;
   padding: 5px 15px;
   cursor: pointer;
   transition: 0.3s;
