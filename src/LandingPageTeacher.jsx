@@ -1,5 +1,6 @@
 import React from "react";
 import "./CSS/LandingPageTeacher.css";
+import { Link } from "react-router-dom";
 
 export function Landingpage() {
   return (
@@ -15,7 +16,7 @@ export function Landingpage() {
 
         <header className="Barra_busqueda">
           <input type="text" placeholder="Pregúntame..." />
-          <button>Enviar</button>
+          <button >Enviar</button>
         </header>
 
         
@@ -44,7 +45,7 @@ export function Landingpage() {
             <div className="card-body">
               <h2>Estudiantes</h2>
               <p>Inicia con tus estudios y mejora tus habilidades</p>
-              <button>Iniciar</button>
+              <button >Iniciar</button>
             </div>
           </div>
 
