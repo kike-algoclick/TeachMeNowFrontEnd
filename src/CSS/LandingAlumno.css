@@ -1,0 +1,138 @@
+/* ----------------------------- */
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.hero h1 span {
+  color: #0077cc;
+}
+
+/* ----------------------------- */
+/* Cards generales (todas las secciones) */
+.card, .opcion {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  width: 260px;      /* ancho fijo */
+  height: 450px;     /* alto fijo */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  overflow: hidden;  /* evita que la imagen sobresalga */
+}
+
+.card:hover, .opcion:hover {
+  transform: translateY(-5px);
+}
+
+/* Imágenes dentro de cards y opciones */
+.card img, .opcion img {
+  width: 100%;        /* ocupa todo el ancho de la card */
+  height: 200px;      /* altura fija */
+  object-fit: cover;  /* mantiene proporción y recorta si es necesario */
+  border-radius: 8px; /* opcional, bordes redondeados */
+  display: block;
+  margin: 0 auto 15px auto;
+}
+
+/* Cards container */
+.cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  font-weight: bold; /* en negrita */
+  text-align: center;
+}
+
+.card p {
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.card button {
+  align-self: flex-end; /* esquina inferior derecha */
+  padding: 8px 15px;
+  border: none;
+  background: #0077cc;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.card button:hover {
+  background: #005fa3;
+}
+
+/* Cards de la sección de aprendizaje */
+.learning-card {
+  width: 260px;
+  height: 250px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  overflow: hidden;
+  transition: transform 0.3s ease; /* transición suave */
+}
+
+.learning-card:hover {
+  transform: translateY(-5px); /* mismo efecto que .card */
+}
+
+.learning-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* ----------------------------- */
+/* Títulos de la sección aprendizaje */
+/* Título de la sección aprendizaje */
+.titulo {
+  font-size: 2rem;                
+  font-weight: bold;
+  color: #000000;                
+  font-family: 'Arial', Helvetica, sans-serif; 
+  text-align: center;             
+}
+
+/* Frases dentro de learning-card */
+.learning-card p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #000000;        /* negro */
+  font-family: 'Poppins', Arial, sans-serif;
+  text-transform: capitalize; /* primera letra mayúscula */
+  margin: 0;              /* opcional para ajustar espaciado */
+  text-align: center;
+}
+.card h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  font-weight: 600;      /* semibold */
+  text-align: center;
+  color: #000000;        /* opcional: negro */
+  font-family: 'Arial', Helvetica, sans-serif; /* tipografía consistente */
+}
