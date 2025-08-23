@@ -1,9 +1,9 @@
 import React from "react";
-import './CSS/mainpage.css'
+import '../CSS/mainpage.css'
 
 export function MainPage(){
     return (
-      <div className="body">
+      <div className="body" >
         <div className="left-panel">
           <div className="logo">
             Teach<span className="highlight">Me</span><span className="highlight2">Now</span>

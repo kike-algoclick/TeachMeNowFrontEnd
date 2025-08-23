@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import './CSS/Signup.css'
+import '../CSS/Signup.css'
 
 function Signup() {
   const [hover, setHover] = useState(false);

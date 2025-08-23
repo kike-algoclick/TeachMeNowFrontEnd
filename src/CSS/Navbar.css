@@ -5,8 +5,8 @@ body {
     padding: 0;
     color: #333;
 }
- 
- 
+
+
 .Header {
     display: flex;
     justify-content: space-between;
@@ -16,6 +16,8 @@ body {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     border-bottom: 1px solid #e0e0e0;
     animation: fadeIn 0.8s ease-in;
+
+
 }
  
  

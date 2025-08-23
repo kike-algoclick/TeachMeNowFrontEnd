@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import './TestParaMaestros.css';
+import '../TestParaMaestros.css';
 import libro from "../src/libro.png";
 import foco from "../src/Foco.jpg";
 import personas from "../scr/personas.png";

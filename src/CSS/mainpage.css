@@ -1,10 +1,9 @@
 .body {
-  margin: 0;
   font-family: Arial, sans-serif;
   background: radial-gradient(circle, #cce7ff, #99ccff);
   display: flex;
- 
   overflow: hidden;
+
 }
 
 
