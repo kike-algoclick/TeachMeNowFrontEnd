@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export function Landingpage() {
   return (
-    <div>
+    <div className="background">
       <div className="conteiner">
        
         <div className="fondo"></div>
@@ -24,7 +24,7 @@ export function Landingpage() {
           <div className="Cards">
             <div className="Card">
               <img
-                src="Teacher.jpeg"
+                src="/Landing_images/Teacher.jpeg"
                 alt=""
               />
             </div>
@@ -38,7 +38,7 @@ export function Landingpage() {
           <div className="Cards">
             <div className="Card">
               <img
-                src="Alumno.jpeg"
+                src="/Landing_images/Alumno.jpeg"
                 alt=""
               />
             </div>
@@ -52,7 +52,7 @@ export function Landingpage() {
           <div className="Cards">
             <div className="Card">
               <img
-                src="Director.jpeg"
+                src="/Landing_images/Director.jpeg"
                 alt=""
               />
             </div>
