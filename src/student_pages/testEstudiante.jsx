@@ -1,6 +1,6 @@
 import React from "react";
 import "../CSS/student.css";
-import robot from "../assets/Robot.avif"
+import robot from "/test_alumno_images/Robot.avif"
 
 export function Test() {
   return (

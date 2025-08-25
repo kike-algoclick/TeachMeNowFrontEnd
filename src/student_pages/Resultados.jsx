@@ -1,8 +1,8 @@
 import React from "react";
 import "../CSS/resultad.css"
-import Robot from "../assets/Robot.avif"
-import Teach from "/Captura de pantalla_13-8-2025_222029_www.figma.com.jpeg"
-import fredy from "../assets/tus resultados.jpg"
+import Robot from "/test_alumno_images/Robot.avif"
+import Teach from "/logo.png"
+import fredy from "/test_alumno_images/tusresultados.jpg"
 
 export function Resultados() {
   return (
