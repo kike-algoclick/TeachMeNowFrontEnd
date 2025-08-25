@@ -1,10 +1,16 @@
 import React from "react";
 import './CSS/Navbar.css'
 import logo from "/logo.png";
+import { SignInButton, SignUpButton } from "@clerk/clerk-react";
+import { ClerkProvider } from "@clerk/clerk-react";
+
+const PUBLISHABLE_KEY = "pk_test_cmFyZS1lYXJ3aWctMy5jbGVyay5hY2NvdW50cy5kZXYk";
+
 
 export function Navbar() {
   return (
     <>
+    
       <div className="navbar">
         <header className="Header">
           <div className="Logo">

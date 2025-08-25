@@ -8,21 +8,23 @@ import { Resultados } from "./student_pages/Resultados.jsx";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { MainPage } from "./teacher_pages/MainPageT.jsx";
 import { Landingpage } from "./teacher_pages/LandingPageTeacher.jsx";
+import { ClerkProvider } from "@clerk/clerk-react";
+
 
 
 
 function App() {
     return (
       <>
-        <Router>
-          <Routes>
-            <Route path="/" element={<Landingpage/>}/>
-            <Route path="/Login" element={<Login />} />
-            <Route path="/Signup" element={<Signup />} />
-          </Routes>
-
-          
-        </Router>
+        
+          <Router>
+            <Routes>
+              <Route path="/" element={<Landingpage />} />
+              <Route path="/Login" element={<Login />} />
+              <Route path="/Signup" element={<Signup />} />
+            </Routes>
+          </Router>
+      
       </>
     );
   }

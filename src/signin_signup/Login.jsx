@@ -1,11 +1,21 @@
 import React from "react";
-import { useState } from "react";
 import '../CSS/Login.css'
 import {Link} from 'react-router-dom'
+import { SignIn, useSignIn } from "@clerk/clerk-react";
+import { useState } from "react";
+
 
 
 function Login(){
+    const {signIn, setActive, isLoaded} = useSignIn();
+    const [email, setEmail] = useState();
+    const [password, setPassword] = useState();
     const [hover, setHover] = useState(false);
+
+  
+
+    
+
     return(
         <>
         <div className="bg-white p-8 rounded-lg shadow-xl w-full max-w-sm mx-auto">
@@ -16,12 +26,12 @@ function Login(){
                 <Link to="/signup" className="text-blue-500 font-semibold hover:underline ml-1" style={{ color: "#1A3D63" }}>Sign up</Link>
             </div>
 
-            <form>
+            <form onSubmit={handleSubmit}>
                 <div className="mb-4">
-                    <input type="email" placeholder="Email" className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                    <input type="email" value={email} placeholder="Email" className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
                 </div>
                 <div className="mb-6">
-                    <input type="password" placeholder="Password" className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"/>
+                    <input type="password" value={password} placeholder="Password" className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"/>
                 </div>
                 <button
                     type="submit"
