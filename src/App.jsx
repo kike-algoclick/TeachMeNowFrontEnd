@@ -9,6 +9,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { MainPage } from "./teacher_pages/MainPageT.jsx";
 import { Landingpage } from "./teacher_pages/LandingPageTeacher.jsx";
 import { ClerkProvider } from "@clerk/clerk-react";
+import { LandingAlumno } from "./student_pages/LandingAlumno.jsx";
 
 
 
@@ -22,6 +23,8 @@ function App() {
               <Route path="/" element={<Landingpage />} />
               <Route path="/Login" element={<Login />} />
               <Route path="/Signup" element={<Signup />} />
+              <Route path="/test" element={<MainPage/>}/>
+              <Route path="/LandingAlumno" element={<LandingAlumno/>}/>
             </Routes>
           </Router>
       
