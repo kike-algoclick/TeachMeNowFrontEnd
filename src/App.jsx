@@ -10,7 +10,6 @@ import { MainPage } from "./teacher_pages/MainPageT.jsx";
 import { Landingpage } from "./teacher_pages/LandingPageTeacher.jsx";
 
 
-
 function App() {
     return (
       <>
@@ -20,6 +19,7 @@ function App() {
             <Route path="/Login" element={<Login />} />
             <Route path="/Signup" element={<Signup />} />
           </Routes>
+         
 
           
         </Router>
