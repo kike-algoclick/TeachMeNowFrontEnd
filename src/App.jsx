@@ -8,6 +8,7 @@ import { Resultados } from "./student_pages/Resultados.jsx";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { MainPage } from "./teacher_pages/MainPageT.jsx";
 import { Landingpage } from "./teacher_pages/LandingPageTeacher.jsx";
+import { TestParaMaestros } from "./teacher_pages/TestParaMaestros.jsx";
 
 
 function App() {
@@ -18,8 +19,9 @@ function App() {
             <Route path="/" element={<Landingpage/>}/>
             <Route path="/Login" element={<Login />} />
             <Route path="/Signup" element={<Signup />} />
-          </Routes>
+        </Routes>
         </Router>
+        <TestParaMaestros/>
       </>
     );
   }
