@@ -8,6 +8,7 @@ import { Resultados } from "./student_pages/Resultados.jsx";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { MainPage } from "./teacher_pages/MainPageT.jsx";
 import { Landingpage } from "./teacher_pages/LandingPageTeacher.jsx";
+import { LandingAlumno } from "./student_pages/LandingAlumno.jsx";
 
 
 
@@ -20,7 +21,7 @@ function App() {
             <Route path="/Login" element={<Login />} />
             <Route path="/Signup" element={<Signup />} />
           </Routes>
-
+        <LandingAlumno/>
           
         </Router>
       </>
