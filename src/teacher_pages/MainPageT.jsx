@@ -1,7 +1,9 @@
 import React from "react";
 import '../CSS/mainpage.css'
 import p1 from '/Herramientas_img/1.png'
-
+import p2 from '/Herramientas_img/2.png'
+import p3 from '/Herramientas_img/3.png'
+import p4 from '/Herramientas_img/4.png'    
 export function MainPage(){
     return (
       <div className="body" >
@@ -21,19 +23,19 @@ export function MainPage(){
           <div className="tools">
             <div className="tool">
               <div className="Icon">
-              <img src="/Herramientas/1.png" alt="Icon" width="50" height="50"/>
+              <img src={p1} alt="Icon" width="50" height="50"/>
             </div>
               Planificar Clases <button>Iniciar</button>
             </div>
             <div className="tool">
               <div className="Icon">
-              <img src={p1} alt="Icon" width="50" height="50"/>
+              <img src={p2} alt="Icon" width="50" height="50"/>
             </div>
               Planificar Lecciones <button>Iniciar</button>
             </div>
             <div className="tool">
               <div className="Icon">
-              <img src="https://cdn-icons-png.flaticon.com/512/4140/4140046.png" alt="Icon" width="50" height="50"/>
+              <img src={p3} alt="Icon" width="50" height="50"/>
             </div>
               Crear Guías <button>Iniciar</button>
             </div>
