@@ -17,17 +17,16 @@ import { LandingAlumno } from "./student_pages/LandingAlumno.jsx";
 function App() {
     return (
       <>
-        
-          <Router>
-            <Routes>
-              <Route path="/" element={<Landingpage />} />
-              <Route path="/Login" element={<Login />} />
-              <Route path="/Signup" element={<Signup />} />
-              <Route path="/test" element={<MainPage/>}/>
-              <Route path="/LandingAlumno" element={<LandingAlumno/>}/>
-            </Routes>
-          </Router>
-      
+        <Router>
+          <Routes>
+            <Route path="/" element={<Landingpage />} />
+            <Route path="/Login" element={<Login />} />
+            <Route path="/Signup" element={<Signup />} />
+            <Route path="/test" element={<Preguntas/>} />
+            <Route path="/LandingAlumno" element={<LandingAlumno />} />
+            <Route path="/LandingMaestro" element={<MainPage/>} />
+          </Routes>
+        </Router>
       </>
     );
   }

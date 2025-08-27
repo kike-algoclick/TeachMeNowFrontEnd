@@ -4,15 +4,16 @@ import '../CSS/Signup.css'
 import { useSignUp } from "@clerk/clerk-react";
 
 //TERMINAR SIGN UP CON LA LÓGICA DE VALIDACIÓN DE TODOS LOS DATOS. LUEGO CONTINUAR CON LOGIN.
+//ARREGLAR EL SIGNUP PARA QUE AL REGISTRARSE SE SUBA AL BACKEND DE CLERK
 
 function Signup() {
   //estados para manejar los datos de los input e inicializar la conexion con Clerk
   const [hover, setHover] = useState(false);
   const {signUp, setActive, isLoaded} = useSignUp(); //Conexión con clerk
-  const [email, setEmail] = useState(); //Manejar texto imput email
+  const [email, setEmail] = useState(""); //Manejar texto imput email
   const [fName, setName] = useState("")
   const [lastName, setLastName] = useState("")
-  const [password, setPassword] = useState(); //Manejar texto input password
+  const [password, setPassword] = useState(""); //Manejar texto input password
   const [confPassword, setConfPassword]  = useState("")
   const [role, setRole] = useState("")
   const [errorMsg, setErrorMsg] = useState("");
@@ -41,7 +42,8 @@ function Signup() {
 
       try{
             await signUp.create({
-                emailAddress: email.trim(), password,
+                emailAddress: email.trim(), 
+                password: password,
                 fName: fName.trim(),
                 lastName: lastName.trim(),
                 unsafeMetadata:{
@@ -54,9 +56,32 @@ function Signup() {
             });
             setVerification(true);
       } catch (err) {
-        setError(err.errors?.[0]?.message || "problems with sigUp");
+        setErrorMsg(err.errors?.[0]?.message || "problems with sigUp");
       };
     };
+
+    const verificar = async(e) => {
+      e.preventDefault()
+      setErrorMsg("")
+
+    try {
+            const completeSignUp = await signUp.attemptEmailAddressVerification({ code });
+ 
+            console.log("Resultado de verificación:", completeSignUp);
+ 
+            if (completeSignUp.status === 'complete') {
+                await setActive({ session: completeSignUp.createdSessionId });
+                console.log("✅ Registro completo, redirigiendo...");
+                window.location.href = '/MainPage';
+            } else {
+                console.warn("⚠️ Registro no se completó, status:", completeSignUp.status);
+            }
+        } catch (err) {
+            console.error("Error en attemptEmailAddressVerification:", err);
+            setErrorMsg(err.errors?.[0]?.message || 'mistaken code');
+        }
+ 
+    }
 
 
 
@@ -78,18 +103,24 @@ function Signup() {
           <div className="mb-4 text-left">
             <span className="text-gray-600">First Name*</span>
             <input
+              value={fName}
               type="text"
               placeholder="First Name"
               className="mt-1 w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              onChange={(e) => setName(e.target.value)}
+              required
             />
           </div>
 
           <div className="mb-4 text-left">
             <span className="text-gray-600">Last Name*</span>
             <input
+              value={lastName}
               type="text"
               placeholder="Last Name"
               className="mt-1 w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              onChange={(e) => setLastName(e.target.value)}
+              required
             />
           </div>
 
@@ -100,32 +131,39 @@ function Signup() {
           <div className="mb-4 text-left">
             <span className="text-gray-600">Email*</span>
             <input
+              value={email}
               type="email"
               placeholder="Email"
               className="mt-1 w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              onChange={(e) => setEmail(e.target.value)}
+              required
             />
           </div>
 
           <div className="mb-4 text-left">
             <span className="text-gray-600">Password*</span>
             <input
+              value={password}
               type="password"
               placeholder="Password"
               className="mt-1 w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              onChange={(e) => setPassword(e.target.value)}
             />
           </div>
 
           <div className="mb-4 text-left">
             <span className="text-gray-600">Confirm Password*</span>
             <input
+              value={confPassword}
               type="password"
               placeholder="Confirm Password"
               className="mt-1 w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              onChange={(e) => setConfPassword(e.target.value)}
             />
           </div>
 
           <div className="flex items-center space-x-2 mb-4 text-sm">
-            <input type="checkbox" className="form-checkbox" />
+            <input type="checkbox" className="form-checkbox" required />
             <span>I accept the terms and conditions</span>
           </div>
           <div className="flex justify-center gap-2 mb-2">
@@ -152,6 +190,8 @@ function Signup() {
               Soy Maestro
             </button>
           </div>
+
+          <div id="clerk-captcha"></div>
 
           <button
             type="submit"
