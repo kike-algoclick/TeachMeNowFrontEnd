@@ -32,9 +32,9 @@ export function Planes() {
             </p>
             <ul className="space-y-2 text-sm text-[#1A3D63]">
               <li>✔ Conduct tests for your students to understand their learning style.</li>
-              <li>✔ Plan unlimited classes.</li>
-              <li>✔ Create unlimited presentations.</li>
-              <li>✔ Create unlimited quizzes.</li>
+              <li>✔ Plan limited classes.</li>
+              <li>✔ Create limited presentations.</li>
+              <li>✔ Create limited quizzes.</li>
               <li>✔ Video recommendations.</li>
               <li>✔ Use of a random spinner.</li>
             </ul>
