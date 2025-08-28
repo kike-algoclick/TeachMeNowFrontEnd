@@ -24,6 +24,7 @@ import p20 from "/test_alumno_images/p20.jpg"
 
 import Rarito from "/test_alumno_images/Robo2.jpg"
 
+//
 
 export function Preguntas(){
 
