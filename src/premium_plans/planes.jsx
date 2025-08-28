@@ -5,19 +5,6 @@ import React from "react";
 export function Planes(){
     return (
     <div className="bg-white text-gray-800">
-      {/* Header */}
-      <header className="flex justify-between items-center px-6 py-4 border-b border-gray-200">
-        <h1 className="text-lg font-bold text-gray-700">
-          Teach<span className="text-primary">Me</span>
-          <span className="text-secondary">Now</span>
-        </h1>
-        <img
-          src="https://via.placeholder.com/40"
-          alt="profile"
-          className="w-10 h-10 rounded-full border"
-        />
-      </header>
-
       {/* Section Title */}
       <section className="text-center py-10">
         <h2 className="text-3xl font-semibold">

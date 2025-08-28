@@ -8,6 +8,8 @@ import { useAuth } from "@clerk/clerk-react";
 
 //TERMINAR SIGN UP CON LA LÓGICA DE VALIDACIÓN DE TODOS LOS DATOS. LUEGO CONTINUAR CON LOGIN.
 //ARREGLAR EL SIGNUP PARA QUE AL REGISTRARSE SE SUBA AL BACKEND DE CLERK
+//ARREGLAR QUE AL REGISTRARSE MANDE A LA PANTALLA DE VERIFICACIÓN DE CÓDIGO
+//AÑADIR BOTONES DE CERRAR SESIÓN 
 
 function Signup() {
   //estados para manejar los datos de los input e inicializar la conexion con Clerk

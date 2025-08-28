@@ -10,6 +10,7 @@ import { MainPage } from "./teacher_pages/MainPageT.jsx";
 import { Landingpage } from "./teacher_pages/LandingPageTeacher.jsx";
 import { ClerkProvider } from "@clerk/clerk-react";
 import { LandingAlumno } from "./student_pages/LandingAlumno.jsx";
+import Planes from "./premium_plans/planes.jsx";
 
 
 
@@ -25,6 +26,7 @@ function App() {
             <Route path="/test" element={<Preguntas/>} />
             <Route path="/LandingAlumno" element={<LandingAlumno />} />
             <Route path="/LandingMaestro" element={<MainPage/>} />
+            <Route path="/Plans" element={<Planes/>}/>
           </Routes>
         </Router>
       </>
