@@ -28,7 +28,7 @@ export function MainPage(){
           </div>
         </div>
 
-        <div className="right-panel">
+        <div className="right-panel overflow-hidden">
           <h2>Herramientas</h2>
           <div className="tools">
             <div className="tool">

@@ -3,6 +3,7 @@
   background: radial-gradient(circle, #cce7ff, #99ccff);
   display: flex;
   overflow: hidden;
+  height: 100vh;
 
 }
 
