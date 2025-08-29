@@ -6,6 +6,7 @@ import personas from "../scr/personas.png";
 import calendario from "../src/calendario.jpg";
 import campana from "../src/campana.jpg";
  
+ 
 export function TestParaMaestros() {
   const [respuestas, setRespuestas] = useState({
     q1: [],
@@ -90,7 +91,62 @@ export function TestParaMaestros() {
           <label><input type="radio" name="q5" onChange={() => handleRadioChange("q5", "2")} /> 2</label><br />
           <label><input type="radio" name="q5" onChange={() => handleRadioChange("q5", "3")} /> 3</label><br />
           <label><input type="radio" name="q5" onChange={() => handleRadioChange("q5", "Más")} /> Más</label>
+        </div> 
+
+                   <div className="card">
+          <div className="card-header">
+            <p>6 ¿Cómo te gustaría usar las planificaciones de la plataforma?</p>
+            <img src={libro} alt="Tecnología" className="icono" />
+          </div>
+          <label><input type="radio" name="q6" onChange={() => handleRadioChange("q6", "")} /> </label><br />
+          <label><input type="radio" name="q6" onChange={() => handleRadioChange("q6", "")} /> </label><br />
+          <label><input type="radio" name="q6" onChange={() => handleRadioChange("q6", "")} /> </label><br />
+          <label><input type="radio" name="q6" onChange={() => handleRadioChange("q6", "")} />  </label>
         </div>
+
+        <div className="card">
+          <div className="card-header">
+            <p>7. ¿Qué tipo de seguimiento te gustaría tener sobre tus clases?</p>
+            <img src={foco} alt="Confort" className="icono" />
+          </div>
+          <label><input type="radio" name="q7" onChange={() => handleRadioChange("q7", "")} /> </label><br />
+          <label><input type="radio" name="q7" onChange={() => handleRadioChange("q7", "")} /> </label><br />
+          <label><input type="radio" name="q7" onChange={() => handleRadioChange("q7", "")} /> </label><br />
+          <label><input type="radio" name="q7" onChange={() => handleRadioChange("q7", "")} /> </label>
+        </div>
+
+        <div className="card">
+          <div className="card-header">
+            <p>8. ¿Qué tipo de recursos creativos te gustaría que te ofreciera la plataforma?</p>
+            <img src={calendario} alt="Planificación" className="icono" />
+          </div>
+          <label><input type="radio" name="q8" onChange={() => handleRadioChange("q8", "")} /> </label><br />
+          <label><input type="radio" name="q8" onChange={() => handleRadioChange("q8", "")} /> </label><br />
+          <label><input type="radio" name="q8" onChange={() => handleRadioChange("q8", "")} /> </label><br />
+          <label><input type="radio" name="q8" onChange={() => handleRadioChange("q8", "T")} /> </label>
+        </div>
+
+        <div className="card">
+          <div className="card-header">
+            <p>9. ¿Cómo te gustaría que los estudiantes participen desde la plataforma?</p>
+            <img src={personas} alt="Apoyo" className="icono" />
+          </div>
+          <label><input type="checkbox" onChange={() => handleCheckboxChange("q9", "")} /> </label><br />
+          <label><input type="checkbox" onChange={() => handleCheckboxChange("q9", "")} /> </label><br />
+          <label><input type="checkbox" onChange={() => handleCheckboxChange("q9", "")} /> </label><br />
+          <label><input type="checkbox" onChange={() => handleCheckboxChange("q9", "")} /> </label>
+        </div>
+
+        <div className="card">
+          <div className="card-header">
+            <p>10. ¿Quieres que la plataforma sugiera materiales según el nivel de tus estudiantes?</p>
+            <img src={campana} alt="Expectativas" className="icono" />
+          </div>
+          <textarea value={respuestas.q10 || ""} onChange={(e) => setRespuestas({ ...respuestas, q10: e.target.value })} placeholder="Escribe tus expectativas..." />
+        </div>
+
+       
+
  
         <div className="boton-container">
           <button className="boton-siguiente" onClick={handleNext}>Siguiente</button>
