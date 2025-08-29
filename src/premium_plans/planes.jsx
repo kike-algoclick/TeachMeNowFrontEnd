@@ -1,5 +1,6 @@
 import React from "react";
 
+//buttons added
 export function Planes() {
   return (
     <div className="bg-white text-gray-800">
