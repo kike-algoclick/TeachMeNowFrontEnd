@@ -17,12 +17,12 @@ export function LandingAlumno() {
                 src="https://scalalearning.com/storage/2023/08/GSS_CREATIVIDAD_SCALA_ARTE_ARTICULO_61_Estilos-de-aprendizaje-y-sus-metodos-04-1024x876.png"
                 alt="estilo"
               />
-              <h3>Estilo de aprendizaje</h3>
+              <h3>Learning style</h3>
               <p>
-                Conoce tu forma personal de aprender: visual, auditiva, lectora
-                o kinestésica.
+                Know your personal way of learning: visual, auditory, reading, or kinesthetic.
+                
               </p>
-              <button>Iniciar</button>
+              <button>Start</button>
             </div>
 
             <div className="card">
@@ -30,12 +30,11 @@ export function LandingAlumno() {
                 src="https://face.unt.edu.ar/web/wp-content/uploads/2020/11/taller-docentes-face-.jpg"
                 alt="clases"
               />
-              <h3>Tus clases</h3>
+              <h3>Your classes</h3>
               <p>
-                Clases y materiales preparados para ti con todo lo que necesitas
-                para aprender.
+                Classes and materials prepared for you with everything you need to learn.
               </p>
-              <button>Iniciar</button>
+              <button>start</button>
             </div>
 
             <div className="card">
@@ -43,18 +42,18 @@ export function LandingAlumno() {
                 src="https://us.123rf.com/450wm/yupiramos/yupiramos1705/yupiramos170527956/78659631-statistics-bars-with-arrow-vector-illustration-design.jpg"
                 alt="resultados"
               />
-              <h3>Tus resultados</h3>
+              <h3>Your results</h3>
               <p>
-                Conoce tu progreso a lo largo del tiempo con reportes visuales.
+                Track your progress over time with visual reports.
               </p>
-              <button>Iniciar</button>
+              <button>Start</button>
             </div>
           </div>
         </header>
 
         {/* Sección de forma de aprender */}
         <section className="learning-style-section">
-          <h2 className="titulo">¿Cuál es tu forma de aprender?</h2>
+          <h2 className="titulo">What is your way of learning?</h2>
           <div className="learning-options">
             <div className="learning-card">
               <img
@@ -72,7 +71,7 @@ export function LandingAlumno() {
                 alt="imagenes"
               />
               <p>
-                <b>Imágenes</b>
+                <b>Images</b>
               </p>
             </div>
 
@@ -82,7 +81,7 @@ export function LandingAlumno() {
                 wei
               />
               <p>
-                <b>Escucha</b>
+                <b>Listen</b>
               </p>
             </div>
           </div>

@@ -45,10 +45,10 @@ export function Preguntas(){
                 <div className="contenedor">
         <div className="Card-preguntas">
             <div className="posicionletra">
-            <p className="Colorletra"><strong>1. Cuando aprendo algo nuevo, prefiero:</strong></p>
-            <label> <input type="radio" name="q1"/> Ver gráficos, imágenes o videos.</label><br />
-            <label><input type="radio" name="q1"/> Escuchar explicaciones.</label><br />
-            <label><input type="radio" name="q1" /> Leer textos o apuntes.</label><br />
+            <p className="Colorletra"><strong>1. When I learn something new, I prefer:</strong></p>
+            <label> <input type="radio" name="q1"/>View graphs, images, or videos.</label><br />
+            <label><input type="radio" name="q1"/>Listen to explanations.</label><br />
+            <label><input type="radio" name="q1" />Read texts or notes.</label><br />
             <label> <input type="radio" name="q1" /> Hacerlo yo mismo(a).</label><br />
             </div>
         <img src={p1} alt="asdf"  className="Pregunta-img"/>
