@@ -8,6 +8,12 @@ import { Resultados } from "./student_pages/Resultados.jsx";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { MainPage } from "./teacher_pages/MainPageT.jsx";
 import { Landingpage } from "./teacher_pages/LandingPageTeacher.jsx";
+import { ClerkProvider } from "@clerk/clerk-react";
+import { LandingAlumno } from "./student_pages/LandingAlumno.jsx";
+import Planes from "./premium_plans/planes.jsx";
+import { TestParaMaestros } from "./teacher_pages/TestParaMaestros.jsx";
+
+
 
 
 function App() {
@@ -15,13 +21,15 @@ function App() {
       <>
         <Router>
           <Routes>
-            <Route path="/" element={<Landingpage/>}/>
+            <Route path="/" element={<Landingpage />} />
             <Route path="/Login" element={<Login />} />
             <Route path="/Signup" element={<Signup />} />
-          </Routes>
-         
-
-          
+            <Route path="/test" element={<Preguntas/>} />
+            <Route path="/LandingAlumno" element={<LandingAlumno />} />
+            <Route path="/LandingMaestro" element={<MainPage/>} />
+            <Route path="/Plans" element={<Planes/>}/>
+            <Route path="/TestMaestri" element={<TestParaMaestros/>}/>
+        </Routes>
         </Router>
       </>
     );
@@ -29,4 +37,4 @@ function App() {
 
 
 
-export default App;
+export default App; 
