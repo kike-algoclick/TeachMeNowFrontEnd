@@ -1,26 +1,21 @@
 .App-grid {
   background: #fff;
-  min-height: 100vh;
   display:flex ;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
   color: #333;
-  margin: 45px;
-
+  margin-top: 10px;
 }
  
  
 .card{
-background: #fff;
+  background: #fff;
   border-radius: 32px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
   max-width: 2500px;
-  width: 95%;
-   min-width:  1200px;;
-   min-height: 1000px;
-  overflow: hidden;
-  margin: 45px;
+  min-height: 1000px;
+
+
 }
  
 .header {
@@ -28,7 +23,6 @@ background: #fff;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #e5e7eb;
-  padding: 12px 20px;
 }
  
  

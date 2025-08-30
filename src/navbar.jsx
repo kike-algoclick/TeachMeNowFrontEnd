@@ -1,16 +1,18 @@
 import React from "react";
 import './CSS/Navbar.css'
 import logo from "/logo.png";
-import { SignInButton, SignUpButton } from "@clerk/clerk-react";
+import { SignInButton, SignUpButton, SignOutButton } from "@clerk/clerk-react";
 import { ClerkProvider } from "@clerk/clerk-react";
+import { useAuth } from "@clerk/clerk-react";
+
 
 const PUBLISHABLE_KEY = "pk_test_cmFyZS1lYXJ3aWctMy5jbGVyay5hY2NvdW50cy5kZXYk";
 
 
 export function Navbar() {
+
   return (
     <>
-    
       <div className="navbar">
         <header className="Header">
           <div className="Logo">
@@ -24,6 +26,9 @@ export function Navbar() {
               <li>Herramientas</li>
             </ul>
           </nav>
+          <SignOutButton>
+            <button>SignOut</button>
+          </SignOutButton>
           <div className="profile">
             <img src="profile-icon-design-free-vector.jpg" alt="" />
           </div>

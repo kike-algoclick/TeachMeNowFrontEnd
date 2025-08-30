@@ -9,7 +9,7 @@ import { useAuth } from "@clerk/clerk-react";
 //TERMINAR SIGN UP CON LA LÓGICA DE VALIDACIÓN DE TODOS LOS DATOS. LUEGO CONTINUAR CON LOGIN.
 //ARREGLAR EL SIGNUP PARA QUE AL REGISTRARSE SE SUBA AL BACKEND DE CLERK
 //ARREGLAR QUE AL REGISTRARSE MANDE A LA PANTALLA DE VERIFICACIÓN DE CÓDIGO
-//AÑADIR BOTONES DE CERRAR SESIÓN 
+//AÑADIR BOTONES DE CERRAR SESIÓN   
 
 function Signup() {
   //estados para manejar los datos de los input e inicializar la conexion con Clerk
@@ -27,12 +27,24 @@ function Signup() {
   const { isSignedIn } = useAuth(); //Para chequear que no haya un login actual.
 
   //Si la conección con Clerk no está lista, da error
-  if (!isLoaded) return null;
+ 
+  if(isSignedIn){
+    if(role=="student"){
+     window.href.location = "/LandingAlumno";
+    }
+    else{
+      window.href.location = '/LandingMaestro'
+    }
+   
+  }
+
+  
 
   //Función que se pasa al form en el evento "onSubmit()"
   const registrar = async (e) => {
       e.preventDefault();
       setErrorMsg("")
+       if (!isLoaded) return null;  
 
       if (!email || !password) {
         setErrorMsg("Por favor, completa todos los campos");
@@ -47,10 +59,7 @@ function Signup() {
         return;
       }
       
-      if (isSignedIn) {
-        window.location.href = "/LandingMaestro";
-        return null;
-      }
+      
 
       try{
             await signUp.create({
@@ -78,6 +87,7 @@ function Signup() {
 
     try {
             const completeSignUp = await signUp.attemptEmailAddressVerification({ code });
+            setVerification(true)
  
             console.log("Resultado de verificación:", completeSignUp);
  

@@ -32,7 +32,7 @@ export function Preguntas(){
 
     return (
         <div className="App-grid">
-            <div className="card">
+            <div className="a">
                 <div className="header">
                     <a href="#"><img src="/Captura de pantalla_13-8-2025_222029_www.figma.com.jpeg" alt="" /></a>
                 </div>
@@ -51,7 +51,7 @@ export function Preguntas(){
             <label><input type="radio" name="q1" /> Leer textos o apuntes.</label><br />
             <label> <input type="radio" name="q1" /> Hacerlo yo mismo(a).</label><br />
             </div>
-        <img src={p1} alt="asdf"  className="Pregunta-img"/>
+        <img src={p1} alt=""  className="Pregunta-img"/>
         </div>
         
         <div className="Card-preguntas">
@@ -62,7 +62,7 @@ export function Preguntas(){
                 <label><input type="radio" name="q2"/>Leyendo la receta.</label><br />
                 <label><input type="radio" name="q2"/>Preparándola.</label><br/>
             </div>
-            <img src={p2} alt="asdf" className="Pregunta-img2" />
+            <img src={p2} alt="" className="Pregunta-img2" />
         </div>
 
                 <div className="Card-preguntas">
@@ -73,7 +73,7 @@ export function Preguntas(){
                 <label><input type="radio" name="q3"/>Leo el material de estudio.</label><br />
                 <label><input type="radio" name="q3"/>Hacemos una actividad práctica.</label><br/>
             </div>
-            <img src={p3} alt="asdf" className="Pregunta-img" />
+            <img src={p3} alt="" className="Pregunta-img" />
         </div>
         </div>
 
@@ -86,7 +86,7 @@ export function Preguntas(){
             <label><input type="radio" name="q4" /> Leer otro libro o apuntes.</label><br />
             <label> <input type="radio" name="q4" /> Intentar aplicarlo en un ejercicio.</label><br />
             </div>
-        <img src={p4} alt="asdf"  className="Pregunta-img2"/>
+        <img src={p4} alt=""  className="Pregunta-img2"/>
         </div>
 
         <div className="Card-preguntas">
@@ -97,7 +97,7 @@ export function Preguntas(){
             <label><input type="radio" name="q5" /> Guías y apuntes.</label><br />
             <label> <input type="radio" name="q5" />Material para manipular.</label><br />
             </div>
-        <img src={p5} alt="asdf"  className="Pregunta-img"/>
+        <img src={p5} alt=""  className="Pregunta-img"/>
         </div>
 
                 <div className="Card-preguntas">
@@ -108,7 +108,7 @@ export function Preguntas(){
             <label><input type="radio" name="q6" />El texto que leí.</label><br />
             <label> <input type="radio" name="q6" />La sensación de hacerlo.</label><br />
             </div>
-        <img src={p6} alt="asdf"  className="Pregunta-img2"/>
+        <img src={p6} alt=""  className="Pregunta-img2"/>
         </div>
     </div>
 
@@ -122,7 +122,7 @@ export function Preguntas(){
             <label><input type="radio" name="q7" /> Leer el instructivo.</label><br />
             <label> <input type="radio" name="q7" />Usar las herramientas.</label><br />
             </div>
-        <img src={p7} alt="asdf"  className="Pregunta-img"/>
+        <img src={p7} alt=""  className="Pregunta-img"/>
         </div>
 
         <div className="Card-preguntas">
@@ -133,7 +133,7 @@ export function Preguntas(){
             <label><input type="radio" name="q8" />Escribo resúmenes.</label><br />
             <label> <input type="radio" name="q8" />Hago modelos o simulaciones.</label><br />
             </div>
-        <img src={p8} alt="asdf"  className="Pregunta-img2"/>
+        <img src={p8} alt=""  className="Pregunta-img2"/>
         </div>
 
              <div className="Card-preguntas">
@@ -144,7 +144,7 @@ export function Preguntas(){
             <label><input type="radio" name="q9" />Lo escribo varias veces.</label><br />
             <label> <input type="radio" name="q9" />Lo marco directamente.</label><br />
             </div>
-        <img src={p9} alt="asdf"  className="Pregunta-img"/>
+        <img src={p9} alt=""  className="Pregunta-img"/>
         </div>
     </div>
 
@@ -157,7 +157,7 @@ export function Preguntas(){
             <label><input type="radio" name="q10" />Leer libros o artículos.</label><br />
             <label> <input type="radio" name="q10" />Hacer deporte o manualidades.</label><br />
             </div>
-        <img src={p10} alt="asdf"  className="Pregunta-img2"/>
+        <img src={p10} alt=""  className="Pregunta-img2"/>
         </div>
     </div>
     <button className="boton-siguiente"  onClick={() => {
@@ -199,7 +199,7 @@ export function Preguntas(){
             <label><input type="radio" name="q11" />Leyendo mis apuntes.</label><br />
             <label> <input type="radio" name="q11" />Practicando ejercicios.</label><br />
             </div>
-        <img src={p11} alt="asdf"  className="Pregunta-img"/>
+        <img src={p11} alt=""  className="Pregunta-img"/>
         </div>
         
         <div className="Card-preguntas">
@@ -210,7 +210,7 @@ export function Preguntas(){
                 <label><input type="radio" name="q12"/>Leyendo el manual.</label><br />
                 <label><input type="radio" name="q12"/>Probando todas las funciones.</label><br/>
             </div>
-            <img src={p12} alt="asdf" className="Pregunta-img2" />
+            <img src={p12} alt="" className="Pregunta-img2" />
         </div>
 
                 <div className="Card-preguntas">
@@ -221,7 +221,7 @@ export function Preguntas(){
                 <label><input type="radio" name="q13"/>Leo las direcciones.</label><br />
                 <label><input type="radio" name="q13"/>Caminar por el lugar me orienta.</label><br/>
             </div>
-            <img src={p13} alt="asdf" className="Pregunta-img" />
+            <img src={p13} alt="" className="Pregunta-img" />
         </div>
         </div>
 
@@ -234,7 +234,7 @@ export function Preguntas(){
             <label><input type="radio" name="q14" />Redactar el contenido.</label><br />
             <label> <input type="radio" name="q14" />Encargarme de las actividades prácticas.</label><br />
             </div>
-        <img src={p14} alt="asdf"  className="Pregunta-img2"/>
+        <img src={p14} alt=""  className="Pregunta-img2"/>
         </div>
 
         <div className="Card-preguntas">
@@ -245,7 +245,7 @@ export function Preguntas(){
             <label><input type="radio" name="q15" />Leo en silencio.</label><br />
             <label> <input type="radio" name="q15" />Trabajo con las manos.</label><br />
             </div>
-        <img src={p15} alt="asdf"  className="Pregunta-img"/>
+        <img src={p15} alt=""  className="Pregunta-img"/>
         </div>
 
                 <div className="Card-preguntas">
@@ -256,7 +256,7 @@ export function Preguntas(){
             <label><input type="radio" name="q16" />Pienso en cómo estaría escrita.</label><br />
             <label> <input type="radio" name="q16" />Me imagino viviéndola.</label><br />
             </div>
-        <img src={p16} alt="asdf"  className="Pregunta-img2"/>
+        <img src={p16} alt=""  className="Pregunta-img2"/>
         </div>
     </div>
 
@@ -269,7 +269,7 @@ export function Preguntas(){
             <label><input type="radio" name="q17" />Leer las descripciones.</label><br />
             <label> <input type="radio" name="q17" />Probar actividades interactivas.</label><br />
             </div>
-        <img src={p17} alt="asdf"  className="Pregunta-img"/>
+        <img src={p17} alt=""  className="Pregunta-img"/>
         </div>
 
         <div className="Card-preguntas">
@@ -280,7 +280,7 @@ export function Preguntas(){
             <label><input type="radio" name="q18" />Escribo con detalle.</label><br />
             <label> <input type="radio" name="q18" />Hago esquemas manipulables.</label><br />
             </div>
-        <img src={p18} alt="asdf"  className="Pregunta-img2"/>
+        <img src={p18} alt=""  className="Pregunta-img2"/>
         </div>
 
              <div className="Card-preguntas">
@@ -291,7 +291,7 @@ export function Preguntas(){
             <label><input type="radio" name="q19" />Leer textos y hacer ejercicios escritos.</label><br />
             <label> <input type="radio" name="q19" />Leer textos y hacer ejercicios escritos.</label><br />
             </div>
-        <img src={p19} alt="asdf"  className="Pregunta-img"/>
+        <img src={p19} alt=""  className="Pregunta-img"/>
         </div>
     </div>
 
@@ -304,7 +304,7 @@ export function Preguntas(){
             <label><input type="radio" name="q20" />El manual escrito.</label><br />
             <label> <input type="radio" name="q20" />Lo pruebo directamente.</label><br />
             </div>
-        <img src={p20} alt="asdf"  className="Pregunta-img3"/>
+        <img src={p20} alt=""  className="Pregunta-img3"/>
         </div>
     </div>
     <button className="boton-results">Ver resultados</button>
