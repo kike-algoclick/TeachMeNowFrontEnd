@@ -17,10 +17,10 @@
   border-radius: 12px;
   padding: 20px;
   width: 260px;
-  height: 450px;
+  height: auto;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+
   box-shadow: 0 3px 10px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
   overflow: hidden;
