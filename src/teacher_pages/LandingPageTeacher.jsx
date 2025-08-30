@@ -16,8 +16,8 @@ export function Landingpage() {
         </div>
 
         <header className="Barra_busqueda">
-          <input type="text" placeholder="Pregúntame..." />
-          <button>Enviar</button>
+          <input type="text" placeholder="Ask me..." />
+          <button>Send</button>
         </header>
 
         <main className="main-content">
@@ -26,8 +26,8 @@ export function Landingpage() {
               <img src="/Landing_images/Teacher.jpeg" alt="" />
             </div>
             <div className="card-body">
-              <h2>Docentes</h2>
-              <p>Inicia con estudiantes y mejora tus clases</p>
+              <h2>Teachers</h2>
+              <p>Start with teachers and improve your classes</p>
               <Link to={'/Login'}>
                 <button>Iniciar</button>
               </Link>
@@ -39,9 +39,9 @@ export function Landingpage() {
               <img src="/Landing_images/Alumno.jpeg" alt="" />
             </div>
             <div className="card-body">
-              <h2>Estudiantes</h2>
-              <p>Inicia con tus estudios y mejora tus habilidades</p>
-              <button>Iniciar</button>
+              <h2>Students</h2>
+              <p>Start with your studies and improve your skills</p>
+              <button>Start</button>
             </div>
           </div>
 
@@ -50,11 +50,11 @@ export function Landingpage() {
               <img src="/Landing_images/Director.jpeg" alt="" />
             </div>
             <div className="card-body">
-              <h2>Director</h2>
+              <h2>Principal</h2>
               <p>
-                Inicia como director y mejora la administración de la escuela
+               Start as a principal and improve school management
               </p>
-              <button>Iniciar</button>
+              <button>Start</button>
             </div>
           </div>
         </main>

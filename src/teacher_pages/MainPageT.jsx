@@ -23,85 +23,85 @@ export function MainPage(){
           </div>
 
           <div className="chat-box">
-            <input type="text" placeholder="Escribe aquí..." />
-            <button>Enviar</button>
+            <input type="text" placeholder="Write here..." />
+            <button>Send</button>
           </div>
         </div>
 
         <div className="right-panel overflow-hidden">
-          <h2>Herramientas</h2>
+          <h2>Tools</h2>
           <div className="tools">
             <div className="tool">
               <div className="Icon">
               <img src={p1} alt="Icon" width="50" height="50"/>
             </div>
-              Planificar Clases <button>Iniciar</button>
+              Plan Classes <button>Start</button>
             </div>
             <div className="tool">
               <div className="Icon">
               <img src={p13} alt="Icon" width="50" height="50"/>
             </div>
-              Planificar Lecciones <button>Iniciar</button>
+              Plan Lessons <button>Start</button>
             </div>
             <div className="tool">
               <div className="Icon">
               <img src={p2} alt="Icon" width="50" height="50"/>
             </div>
-              Crear Guías <button>Iniciar</button>
+              Create Guides <button>Start</button>
             </div>
             <div className="tool">
               <div className="Icon">
               <img src={p8}  alt="Icon" width="50" height="50"/>
             </div>
-              Crear Presentación <button>Iniciar</button>
+              Create Presentation <button>Start</button>
             </div>
             <div className="tool">
               <div className="Icon">
               <img src={p3}  alt="Icon" width="50" height="50"/>
             </div>
-              Rúbrica <button>Iniciar</button>
+              Rubric <button>Start</button>
             </div>
             <div className="tool">
               <div className="Icon">
               <img src={p9}  alt="Icon" width="50" height="50"/>
             </div>
-              Video <button>Iniciar</button>
+              Video <button>Start</button>
             </div>
             <div className="tool">
               <div className="Icon">
               <img src={p4}  alt="Icon" width="50" height="50"/>
             </div>
-              Planificar Examen <button>Iniciar</button>
+              Plan Exam <button>Start</button>
             </div>
             <div className="tool">
               <div className="Icon">
               <img src={p10}  alt="Icon" width="50" height="50"/>
             </div>
-              Planificar Unidad <button>Iniciar</button>
+              Plan Unit <button>Start</button>
             </div>
             <div className="tool">
               <div className="Icon">
               <img src={p5} alt="Icon" width="50" height="50"/>
             </div>
-              Planificar Clase <button>Iniciar</button>
+              Plan Class <button>Start</button>
             </div>
             <div className="tool">
               <div className="Icon">
               <img src={p11}  alt="Icon" width="50" height="50"/>
             </div>
-              Planificar Prueba <button>Iniciar</button>
+             Plan Test <button>Start</button>
             </div>
             <div className="tool">
               <div className="Icon">
               <img src={p6} alt="Icon" width="50" height="50"/>
             </div>
-              Planificar Taller <button>Iniciar</button>
+              Plan Workshop <button>Start</button>
             </div>
             <div className="tool">
               <div className="Icon">
               <img src={p12} alt="Icon" width="50" height="50"/>
             </div>
-              Planificar Actividad <button>Iniciar</button>
+              Plan Activity <button>Start</button>
             </div>
           </div>
         </div>

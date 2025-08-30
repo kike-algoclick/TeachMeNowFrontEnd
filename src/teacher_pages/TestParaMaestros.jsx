@@ -37,63 +37,63 @@ export function TestParaMaestros() {
  
   return (
     <div className="test-container">
-      <h1 className="titulo">Realizar Test</h1>
+      <h1 className="titulo">Take Test</h1>
  
       <div className="preguntas-grid">
  
         <div className="card">
           <div className="card-header">
-            <p>1. ¿Qué método usas para enseñar?</p>
+            <p>1. What method do you use to teach?</p>
             <img src={libro} alt="Libro" className="icono" />
           </div>
-          <label><input type="checkbox" onChange={() => handleCheckboxChange("q1", "Explicando")} /> Explicando el tema y luego ejercicios</label><br />
-          <label><input type="checkbox" onChange={() => handleCheckboxChange("q1", "Grupo")} /> Haciendo que trabajen en grupo</label><br />
-          <label><input type="checkbox" onChange={() => handleCheckboxChange("q1", "Juegos")} /> Juegos o dinámicas divertidas</label><br />
-          <label><input type="checkbox" onChange={() => handleCheckboxChange("q1", "Otra")} /> Otra forma</label>
+          <label><input type="checkbox" onChange={() => handleCheckboxChange("q1", "Explicando")} /> Explaining the topic and then exercises</label><br />
+          <label><input type="checkbox" onChange={() => handleCheckboxChange("q1", "Grupo")} /> Having students work in groups</label><br />
+          <label><input type="checkbox" onChange={() => handleCheckboxChange("q1", "Juegos")} /> Games or fun activities</label><br />
+          <label><input type="checkbox" onChange={() => handleCheckboxChange("q1", "Otra")} /> Another way</label>
         </div>
  
         <div className="card">
           <div className="card-header">
-            <p>2. ¿Qué tipo de apoyo te gustaría recibir?</p>
+            <p>2. What kind of support would you like to receive?</p>
             <img src={foco} alt="Idea" className="icono" />
           </div>
-          <textarea value={respuestas.q2} onChange={handleInputChange} placeholder="Escribe..." />
+          <textarea value={respuestas.q2} onChange={handleInputChange} placeholder="Write here..." />
         </div>
  
         <div className="card">
           <div className="card-header">
-            <p>3. ¿Qué apoyo digital te gustaría?</p>
+            <p>3. What kind of digital support would you like?</p>
             <img src={personas} alt="Personas" className="icono" />
           </div>
-          <label><input type="checkbox" onChange={() => handleCheckboxChange("q3", "Tutoriales")} /> Tutoriales o cursos online</label><br />
-          <label><input type="checkbox" onChange={() => handleCheckboxChange("q3", "Acompañamiento")} /> Acompañamiento y ayuda</label><br />
-          <label><input type="checkbox" onChange={() => handleCheckboxChange("q3", "Materiales")} /> Materiales listos</label><br />
-          <label><input type="checkbox" onChange={() => handleCheckboxChange("q3", "Otro")} /> Otro tipo de apoyo</label>
+          <label><input type="checkbox" onChange={() => handleCheckboxChange("q3", "Tutoriales")} /> Tutorials or online courses</label><br />
+          <label><input type="checkbox" onChange={() => handleCheckboxChange("q3", "Acompañamiento")} /> Guidance and help</label><br />
+          <label><input type="checkbox" onChange={() => handleCheckboxChange("q3", "Materiales")} /> Ready-to-use materials</label><br />
+          <label><input type="checkbox" onChange={() => handleCheckboxChange("q3", "Otro")} /> Another type of support</label>
         </div>
  
         <div className="card">
           <div className="card-header">
-            <p>4. ¿Qué tan importante es que la plataforma se adapte a tu estilo?</p>
+            <p>4. How important is it that the platform adapts to your style?</p>
             <img src={calendario} alt="Calendario" className="icono" />
           </div>
-          <label><input type="radio" name="q4" onChange={() => handleRadioChange("q4", "Nada")} /> Nada</label><br />
-          <label><input type="radio" name="q4" onChange={() => handleRadioChange("q4", "Algo")} /> Algo</label><br />
-          <label><input type="radio" name="q4" onChange={() => handleRadioChange("q4", "Mucho")} /> Mucho</label>
+          <label><input type="radio" name="q4" onChange={() => handleRadioChange("q4", "Nada")} /> Not at all</label><br />
+          <label><input type="radio" name="q4" onChange={() => handleRadioChange("q4", "Algo")} /> Somewhat</label><br />
+          <label><input type="radio" name="q4" onChange={() => handleRadioChange("q4", "Mucho")} /> Very</label>
         </div>
  
         <div className="card">
           <div className="card-header">
-            <p>5. ¿Cuántas materias impartes?</p>
+            <p>5. How many subjects do you teach?</p>
             <img src={campana} alt="Campana" className="icono" />
           </div>
           <label><input type="radio" name="q5" onChange={() => handleRadioChange("q5", "1")} /> 1</label><br />
           <label><input type="radio" name="q5" onChange={() => handleRadioChange("q5", "2")} /> 2</label><br />
           <label><input type="radio" name="q5" onChange={() => handleRadioChange("q5", "3")} /> 3</label><br />
-          <label><input type="radio" name="q5" onChange={() => handleRadioChange("q5", "Más")} /> Más</label>
+          <label><input type="radio" name="q5" onChange={() => handleRadioChange("q5", "Más")} /> More</label>
         </div>
  
         <div className="boton-container">
-          <button className="boton-siguiente" onClick={handleNext}>Siguiente</button>
+          <button className="boton-siguiente" onClick={handleNext}>Next</button>
         </div>
  
       </div>
