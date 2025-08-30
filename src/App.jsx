@@ -28,7 +28,7 @@ function App() {
             <Route path="/LandingAlumno" element={<LandingAlumno />} />
             <Route path="/LandingMaestro" element={<MainPage/>} />
             <Route path="/Plans" element={<Planes/>}/>
-            <Route path="/TestMaestri" element={<TestParaMaestros/>}/>
+            <Route path="/TestMaestro" element={<TestParaMaestros/>}/>
         </Routes>
         </Router>
       </>
