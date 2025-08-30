@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import '../CSS/TestParaMaestros.css';
 import libro from "/TestParMaestrosIMG/libro.png";
-import foco from "/TestParMaestrosIMG/Foco.jpg";
+import foco from "/TestParMaestrosIMG/Foco.png";
 import personas from "/TestParMaestrosIMG/personas.png";
-import calendario from "/TestParMaestrosIMG/calendario.jpg";
-import campana from "/TestParMaestrosIMG/campana.jpg";
+import calendario from "/TestParMaestrosIMG/Calendario.png";
+import campana from "/TestParMaestrosIMG/Campana.png";
 
 export function TestParaMaestros() {
   const [respuestas, setRespuestas] = useState({
@@ -96,7 +96,7 @@ export function TestParaMaestros() {
       </div>
 
       <div className="boton-container">
-        <button className="boton-siguiente" onClick={handleNext}>Siguiente</button>
+        <button className="boton-siguiente" onClick={handleNext}>Ver resultado</button>
       </div>
     </div>
   );
