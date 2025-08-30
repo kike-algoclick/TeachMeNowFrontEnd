@@ -1,33 +1,21 @@
-import React from "react";
-import { Footer } from "./Footer.jsx";
-import Login from "./signin_signup/Login.jsx";
-import { Test } from "./student_pages/testEstudiante.jsx";
-import { Preguntas } from "./student_pages/Cuestionario.jsx";
-import Signup from './signin_signup/Signup.jsx'
-import { Resultados } from "./student_pages/Resultados.jsx";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { MainPage } from "./teacher_pages/MainPageT.jsx";
-import { Landingpage } from "./teacher_pages/LandingPageTeacher.jsx";
-import { LandingAlumno } from "./student_pages/LandingAlumno.jsx";
-
-
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import PerfilAlumno from "./student_pages/PerfilAlumno";
+import PerfilMaestro from "./teacher_pages/PerfilMaestro";
 
 function App() {
-    return (
-      <>
-        <Router>
-          <Routes>
-            <Route path="/" element={<Landingpage/>}/>
-            <Route path="/Login" element={<Login />} />
-            <Route path="/Signup" element={<Signup />} />
-          </Routes>
-        <LandingAlumno/>
-          
-        </Router>
-      </>
-    );
-  }
+  return (
+    <Router>
+      <nav style={{ padding: "10px", background: "#eaf4ff" }}>
+        <Link to="/" style={{ marginRight: "15px" }}>Alumno</Link>
+        <Link to="/maestro">Maestro</Link>
+      </nav>
 
-
+      <Routes>
+        <Route path="/" element={<PerfilAlumno />} />
+        <Route path="/maestro" element={<PerfilMaestro />} />
+      </Routes>
+    </Router>
+  );
+}
 
 export default App;

@@ -4,7 +4,6 @@ import "../CSS/LandingAlumno.css";
 export function LandingAlumno() {
   return (
     <div className="landing-page">
-      {/* Sección principal */}
       <header className="hero">
         <h1>
           Teach<span>Me</span>Now
@@ -21,7 +20,7 @@ export function LandingAlumno() {
           </div>
  
           <div className="card">
-            <img src="https://face.unt.edu.ar/web/wp-content/uploads/2020/11/taller-docentes-face-.jpg" alt="clases" / >
+            <img src="https://face.unt.edu.ar/web/wp-content/uploads/2020/11/taller-docentes-face-.jpg" alt="clases"/ >
             <h3>Tus clases</h3>
             <p>
               Clases y materiales preparados para ti con todo lo que necesitas para aprender.
@@ -40,7 +39,7 @@ export function LandingAlumno() {
         </div>
       </header>
  
-      {/* Sección de forma de aprender */}
+      /* Sección de forma de aprender */
       <section className="learning-style-section">
         <h2 className="titulo">¿Cuál es tu forma de aprender?</h2>
         <div className="learning-options">
