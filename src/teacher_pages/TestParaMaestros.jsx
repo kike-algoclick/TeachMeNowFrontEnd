@@ -1,9 +1,16 @@
 import React, { useState } from "react";
 import libro from "/TestParMaestrosIMG/libro.png";
-import foco from "/TestParMaestrosIMG/Foco.jpg";
+import foco from "/TestParMaestrosIMG/Foco.png";
 import personas from "/TestParMaestrosIMG/personas.png";
-import calendario from "/TestParMaestrosIMG/calendario.jpg";
-import campana from "/TestParMaestrosIMG/campana.jpg";
+import calendario from "/TestParMaestrosIMG/calendario.png";
+import campana from "/TestParMaestrosIMG/campana.png";
+import cuaderno from "/TestParMaestrosIMG/cuaderno.png";
+import listado from "/TestParMaestrosIMG/listado.png";
+import lapiz from "/TestParMaestrosIMG/lapiz.png";
+import grupo from "/TestParMaestrosIMG/grupo.png";
+import libros from "/TestParMaestrosIMG/libros.png";
+
+ 
 import '../CSS/TestParaMaestros.css'
  
  
@@ -13,7 +20,12 @@ export function TestParaMaestros() {
     q2: "",
     q3: "",
     q4: "",
-    q5: ""
+    q5: "",
+    q6: "",
+    q7: "",
+    q8: "",
+    q9: "",
+    q10: "",
   });
 
   const handleRadioChange = (question, value) => {
@@ -87,7 +99,7 @@ export function TestParaMaestros() {
         <div className="card">
           <div className="card-header">
             <p>5. ¿Cuántas materias impartes?</p>
-            <img src={campana} alt="Campana" className="icono" />
+            <img src={campana} alt="Pregunta 5" className="Pregunta-img" />
 
           </div>
           <label><input type="radio" name="q5" onChange={() => handleRadioChange("q5", "1")} /> 1</label><br />
@@ -99,7 +111,7 @@ export function TestParaMaestros() {
                    <div className="card">
           <div className="card-header">
             <p>6 ¿Cómo te gustaría usar las planificaciones de la plataforma?</p>
-            <img src={} alt="" className="" />
+            <img src={cuaderno} alt="Pregunta 6" className="Pregunta-img" />
           </div>
           <label><input type="radio" name="q6" onChange={() => handleRadioChange("q6", "Editarlas por completo para adaptarlas a mi estilo")} /> Editarlas por completo para adaptarlas a mi estilo</label><br />
           <label><input type="radio" name="q6" onChange={() => handleRadioChange("q6", "Ajustar lo necesario pero mantener la base")} />Ajustar lo necesario pero mantener la base </label><br />
@@ -109,7 +121,7 @@ export function TestParaMaestros() {
         <div className="card">
           <div className="card-header">
             <p>7. ¿Qué tipo de seguimiento te gustaría tener sobre tus clases?</p>
-            <img src={} alt="" className="" />
+            <img src={listado} alt="Pregunta 7" className="Pregunta-img2" />
           </div>
           <label><input type="radio" name="q7" onChange={() => handleRadioChange("q7", "Resumen semanal de avances")} />Resumen semanal de avances </label><br />
           <label><input type="radio" name="q7" onChange={() => handleRadioChange("q7", "Alertas de pendientes o retrasos")} />Alertas de pendientes o retrasos</label><br />
@@ -120,7 +132,7 @@ export function TestParaMaestros() {
         <div className="card">
           <div className="card-header">
             <p>8. ¿Qué tipo de recursos creativos te gustaría que te ofreciera la plataforma?</p>
-            <img src={} alt="" className="" />
+            <img src={lapiz} alt="Pregunta 8" className="Pregunta-img" />
           </div>
           <label><input type="radio" name="q8" onChange={() => handleRadioChange("q8", "Actividades interactivas")} /> Actividades interactivas</label><br />
           <label><input type="radio" name="q8" onChange={() => handleRadioChange("q8", "Juegos educativos")} />Juegos educativos </label><br />
@@ -131,7 +143,7 @@ export function TestParaMaestros() {
         <div className="card">
           <div className="card-header">
             <p>9. ¿Cómo te gustaría que los estudiantes participen desde la plataforma?</p>
-            <img src={} alt="" className="" />
+            <img src={grupo} alt="Pregunta 9" className="Pregunta-img2" />
           </div>
           <label><input type="checkbox" onChange={() => handleCheckboxChange("q9", "Comentando o respondiendo actividades")} /> Comentando o respondiendo actividades</label><br />
           <label><input type="checkbox" onChange={() => handleCheckboxChange("q9", "Haciendo autoevaluaciones")} />Haciendo autoevaluaciones</label><br />
@@ -142,7 +154,7 @@ export function TestParaMaestros() {
         <div className="card">
           <div className="card-header">
             <p>9. ¿Cómo te gustaría que los estudiantes participen desde la plataforma?</p>
-            <img src={} alt="" className="" />
+            <img src={libros} alt="Pregunta 10" className="Pregunta-img" />
           </div>
           <label><input type="checkbox" onChange={() => handleCheckboxChange("q10", "Sí, personalizados por estudiante")} />Sí, personalizados por estudiante</label><br />
           <label><input type="checkbox" onChange={() => handleCheckboxChange("q10", "Sí, diferenciados por grupo")} />Sí, diferenciados por grupo</label><br />
@@ -153,7 +165,7 @@ export function TestParaMaestros() {
 
        
         <div className="boton-container">
-          <button className="boton-siguiente" onClick={handleNext}>Ver resultados</button>
+          <button className="boton-siguiente" onClick={handleNext}>Ver Resultados</button>
         </div>
  
       </div>
