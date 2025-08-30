@@ -13,6 +13,7 @@ import { ClerkProvider } from "@clerk/clerk-react";
 import { LandingAlumno } from "./student_pages/LandingAlumno.jsx";
 import Planes from "./premium_plans/planes.jsx";
 import { SignUpRedirect } from "./signin_signup/SignUpRedirect.jsx";
+import { TestParaMaestros } from "./teacher_pages/TestParaMaestros.jsx";
 
 
 
@@ -38,6 +39,7 @@ function App() {
               <Route path="/LandingMaestro" element={<MainPage />} />
               <Route path="/Plans" element={<Planes />} />
               <Route path="/Redirect" element={<SignUpRedirect />} />
+              <Route path="TestMaestro" element={<TestParaMaestros/>}/>
             </Routes>
           </Router>
 
