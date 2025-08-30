@@ -1,0 +1,292 @@
+.perfil-container {
+  background-color: white;
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.perfil-card {
+  background: #dbefff;
+  width: 100%;
+  max-width: 650px;
+  min-height: 85vh;
+  margin: 20px auto;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+}
+
+.perfil-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.foto-perfil {
+  border-radius: 50%;
+  border: 3px solid #007bff;
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+}
+
+.nombre {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.profesion {
+  color: #555;
+  margin: 5px 0;
+}
+
+.descripcion {
+  color: #666;
+  font-size: 14px;
+}
+
+.barra-progreso-container {
+  margin: 20px 0 35px 0;
+  text-align: center;
+}
+
+.titulo-progreso {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: #333;
+}
+
+.barra-progreso {
+  width: 100%;
+  height: 12px;
+  background: #e0e7ff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.barra-relleno {
+  height: 100%;
+  background: #007bff;
+  transition: width 0.5s ease-in-out;
+}
+
+.porcentaje {
+  margin-top: 8px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #333;
+}
+
+.mis-clases {
+  background: #f9fbff;
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 10px;
+}
+
+.mis-clases h3 {
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.clases-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.clase-item {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 10px;
+  width: 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.clase-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+  border: 1px solid #007bff;
+}
+
+.clase-imagen {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 8px;
+  border: 2px solid #007bff;
+}
+
+.clase-nombre {
+  font-weight: bold;
+  text-align: center;
+  font-size: 14px;
+  color: #333;
+}
+
+.opciones {
+  display: flex;
+  justify-content: space-around;
+  margin-top: auto;
+}
+
+.opciones button {
+  background-color: #fff;
+  color: rgb(12, 11, 11);
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 10px;
+  transition: 0.3s;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.opciones button:hover {
+  background-color: #e6f0ff;
+}
+
+.progress-bar {
+  margin-top: 10px;
+  height: 12px;
+  background-color: #d9e7ff;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background-color: #007bff;
+  border-radius: 6px;
+  width: 0;
+  animation: fillProgress 1s forwards;
+}
+
+.progress-text {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #007bff;
+  font-weight: bold;
+  text-align: center;
+}
+
+@keyframes fillProgress {
+  from { width: 0; }
+  to { width: 75%; }
+}
+
+.progress-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.progress-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: conic-gradient(#007bff 0% 75%, #e6e6e6 75% 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 18px;
+  color: #007bff;
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-circle::before {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background: white;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.Circle-Container {
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 600px) {
+  .perfil-container {
+    padding: 20px 10px;
+  }
+
+  .perfil-card {
+    padding: 20px;
+  }
+
+  .perfil-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .estadisticas {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .stat {
+    width: 100%;
+    text-align: center;
+  }
+
+  .clases-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .clase-item {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .opciones {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    margin-top: 30px;
+  }
+
+  .opciones button {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .progress-circle {
+    width: 80px;
+    height: 80px;
+    font-size: 16px;
+  }
+
+  .progress-circle::before {
+    width: 55px;
+    height: 55px;
+  }
+}
