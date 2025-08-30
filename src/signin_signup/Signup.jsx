@@ -3,6 +3,7 @@ import { useState } from "react";
 import '../CSS/Signup.css'
 import { useSignUp } from "@clerk/clerk-react";
 import { useAuth } from "@clerk/clerk-react";
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -28,15 +29,7 @@ function Signup() {
 
   //Si la conección con Clerk no está lista, da error
  
-  if(isSignedIn){
-    if(role=="student"){
-     window.href.location = "/LandingAlumno";
-    }
-    else{
-      window.href.location = '/LandingMaestro'
-    }
-   
-  }
+
 
   
 
@@ -63,13 +56,13 @@ function Signup() {
 
       try{
             await signUp.create({
-                emailAddress: email.trim(), 
-                password: password,
+              emailAddress: email.trim(),
+              password: password,
+              unsafeMetadata: {
                 firstName: fName.trim(),
                 lastName: lastName.trim(),
-                unsafeMetadata:{
-                    role: role,
-                },
+                role: role,
+              },
             });
 
             await signUp.prepareEmailAddressVerification({
@@ -92,7 +85,8 @@ function Signup() {
             console.log("Resultado de verificación:", completeSignUp);
  
             if (completeSignUp.status === 'complete') {
-                window.location.href = '/Login'
+               await setActive({ session: completeSignUp.createdSessionId });
+                useNavigate('/Redirect')
                 console.log("✅ Registro completo, redirigiendo...");
               
             } else {
@@ -109,7 +103,8 @@ function Signup() {
 
   return (
     <div className="bg-[url(/SignUpImage.png)] bg-cover p-10">
-      <div className=" p-10 bg-white p-8 rounded-lg shadow-xl w-full max-w-sm mx-auto">
+
+      {!verification && (<div className=" p-10 bg-white p-8 rounded-lg shadow-xl w-full max-w-sm mx-auto">
         <h2
           className="text-2xl font-bold mb-6 text-center"
           style={{ color: "#1A3D63" }}
@@ -228,7 +223,7 @@ function Signup() {
             <p className="text-red-500 text-center mt-2x|">{errorMsg}</p>
           )}
         </form>
-      </div>
+      </div>)}
       {verification && (
         <form onSubmit={verificar}>
           <input

@@ -8,9 +8,48 @@ import { useState } from "react";
 
 function Login(){
     const {signIn, setActive, isLoaded} = useSignIn();
-    const [email, setEmail] = useState();
-    const [password, setPassword] = useState();
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
     const [hover, setHover] = useState(false);
+    const [errorMsg, setErrorMsg] = useState('')
+
+   
+
+    const handleLogin = async(e)=>{
+       if (!isLoaded) return null;
+e.preventDefault()
+setErrorMsg('')
+
+if (!email || !password) {
+  setErrorMsg("Por favor, completa todos los campos");
+  return;
+} 
+
+try{
+const form = await signIn.create({
+  identifier: email.trim(),
+  password: password
+});
+
+if (form.status === "complete") {
+  await setActive({ session: form.createdSessionId })
+} else {
+  console.log("Estado Login:", form);
+}
+}
+catch(err){
+  const clerkError = err?.errors?.[0]?.message;
+  if (clerkError?.includes("Couldn't find your account")) {
+    setErrorMsg("Correo electrónico incorrecto");
+  } else if (clerkError?.includes("Password is incorrect")) {
+    setErrorMsg("Contraseña incorrecta");
+  } else {
+    setErrorMsg("Error al iniciar sesión");
+  }
+
+}
+}
+
 
   
 
@@ -45,6 +84,7 @@ function Login(){
                   value={email}
                   placeholder="Email"
                   className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
               <div className="mb-6">
@@ -53,6 +93,7 @@ function Login(){
                   value={password}
                   placeholder="Password"
                   className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  onChange={(e) => setPassword(e.target.value)}
                 />
               </div>
               <button
@@ -61,9 +102,13 @@ function Login(){
                 style={{ backgroundColor: hover ? "#153654" : "#1A3D63" }}
                 onMouseOver={() => setHover(true)}
                 onMouseOut={() => setHover(false)}
+                onClick={handleLogin}
               >
                 Log in
               </button>
+              {errorMsg && (
+                <p className="text-red-500 text-center mt-2x|">{errorMsg}</p>
+              )}
             </form>
 
             <div className="flex justify-between text-sm mt-4">
