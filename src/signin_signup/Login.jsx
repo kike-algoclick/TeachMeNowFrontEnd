@@ -1,7 +1,7 @@
 import React from "react";
 import '../CSS/Login.css'
 import {Link} from 'react-router-dom'
-import { SignIn, useSignIn } from "@clerk/clerk-react";
+import { useSignIn } from "@clerk/clerk-react";
 import { useState } from "react";
 
 
@@ -13,11 +13,13 @@ function Login(){
     const [hover, setHover] = useState(false);
     const [errorMsg, setErrorMsg] = useState('')
 
-   
+
 
     const handleLogin = async(e)=>{
-       if (!isLoaded) return null;
+      
+      
 e.preventDefault()
+if(!isLoaded) return;
 setErrorMsg('')
 
 if (!email || !password) {
@@ -28,17 +30,22 @@ if (!email || !password) {
 try{
 const form = await signIn.create({
   identifier: email.trim(),
-  password: password
+  password,
 });
 
 if (form.status === "complete") {
   await setActive({ session: form.createdSessionId })
+  console.log('Login successful')
 } else {
   console.log("Estado Login:", form);
 }
 }
 catch(err){
-  const clerkError = err?.errors?.[0]?.message;
+  
+  const clerkError = console.error(
+    "Error Clerk >>>",
+    JSON.stringify(err, null, 2) //REEMPLAZAR LUEGO: err?.errors?.[0]?.message
+  );
   if (clerkError?.includes("Couldn't find your account")) {
     setErrorMsg("Correo electrónico incorrecto");
   } else if (clerkError?.includes("Password is incorrect")) {
@@ -46,7 +53,6 @@ catch(err){
   } else {
     setErrorMsg("Error al iniciar sesión");
   }
-
 }
 }
 
@@ -77,7 +83,7 @@ catch(err){
               </Link>
             </div>
 
-            <form>
+            <form onSubmit={handleLogin}>
               <div className="mb-4">
                 <input
                   type="email"
@@ -102,7 +108,6 @@ catch(err){
                 style={{ backgroundColor: hover ? "#153654" : "#1A3D63" }}
                 onMouseOver={() => setHover(true)}
                 onMouseOut={() => setHover(false)}
-                onClick={handleLogin}
               >
                 Log in
               </button>
