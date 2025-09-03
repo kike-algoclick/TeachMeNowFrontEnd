@@ -27,7 +27,7 @@ export function Navbar() {
             </ul>
           </nav>
           <SignOutButton>
-            <button>SignOut</button>
+            <button className="rounded-lg bg-blue-400 p-2 text-black">SignOut</button>
           </SignOutButton>
           <div className="profile">
             <img src="profile-icon-design-free-vector.jpg" alt="" />

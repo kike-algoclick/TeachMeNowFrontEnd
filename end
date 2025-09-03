@@ -1,0 +1,95 @@
+[33m8632282[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mtatiana[m[33m, [m[1;31morigin/tatiana[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;31morigin/Enrique[m[33m, [m[1;32mmain[m[33m)[m HEAD@{0}: reset: moving to 8632282
+[33m8632282[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mtatiana[m[33m, [m[1;31morigin/tatiana[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;31morigin/Enrique[m[33m, [m[1;32mmain[m[33m)[m HEAD@{1}: pull origin main: Fast-forward
+[33mdbf2aaf[m HEAD@{2}: reset: moving to HEAD
+[33mdbf2aaf[m HEAD@{3}: checkout: moving from main to tatiana
+[33m8632282[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mtatiana[m[33m, [m[1;31morigin/tatiana[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;31morigin/Enrique[m[33m, [m[1;32mmain[m[33m)[m HEAD@{4}: checkout: moving from tatiana to main
+[33mdbf2aaf[m HEAD@{5}: checkout: moving from Login to tatiana
+[33m363e0ef[m[33m ([m[1;31morigin/Login[m[33m, [m[1;32mLogin[m[33m)[m HEAD@{6}: commit: Login
+[33mf0797a5[m[33m ([m[1;31morigin/develop[m[33m, [m[1;32mdevelop[m[33m)[m HEAD@{7}: checkout: moving from develop to Login
+[33mf0797a5[m[33m ([m[1;31morigin/develop[m[33m, [m[1;32mdevelop[m[33m)[m HEAD@{8}: checkout: moving from Enrique to develop
+[33mc7e7f3e[m[33m ([m[1;32mEnrique[m[33m)[m HEAD@{9}: checkout: moving from develop to Enrique
+[33mf0797a5[m[33m ([m[1;31morigin/develop[m[33m, [m[1;32mdevelop[m[33m)[m HEAD@{10}: checkout: moving from TestMaestro to develop
+[33m9ef0f56[m[33m ([m[1;32mTestMaestro[m[33m)[m HEAD@{11}: reset: moving to HEAD
+[33m9ef0f56[m[33m ([m[1;32mTestMaestro[m[33m)[m HEAD@{12}: commit (merge): Merge branch 'Briseyda' of https://github.com/kike-algoclick/TeachMeNow into TestMaestro
+[33mf0797a5[m[33m ([m[1;31morigin/develop[m[33m, [m[1;32mdevelop[m[33m)[m HEAD@{13}: checkout: moving from develop to TestMaestro
+[33mf0797a5[m[33m ([m[1;31morigin/develop[m[33m, [m[1;32mdevelop[m[33m)[m HEAD@{14}: checkout: moving from Enrique to develop
+[33mc7e7f3e[m[33m ([m[1;32mEnrique[m[33m)[m HEAD@{15}: checkout: moving from develop to Enrique
+[33mf0797a5[m[33m ([m[1;31morigin/develop[m[33m, [m[1;32mdevelop[m[33m)[m HEAD@{16}: commit: Test Maestro route added
+[33m8632282[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mtatiana[m[33m, [m[1;31morigin/tatiana[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;31morigin/Enrique[m[33m, [m[1;32mmain[m[33m)[m HEAD@{17}: pull origin main: Fast-forward
+[33m27a1208[m HEAD@{18}: checkout: moving from main to develop
+[33m8632282[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mtatiana[m[33m, [m[1;31morigin/tatiana[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;31morigin/Enrique[m[33m, [m[1;32mmain[m[33m)[m HEAD@{19}: checkout: moving from develop to main
+[33m27a1208[m HEAD@{20}: checkout: moving from main to develop
+[33m8632282[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mtatiana[m[33m, [m[1;31morigin/tatiana[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;31morigin/Enrique[m[33m, [m[1;32mmain[m[33m)[m HEAD@{21}: pull origin Enrique: Fast-forward
+[33m27a1208[m HEAD@{22}: checkout: moving from Enrique to main
+[33mc7e7f3e[m[33m ([m[1;32mEnrique[m[33m)[m HEAD@{23}: reset: moving to HEAD
+[33mc7e7f3e[m[33m ([m[1;32mEnrique[m[33m)[m HEAD@{24}: commit (merge): Merge branch 'Briseyda' of https://github.com/kike-algoclick/TeachMeNow into Enrique
+[33m4c2494c[m HEAD@{25}: commit: Navbar fixed
+[33m8632282[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mtatiana[m[33m, [m[1;31morigin/tatiana[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;31morigin/Enrique[m[33m, [m[1;32mmain[m[33m)[m HEAD@{26}: pull origin Briseyda: updating HEAD
+[33m8632282[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mtatiana[m[33m, [m[1;31morigin/tatiana[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;31morigin/Enrique[m[33m, [m[1;32mmain[m[33m)[m HEAD@{27}: pull origin Briseyda: updating HEAD
+[33m8632282[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mtatiana[m[33m, [m[1;31morigin/tatiana[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;31morigin/Enrique[m[33m, [m[1;32mmain[m[33m)[m HEAD@{28}: commit (merge): Merge branch 'Pimentel' of https://github.com/kike-algoclick/TeachMeNow into Enrique
+[33m0ee5196[m HEAD@{29}: commit: Student Page added
+[33mb51f1cb[m HEAD@{30}: pull origin Pimentel: updating HEAD
+[33mb51f1cb[m HEAD@{31}: commit (merge): Merge branch 'tatiana' of https://github.com/kike-algoclick/TeachMeNow into Enrique
+[33m92eafa5[m HEAD@{32}: commit: SignUp ended
+[33m7cebf8e[m HEAD@{33}: commit (merge): Merge branch 'tatiana' of https://github.com/kike-algoclick/TeachMeNow into Enrique
+[33m133c4ba[m HEAD@{34}: commit: Login
+[33m08a9395[m HEAD@{35}: commit (merge): Merge branch 'Elias' of https://github.com/kike-algoclick/TeachMeNow into Enrique
+[33me03964a[m HEAD@{36}: pull origin Rocío: Merge made by the 'ort' strategy.
+[33m013ac02[m HEAD@{37}: commit: Subido
+[33m3d5ce30[m HEAD@{38}: pull origin Rocío: updating HEAD
+[33m3d5ce30[m HEAD@{39}: commit (merge): Merge branch 'Rocío' of https://github.com/kike-algoclick/TeachMeNow into Enrique
+[33mb6ec2e5[m HEAD@{40}: commit: Sign up finished and MainPageT fixed
+[33mabe4215[m HEAD@{41}: commit (merge): Merge branch 'brayan' of https://github.com/kike-algoclick/TeachMeNow into Enrique
+[33m206d1bf[m HEAD@{42}: commit: Sign up continue
+[33m284de47[m HEAD@{43}: commit (merge): Plans Added
+[33m27a1208[m HEAD@{44}: checkout: moving from develop to Enrique
+[33m27a1208[m HEAD@{45}: pull origin main: Fast-forward
+[33m8bde5e3[m HEAD@{46}: checkout: moving from main to develop
+[33m27a1208[m HEAD@{47}: pull origin Enrique: Fast-forward
+[33m9898f85[m HEAD@{48}: checkout: moving from Enrique to main
+[33m27a1208[m HEAD@{49}: checkout: moving from main to Enrique
+[33m9898f85[m HEAD@{50}: checkout: moving from Enrique to main
+[33m27a1208[m HEAD@{51}: commit: Clerk Login Continue
+[33m9898f85[m HEAD@{52}: checkout: moving from main to Enrique
+[33m9898f85[m HEAD@{53}: commit: Connection with clerk started
+[33m8bde5e3[m HEAD@{54}: checkout: moving from develop to main
+[33m8bde5e3[m HEAD@{55}: pull origin main: Fast-forward
+[33m3282837[m HEAD@{56}: checkout: moving from main to develop
+[33m8bde5e3[m HEAD@{57}: commit: Imaged ordered
+[33me1d4cd9[m HEAD@{58}: commit: Starting ordering images
+[33m3282837[m HEAD@{59}: merge origin/develop: Fast-forward
+[33mca53ea5[m HEAD@{60}: checkout: moving from develop to main
+[33m3282837[m HEAD@{61}: checkout: moving from develop to develop
+[33m3282837[m HEAD@{62}: checkout: moving from main to develop
+[33mca53ea5[m HEAD@{63}: checkout: moving from main to main
+[33mca53ea5[m HEAD@{64}: checkout: moving from develop to main
+[33m3282837[m HEAD@{65}: checkout: moving from develop to develop
+[33m3282837[m HEAD@{66}: checkout: moving from main to develop
+[33mca53ea5[m HEAD@{67}: checkout: moving from develop to main
+[33m3282837[m HEAD@{68}: commit: Proyect added to develop branch
+[33mca53ea5[m HEAD@{69}: checkout: moving from main to develop
+[33mca53ea5[m HEAD@{70}: pull origin main: Fast-forward
+[33m21375e6[m HEAD@{71}: reset: moving to HEAD
+[33m21375e6[m HEAD@{72}: reset: moving to HEAD
+[33m21375e6[m HEAD@{73}: pull origin main: Fast-forward
+[33m9aa6970[m HEAD@{74}: reset: moving to HEAD
+[33m9aa6970[m HEAD@{75}: commit: Teacher Assistant Screen Added
+[33m9be04e3[m HEAD@{76}: reset: moving to HEAD
+[33m9be04e3[m HEAD@{77}: commit: Footer fixed
+[33m725ec12[m HEAD@{78}: pull origin main: Fast-forward
+[33md108d7d[m HEAD@{79}: reset: moving to HEAD
+[33md108d7d[m HEAD@{80}: reset: moving to HEAD
+[33md108d7d[m HEAD@{81}: pull origin main: Fast-forward
+[33m39b16a3[m HEAD@{82}: commit: Navbar added
+[33mc7c0ec7[m HEAD@{83}: commit: navbar added
+[33m60c50c1[m HEAD@{84}: pull origin main: Fast-forward
+[33m17cb31a[m HEAD@{85}: reset: moving to HEAD
+[33m17cb31a[m HEAD@{86}: pull origin main: Fast-forward
+[33m20ac85e[m HEAD@{87}: commit: Login added
+[33mcf71756[m HEAD@{88}: commit: Login Added
+[33md5dfb56[m HEAD@{89}: commit: footer added
+[33m4f9b55f[m HEAD@{90}: pull origin main: Fast-forward
+[33m008715a[m HEAD@{91}: commit: footer added
+[33m56ec696[m HEAD@{92}: pull origin main: Fast-forward
+[33mfc28c58[m HEAD@{93}: reset: moving to HEAD
+[33mfc28c58[m HEAD@{94}: clone: from https://github.com/kike-algoclick/TeachMeNow.git

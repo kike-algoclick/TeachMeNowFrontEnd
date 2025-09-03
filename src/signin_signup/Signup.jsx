@@ -231,7 +231,7 @@ function Signup() {
             value={code}
             onChange={(e) => setCode(e.target.value)}
             placeholder="Código de verificación"
-            className="mt-1 w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="mt-1 w-200 px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
           <button
             type="submit"
