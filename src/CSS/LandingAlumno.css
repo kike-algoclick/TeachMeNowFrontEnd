@@ -1,6 +1,7 @@
 .hero {
   text-align: center;
   padding: 50px 20px;
+  display: grid;
 }
 
 .hero h1 {
@@ -13,7 +14,7 @@
 }
 
 .card, .opcion {
-  background: white;
+
   border-radius: 12px;
   padding: 20px;
   width: 260px;
@@ -39,7 +40,7 @@
   margin: 0 auto 15px auto;
 }
 
-.cards-container {
+.cards-containers {
   display: flex;
   justify-content: center;
   gap: 25px;
@@ -152,15 +153,10 @@
     flex-direction: column;
   }
 
-  .card {
-    width: 100%;
-  }
+
 
   .learning-options {
     flex-direction: column;
   }
 
-  .learning-card {
-    width: 100%;
-  }
 }
