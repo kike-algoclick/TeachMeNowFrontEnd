@@ -1,31 +1,18 @@
 import React, { useState } from "react";
+import '../CSS/TestParaMaestros.css';
 import libro from "/TestParMaestrosIMG/libro.png";
 import foco from "/TestParMaestrosIMG/Foco.png";
 import personas from "/TestParMaestrosIMG/personas.png";
 import calendario from "/TestParMaestrosIMG/Calendario.png";
 import campana from "/TestParMaestrosIMG/Campana.png";
-import cuaderno from "/TestParMaestrosIMG/cuaderno.png";
-import listado from "/TestParMaestrosIMG/listado.png";
-import lapiz from "/TestParMaestrosIMG/lapiz.png";
-import grupo from "/TestParMaestrosIMG/grupo.png";
-import libros from "/TestParMaestrosIMG/libros.png";
 
- 
-import '../CSS/TestParaMaestros.css'
- 
- 
 export function TestParaMaestros() {
   const [respuestas, setRespuestas] = useState({
     q1: "",
     q2: "",
     q3: "",
     q4: "",
-    q5: "",
-    q6: "",
-    q7: "",
-    q8: "",
-    q9: "",
-    q10: "",
+    q5: ""
   });
 
   const handleRadioChange = (question, value) => {
@@ -95,79 +82,21 @@ export function TestParaMaestros() {
           </div>
           <img src={calendario} alt="Pregunta 4" className="Pregunta-img2" />
         </div>
- 
-        <div className="card">
-          <div className="card-header">
-            <p>5. ¿Cuántas materias impartes?</p>
-            <img src={campana} alt="Pregunta 5" className="Pregunta-img" />
 
+        <div className="Card-preguntas">
+          <div className="posicionletra2">
+            <p className="Colorletra"><strong>5. ¿Cuántas materias impartes?</strong></p>
+            <label><input type="radio" name="q5" onChange={() => handleRadioChange("q5", "1")} /> 1</label><br />
+            <label><input type="radio" name="q5" onChange={() => handleRadioChange("q5", "2")} /> 2</label><br />
+            <label><input type="radio" name="q5" onChange={() => handleRadioChange("q5", "3")} /> 3</label><br />
+            <label><input type="radio" name="q5" onChange={() => handleRadioChange("q5", "Más")} /> Más</label><br />
           </div>
-          <label><input type="radio" name="q5" onChange={() => handleRadioChange("q5", "1")} /> 1</label><br />
-          <label><input type="radio" name="q5" onChange={() => handleRadioChange("q5", "2")} /> 2</label><br />
-          <label><input type="radio" name="q5" onChange={() => handleRadioChange("q5", "3")} /> 3</label><br />
-          <label><input type="radio" name="q5" onChange={() => handleRadioChange("q5", "Más")} /> Más</label>
-        </div> 
-
-                   <div className="card">
-          <div className="card-header">
-            <p>6 ¿Cómo te gustaría usar las planificaciones de la plataforma?</p>
-            <img src={cuaderno} alt="Pregunta 6" className="Pregunta-img" />
-          </div>
-          <label><input type="radio" name="q6" onChange={() => handleRadioChange("q6", "Editarlas por completo para adaptarlas a mi estilo")} /> Editarlas por completo para adaptarlas a mi estilo</label><br />
-          <label><input type="radio" name="q6" onChange={() => handleRadioChange("q6", "Ajustar lo necesario pero mantener la base")} />Ajustar lo necesario pero mantener la base </label><br />
-          <label><input type="radio" name="q6" onChange={() => handleRadioChange("q6", "Usarlas tal cual sin modificaciones")} /> Usarlas tal cual sin modificaciones</label><br />
+          <img src={campana} alt="Pregunta 5" className="Pregunta-img" />
         </div>
+      </div>
 
-        <div className="card">
-          <div className="card-header">
-            <p>7. ¿Qué tipo de seguimiento te gustaría tener sobre tus clases?</p>
-            <img src={listado} alt="Pregunta 7" className="Pregunta-img2" />
-          </div>
-          <label><input type="radio" name="q7" onChange={() => handleRadioChange("q7", "Resumen semanal de avances")} />Resumen semanal de avances </label><br />
-          <label><input type="radio" name="q7" onChange={() => handleRadioChange("q7", "Alertas de pendientes o retrasos")} />Alertas de pendientes o retrasos</label><br />
-          <label><input type="radio" name="q7" onChange={() => handleRadioChange("q7", "Registro automático de lo trabajado")} />Registro automático de lo trabajado</label><br />
-          <label><input type="radio" name="q7" onChange={() => handleRadioChange("q7", "Ninguno")} />Ninguno</label>
-        </div>
-
-        <div className="card">
-          <div className="card-header">
-            <p>8. ¿Qué tipo de recursos creativos te gustaría que te ofreciera la plataforma?</p>
-            <img src={lapiz} alt="Pregunta 8" className="Pregunta-img" />
-          </div>
-          <label><input type="radio" name="q8" onChange={() => handleRadioChange("q8", "Actividades interactivas")} /> Actividades interactivas</label><br />
-          <label><input type="radio" name="q8" onChange={() => handleRadioChange("q8", "Juegos educativos")} />Juegos educativos </label><br />
-          <label><input type="radio" name="q8" onChange={() => handleRadioChange("q8", "Videos cortos por tema")} />Videos cortos por tema</label><br />
-          <label><input type="radio" name="q8" onChange={() => handleRadioChange("q8", "No necesito recursos creativos")} />No necesito recursos creativos </label>
-        </div>
-
-        <div className="card">
-          <div className="card-header">
-            <p>9. ¿Cómo te gustaría que los estudiantes participen desde la plataforma?</p>
-            <img src={grupo} alt="Pregunta 9" className="Pregunta-img2" />
-          </div>
-          <label><input type="checkbox" onChange={() => handleCheckboxChange("q9", "Comentando o respondiendo actividades")} /> Comentando o respondiendo actividades</label><br />
-          <label><input type="checkbox" onChange={() => handleCheckboxChange("q9", "Haciendo autoevaluaciones")} />Haciendo autoevaluaciones</label><br />
-          <label><input type="checkbox" onChange={() => handleCheckboxChange("q9", "Eligiendo actividades opcionales")} />Eligiendo actividades opcionales</label><br />
-          <label><input type="checkbox" onChange={() => handleCheckboxChange("q9", "Solo entregando tareas")} />Solo entregando tareas</label>
-        </div>
-
-        <div className="card">
-          <div className="card-header">
-            <p>9. ¿Cómo te gustaría que los estudiantes participen desde la plataforma?</p>
-            <img src={libros} alt="Pregunta 10" className="Pregunta-img" />
-          </div>
-          <label><input type="checkbox" onChange={() => handleCheckboxChange("q10", "Sí, personalizados por estudiante")} />Sí, personalizados por estudiante</label><br />
-          <label><input type="checkbox" onChange={() => handleCheckboxChange("q10", "Sí, diferenciados por grupo")} />Sí, diferenciados por grupo</label><br />
-          <label><input type="checkbox" onChange={() => handleCheckboxChange("q10", "No, prefiero usar mis propios recursos")} />No, prefiero usar mis propios recursos</label><br />
-        </div>
-
-        
-
-       
-        <div className="boton-container">
-          <button className="boton-siguiente" onClick={handleNext}>Ver Resultados</button>
-        </div>
- 
+      <div className="boton-container">
+        <button className="boton-siguiente" onClick={handleNext}>Ver resultado</button>
       </div>
     </div>
   );
