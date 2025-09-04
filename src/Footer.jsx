@@ -8,35 +8,35 @@ export function Footer() {
             
                 <div className="footer-content">
                     <div className="footer-section">
-                        <h3>¿Qué somos?</h3>
-                        <p>Somos una plataforma que apoya a docentes con herramientas prácticas para una clase más efectiva.</p>
+                        <h3>What are?</h3>
+                        <p>We are a platform that supports teachers with practical tools to improve classroom results</p>
                     </div>
 
                     <div className="footer-section">
-                        <h3>¿A quiénes beneficiamos?</h3>
+                        <h3>Who do we help?</h3>
                         <ul>
-                            <li>Docentes que buscan mejorar sus clases.</li>
-                            <li>Futuros maestros en formación.</li>
-                            <li>Coordinadores y directores escolares.</li>
+                            <li>Teachers who want to improve classes</li>
+                            <li>Teachers in their formation path</li>
+                            <li> Schools Principal's</li>
                         </ul>
                     </div>
 
                     <div className="footer-section">
-                        <h3>Contáctanos</h3>
+                        <h3>Contact Us</h3>
                         <address>
-                            Email: <a href="mailto:teachmenow@tustiioweb.com">teachmenow@tustiioweb.com</a><br />
+                            Email: <a href="mailto:teachmenow@tustiioweb.com">TeachMeNow@gmail.com</a><br />
                             Teléfono: +503 0000-0000.
                         </address>
                     </div>
 
                     <div className="footer-section">
-                        <h3>Síguenos</h3>
+                        <h3>Follow us</h3>
                         <div className="social-icons">
                             <a href="#" aria-label="Facebook"><img src="R.png" alt="Facebook" /></a>
                             <a href="#" aria-label="Twitter"><img src="twitter-x-logo-png-9.png" alt="Twitter" /></a>
                             <a href="#" aria-label="Instagram"><img src="instagram-social-media-icon-symbol-design-element-vector-42845212.jpg" alt="Instagram" /></a>
                         </div>
-                        <p><a href="#">Políticas y Privacidad</a></p>
+                        <p><a href="#">Politics and Privacy</a></p>
                     </div>
                 </div>
             </footer>

@@ -41,7 +41,7 @@ function App() {
               <Route path="/LandingMaestro" element={<MainPage />} />
               <Route path="/Plans" element={<Planes />} />
               <Route path="/Redirect" element={<SignUpRedirect />} />
-              <Route path="TestMaestro" element={<TestParaMaestros/>}/>
+              <Route/>
             </Routes>
           </Router>
 

@@ -26,6 +26,9 @@ export function Navbar() {
               <li>Herramientas</li>
             </ul>
           </nav>
+          <SignOutButton>
+            <button className="rounded-lg bg-blue-400 p-2 text-black">SignOut</button>
+          </SignOutButton>
           <div className="profile">
             <img src="profile-icon-design-free-vector.jpg" alt="" />
           </div>
