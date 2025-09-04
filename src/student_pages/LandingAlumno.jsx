@@ -10,7 +10,7 @@ export function LandingAlumno() {
         </h1>
 
         <div className="cards-containers">
-          <div className="card">
+          <div className="cards">
             <img
               src="https://scalalearning.com/storage/2023/08/GSS_CREATIVIDAD_SCALA_ARTE_ARTICULO_61_Estilos-de-aprendizaje-y-sus-metodos-04-1024x876.png"
               alt="estilo"
@@ -23,7 +23,7 @@ export function LandingAlumno() {
             <button>Start</button>
           </div>
 
-          <div className="card">
+          <div className="cards">
             <img
               src="https://face.unt.edu.ar/web/wp-content/uploads/2020/11/taller-docentes-face-.jpg"
               alt="clases"
@@ -36,7 +36,7 @@ export function LandingAlumno() {
             <button>Start</button>
           </div>
 
-          <div className="card">
+          <div className="cards">
             <img
               src="https://us.123rf.com/450wm/yupiramos/yupiramos1705/yupiramos170527956/78659631-statistics-bars-with-arrow-vector-illustration-design.jpg"
               alt="resultados"
