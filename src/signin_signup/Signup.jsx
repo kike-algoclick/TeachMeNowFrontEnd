@@ -56,9 +56,9 @@ function Signup() {
             await signUp.create({
               emailAddress: email.trim(),
               password: password,
+              firstName: fName.trim(),
+              lastName: lastName.trim(),
               unsafeMetadata: {
-                firstName: fName.trim(),
-                lastName: lastName.trim(),
                 role: role,
               },
             });
