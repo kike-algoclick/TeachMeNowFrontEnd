@@ -41,7 +41,7 @@ export function Landingpage() {
             <div className="card-body">
               <h2>Start Now</h2>
               <p>Get started with you classes and improve your results</p>
-              <button>Iniciar</button>
+              <button>Start Now</button>
             </div>
           </div>
 
