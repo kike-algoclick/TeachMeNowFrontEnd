@@ -131,7 +131,7 @@ input[type="radio"]:checked {
   border: 2px solid #000;
 }
  
-btn-container {
+.btn-container {
   margin-top: 20px;
   text-align: right;
 }
