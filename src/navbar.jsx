@@ -6,6 +6,7 @@ import { ClerkProvider } from "@clerk/clerk-react";
 import { useAuth } from "@clerk/clerk-react";
 
 
+
 const PUBLISHABLE_KEY = "pk_test_cmFyZS1lYXJ3aWctMy5jbGVyay5hY2NvdW50cy5kZXYk";
 
 
@@ -20,10 +21,10 @@ export function Navbar() {
           </div>
           <nav className="nav">
             <ul>
-              <li>Inicio</li>
-              <li>Información</li>
-              <li>Organización</li>
-              <li>Herramientas</li>
+              <li>Home</li>
+              <li>About us</li>
+              <li>Explore Premium</li>
+              <li>Tools</li>
             </ul>
           </nav>
           <SignOutButton>
