@@ -1,10 +1,6 @@
 import React, { useState } from "react";
 import '../CSS/TestParaMaestros.css';
-import libro from "/TestParMaestrosIMG/libro.png";
-import foco from "/TestParMaestrosIMG/Foco.png";
-import personas from "/TestParMaestrosIMG/personas.png";
-import calendario from "/TestParMaestrosIMG/Calendario.png";
-import campana from "/TestParMaestrosIMG/Campana.png";
+
 
 export function TestParaMaestros() {
   const [respuestas, setRespuestas] = useState({
@@ -48,7 +44,6 @@ export function TestParaMaestros() {
             <label><input type="radio" name="q1" onChange={() => handleRadioChange("q1", "Juegos")} /> Usando juegos o dinámicas divertidas</label><br />
             <label><input type="radio" name="q1" onChange={() => handleRadioChange("q1", "Otra")} /> Otra forma</label><br />
           </div>
-          <img src={libro} alt="Pregunta 1" className="Pregunta-img" />
         </div>
 
         <div className="Card-preguntas">
@@ -59,7 +54,7 @@ export function TestParaMaestros() {
             <label><input type="radio" name="q2" onChange={() => handleRadioChange("q2", "Herramientas")} /> Herramientas y recursos listos y de uso para tus clases</label><br />
             <label><input type="radio" name="q2" onChange={() => handleRadioChange("q2", "Otro")} /> Otro tipo de apoyo</label><br />
           </div>
-          <img src={foco} alt="Pregunta 2" className="Pregunta-img2" />
+          
         </div>
 
         <div className="Card-preguntas">
@@ -70,7 +65,7 @@ export function TestParaMaestros() {
             <label><input type="radio" name="q3" onChange={() => handleRadioChange("q3", "Materiales")} /> Material para tus clases</label><br />
             <label><input type="radio" name="q3" onChange={() => handleRadioChange("q3", "Otro")} /> Otro tipo de apoyo</label><br />
           </div>
-          <img src={personas} alt="Pregunta 3" className="Pregunta-img" />
+          
         </div>
 
         <div className="Card-preguntas">
@@ -80,7 +75,7 @@ export function TestParaMaestros() {
             <label><input type="radio" name="q4" onChange={() => handleRadioChange("q4", "Algo")} /> Algo</label><br />
             <label><input type="radio" name="q4" onChange={() => handleRadioChange("q4", "Mucho")} /> Mucho</label><br />
           </div>
-          <img src={calendario} alt="Pregunta 4" className="Pregunta-img2" />
+        
         </div>
 
         <div className="Card-preguntas">
@@ -91,7 +86,7 @@ export function TestParaMaestros() {
             <label><input type="radio" name="q5" onChange={() => handleRadioChange("q5", "3")} /> 3</label><br />
             <label><input type="radio" name="q5" onChange={() => handleRadioChange("q5", "Más")} /> Más</label><br />
           </div>
-          <img src={campana} alt="Pregunta 5" className="Pregunta-img" />
+      
         </div>
       </div>
 
