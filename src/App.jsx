@@ -18,8 +18,6 @@ import { TestParaMaestros } from "./teacher_pages/TestParaMaestros.jsx";
 
 
 
-
-
 function App() {
 
   const clerkPubKey = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
@@ -41,7 +39,7 @@ function App() {
               <Route path="/LandingMaestro" element={<MainPage />} />
               <Route path="/Plans" element={<Planes />} />
               <Route path="/Redirect" element={<SignUpRedirect />} />
-              <Route/>
+              <Route path="TestMaestro" element={<TestParaMaestros/>}/>
             </Routes>
           </Router>
 
