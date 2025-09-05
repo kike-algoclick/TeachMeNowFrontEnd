@@ -1,6 +1,11 @@
 import React from "react";
 import "../CSS/LandingAlumno.css";
-
+import aprendizaje from '/LandingAlumno/Aprendizaje.jpg'
+import clase from '/LandingAlumno/clases.jpg'
+import grafica from '/LandingAlumno/grafica.jpg'
+import videos from '/LandingAlumno/videos.jpg'
+import imagenes from '/LandingAlumno/imagenes.jpg'
+import escucha from '/LandingAlumno/escucha.jpg'
 export function LandingAlumno() {
   return (
     <div className="Landing-container">
@@ -12,8 +17,7 @@ export function LandingAlumno() {
         <div className="cards-containers">
           <div className="cards">
             <img
-              src="https://scalalearning.com/storage/2023/08/GSS_CREATIVIDAD_SCALA_ARTE_ARTICULO_61_Estilos-de-aprendizaje-y-sus-metodos-04-1024x876.png"
-              alt="estilo"
+              src={aprendizaje} alt=""
             />
             <h3>Learning style</h3>
             <p>
@@ -25,7 +29,7 @@ export function LandingAlumno() {
 
           <div className="cards">
             <img
-              src="https://face.unt.edu.ar/web/wp-content/uploads/2020/11/taller-docentes-face-.jpg"
+              src={clase}
               alt="clases"
             />
             <h3>Your classes</h3>
@@ -38,7 +42,7 @@ export function LandingAlumno() {
 
           <div className="cards">
             <img
-              src="https://us.123rf.com/450wm/yupiramos/yupiramos1705/yupiramos170527956/78659631-statistics-bars-with-arrow-vector-illustration-design.jpg"
+              src={grafica}
               alt="resultados"
             />
             <h3>Your results</h3>
@@ -53,7 +57,7 @@ export function LandingAlumno() {
         <div className="learning-options">
           <div className="learning-card">
             <img
-              src="https://cdn-icons-png.flaticon.com/512/1383/1383260.png"
+              src={videos}
               alt="videos"
             />
             <p>
@@ -62,14 +66,14 @@ export function LandingAlumno() {
           </div>
 
           <div className="learning-card">
-            <img src="dsfa" alt="imagenes" />
+            <img src={imagenes} alt="imagenes" />
             <p>
               <b>Images</b>
             </p>
           </div>
 
           <div className="learning-card">
-            <img src="https://i.pinimg.com/736x/28/b2/b4/28b2b4a0f52b0c829255c7859a60ee94.jpg" />
+            <img src={escucha} />
             <p>
               <b>Listening</b>
             </p>
