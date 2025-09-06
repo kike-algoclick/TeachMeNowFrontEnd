@@ -7,7 +7,7 @@ body {
 }
 
 
-.Header {
+.TeachNav {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -19,6 +19,7 @@ body {
     position:fixed;
     width: 100lvi;
     z-index: 200;
+    gap: 10px;
     
 }
  
@@ -27,17 +28,21 @@ body {
     height: 45px;
     display: flex;
 }
+
+.TeachMeNowLogo{
+    width: fit-content;
+}
  
  
-.nav ul {
+.options ul {
     display: flex;
     list-style: none;
-    gap: 25px;
+    gap: 70px;
     margin: 0;
     padding: 0;
 }
  
-.nav li {
+.options li {
     cursor: pointer;
     font-weight: 500;
     color: #2c3e50;
@@ -46,7 +51,7 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
  
-.nav li:hover {
+.options li:hover {
     background-color:#4A7FA7;
     color: #ffffff;
 }

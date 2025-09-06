@@ -41,7 +41,7 @@ function App() {
                 <Route path="/Plans" element={<Planes />} />
                 <Route path="/Redirect" element={<SignUpRedirect />} />
                 <Route path="TestMaestro" element={<TestParaMaestros />} />
-                <Route path="/navbar" element={<Navbar />} />
+                <Route path="/navbar" element={<Navbar/>} />
               </Routes>
             </div>
 

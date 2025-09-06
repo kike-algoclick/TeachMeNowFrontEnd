@@ -15,34 +15,27 @@ const PUBLISHABLE_KEY = "pk_test_cmFyZS1lYXJ3aWctMy5jbGVyay5hY2NvdW50cy5kZXYk";
 export function Navbar() {
 
   return (
-    <>
-      <div className="navbar">
-        <header className="Header">
-          <div className="Logo">
-            <img src={logo} alt="TeachMeNow Logo" />
-          </div>
-          <nav className="nav">
-            <ul>
-              <Link to="/">
-                <li>Home</li>
-              </Link>
-              <li>About us</li>
-              <Link to="/Plans">
-                <li>Explore Premium</li>
-              </Link>
-              <li>Tools</li>
-            </ul>
-          </nav>
-          <SignOutButton>
-            <button className="rounded-lg bg-blue-400 p-2 text-black">
-              SignOut
-            </button>
-          </SignOutButton>
-          <div className="profile">
-            <img src="profile-icon-design-free-vector.jpg" alt="" />
-          </div>
-        </header>
+    <div className="TeachNav">
+      <div className="Logo">
+        <Link to="/">
+          <img src={logo} alt="TeachMeNowLogo" />
+        </Link>
       </div>
-    </>
+      <nav className="options">
+        <ul>
+          <Link to="/">
+            <li>Home</li>
+          </Link>
+          <li>About us</li>
+          <Link to="/Plans">
+            <li>Explore Premium</li>
+          </Link>
+          <li>Tools</li>
+        </ul>
+      </nav>
+      <div className="profile">
+        <img src="R.png" alt="" />
+      </div>
+    </div>
   );
 }
