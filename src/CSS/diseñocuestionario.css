@@ -4,7 +4,9 @@
   justify-content: center;
   align-items: center;
   color: #333;
-  margin-top: 10px;
+  margin: 45px;
+  margin-right: 45px;
+
 }
  
  
@@ -13,9 +15,12 @@
   border-radius: 32px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
   max-width: 2500px;
-  min-height: 1000px;
-
-
+  width: 98%;          /* que ocupe más ancho */
+  min-width: 1400px;   /* más ancho mínimo */
+  min-height: 1300px;  /* más alto */
+  padding: 40px;       /* espacio interno */
+  margin: 30px auto; 
+  
 }
  
 .header {
@@ -28,7 +33,7 @@
  
 .contenedor{
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+ grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 20px;
   margin-top: 20px;
   margin-left: 20px;
@@ -37,7 +42,7 @@
  
 .contenedor2{
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 20px;
   margin-top: 20px;
   margin-left: 20px;
@@ -47,26 +52,30 @@
 .contenedor4{
   display: flex;
   align-items: center;
-  grid-template-columns: repeat(3, 1fr);
+grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 20px;
   margin-top: 20px;
+  margin-right: 20px;
+  margin-right: 20px;
 }
  
  
  
  
 .Card-preguntas{
-  position: relative;  
-  width: 400px;        
-  height: 200px;        
+ position: relative;  
+  width: 100%;         /* ocupará todo el ancho de la columna */
+  height: 220px;          
   background: #fff;    
   border-radius: 12px;  
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
   margin: 15px;        
-  padding: 10px;
+  padding: 15px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;   /* 📌 Ahora horizontal */
+  align-items: center;   /* centra verticalmente */
+  gap: 15px;  
+  margin-right: 60px; 
  
 }
  
@@ -85,23 +94,23 @@
 }
  
 .Pregunta-img {
-  position: absolute;
-  width: 45px;  
-  bottom: -10px;
-  right: -10px;
+  width: 100px;        /* ajusta tamaño de la imagen */
+  height: 100px;
+  object-fit: cover;
+  border-radius: 12px;
 }
 .Pregunta-img2 {
-  position: absolute;
-  width: 45px;  
-  top: -10px;
-  left: -40px;
+  width: 100px;        /* ajusta tamaño de la imagen */
+  height: 100px;
+  object-fit: cover;
+  border-radius: 12px;
 }
  
 .Pregunta-img3 {
-  position: absolute;
-  width: 45px;  
-  bottom: -10px;
-  left: -10px;
+  width: 100px;        /* ajusta tamaño de la imagen */
+  height: 100px;
+  object-fit: cover;
+  border-radius: 12px;
 }
  
 .Contenedor4{
@@ -171,6 +180,7 @@ input[type="radio"]:checked {
   margin-bottom: 20px;
   min-height: 120px;
 }
+
  
 .typewriter {
   overflow: hidden;
@@ -200,4 +210,26 @@ input[type="radio"]:checked {
   object-fit: cover;
   margin-right: 100px;
  
+}
+
+.custom-alert {
+  position: fixed;
+  bottom: 40px;   /* lugar en pantalla */
+  right: 40px;
+  background: #1A3D63;
+  color: white;
+  font-weight: bold;
+  padding: 14px 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.25);
+  z-index: 999;
+  display: flex;             /* Para alinear ícono + texto */
+  align-items: center;
+  gap: 10px;                 /* espacio entre imagen y texto */
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.alert-icon {
+  width: 60px;   /* tamaño de la imagen */
+  height: 60px;
 }
