@@ -4,6 +4,8 @@ import logo from "/logo.png";
 import { SignInButton, SignUpButton, SignOutButton } from "@clerk/clerk-react";
 import { ClerkProvider } from "@clerk/clerk-react";
 import { useAuth } from "@clerk/clerk-react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 
@@ -21,14 +23,20 @@ export function Navbar() {
           </div>
           <nav className="nav">
             <ul>
-              <li>Home</li>
+              <Link to="/">
+                <li>Home</li>
+              </Link>
               <li>About us</li>
-              <li>Explore Premium</li>
+              <Link to="/Plans">
+                <li>Explore Premium</li>
+              </Link>
               <li>Tools</li>
             </ul>
           </nav>
           <SignOutButton>
-            <button className="rounded-lg bg-blue-400 p-2 text-black">SignOut</button>
+            <button className="rounded-lg bg-blue-400 p-2 text-black">
+              SignOut
+            </button>
           </SignOutButton>
           <div className="profile">
             <img src="profile-icon-design-free-vector.jpg" alt="" />
