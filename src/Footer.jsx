@@ -8,7 +8,7 @@ export function Footer() {
             
                 <div className="footer-content">
                     <div className="footer-section">
-                        <h3>What are?</h3>
+                        <h3>What are we?</h3>
                         <p>We are a platform that supports teachers with practical tools to improve classroom results</p>
                     </div>
 
