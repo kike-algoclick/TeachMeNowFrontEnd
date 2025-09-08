@@ -1,9 +1,22 @@
-body {
+.navy{
     font-family: 'Segoe UI', sans-serif;
     background-color: #f4f6f8;
-    margin: 0;
-    padding: 0;
     color: #333;
+    display: flex;
+}
+.sign{
+cursor: pointer;
+    font-weight: 500;
+    color: #2c3e50;
+    padding: 8px 12px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+.sign:hover{
+ background-color:#4A7FA7;
+    color: #ffffff;
 }
 
 
@@ -17,10 +30,8 @@ body {
     border-bottom: 1px solid #e0e0e0;
     animation: fadeIn 0.8s ease-in;
     position:fixed;
-    width: 100lvi;
     z-index: 200;
-    gap: 10px;
-    
+    gap: 10px;    
 }
  
  

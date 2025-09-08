@@ -9,33 +9,38 @@ import { Link } from "react-router-dom";
 
 
 
-const PUBLISHABLE_KEY = "pk_test_cmFyZS1lYXJ3aWctMy5jbGVyay5hY2NvdW50cy5kZXYk";
-
 
 export function Navbar() {
 
   return (
-    <div className="TeachNav">
-      <div className="Logo">
-        <Link to="/">
-          <img src={logo} alt="TeachMeNowLogo" />
-        </Link>
-      </div>
-      <nav className="options">
-        <ul>
+    <>
+      <div className="TeachNav navy w-full">
+        <div className="Logo">
           <Link to="/">
-            <li>Home</li>
+            <img src={logo} alt="TeachMeNowLogo" />
           </Link>
-          <li>About us</li>
-          <Link to="/Plans">
-            <li>Explore Premium</li>
+        </div>
+        <nav className="options">
+          <ul>
+            <Link to="/">
+              <li>Home</li>
+            </Link>
+            <li>About us</li>
+            <Link to="/Plans">
+              <li>Explore Premium</li>
+            </Link>
+            <li>Tools</li>
+          </ul>
+        </nav>
+        <div className="flex justify-center gap-5">
+          <Link to="/Login">
+            <button className="sign">Log in</button>
           </Link>
-          <li>Tools</li>
-        </ul>
-      </nav>
-      <div className="profile">
-        <img src="R.png" alt="" />
+          <Link to="/signUp">
+            <button className="sign">Sign up</button>
+          </Link>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
