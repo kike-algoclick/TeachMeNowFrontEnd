@@ -98,7 +98,7 @@ catch(err){
               </div>
               <button
                 type="submit"
-                className="w-full text-white py-2 rounded-md font-bold transition-colors duration-300"
+                className="w-full text-white py-2 rounded-md font-bold transition-colors duration-300 cursor-pointer"
                 style={{ backgroundColor: hover ? "#153654" : "#1A3D63" }}
                 onMouseOver={() => setHover(true)}
                 onMouseOut={() => setHover(false)}

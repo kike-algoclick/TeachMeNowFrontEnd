@@ -24,7 +24,9 @@ function Signup() {
   const [role, setRole] = useState("")
   const [errorMsg, setErrorMsg] = useState("");
   const [verification, setVerification] = useState(false);  
+   const [code, setCode] = useState("");
   const { isSignedIn } = useAuth(); //Para chequear que no haya un login actual.
+  
 
   //Si la conección con Clerk no está lista, da error
  
@@ -36,7 +38,16 @@ function Signup() {
   const registrar = async (e) => {
       e.preventDefault();
       setErrorMsg("")
-       if (!isLoaded) return null;  
+       if (!isLoaded)return null;
+
+       if (isSignedIn && role == "teacher") {
+         window.location.href = '/LandingMaestro'
+       }
+       else if (isSignedIn && role == "maestro"){
+        window.location.href = "/LandingAlumno";
+       }
+
+       
 
       if (!email || !password) {
         setErrorMsg("Por favor, completa todos los campos");
@@ -73,12 +84,44 @@ function Signup() {
       };
     };
 
-    
+    const verificar = async (e) => {
+      e.preventDefault();
+      setErrorMsg("");
+
+      try {
+        const completeSignUp = await signUp.attemptEmailAddressVerification({
+          code,
+        });
+        setVerification(true);
+
+        console.log("Resultado de verificación:", completeSignUp);
+
+        if (completeSignUp.status === "complete") {
+          await setActive({ session: completeSignUp.createdSessionId });
+          console.log("✅ Registro completo, redirigiendo...");
+          if(role =="student"){
+            windows.location.href('/LandingAlumno')
+          }
+          if(role == "teacher"){
+            windows.location.href('/LandingMaestro')
+          }
+        } else {
+          console.warn(
+            "⚠️ Registro no se completó, status:",
+            completeSignUp.status
+          );
+        }
+      } catch (err) {
+        console.error("Error en attemptEmailAddressVerification:", err);
+        setErrorMsg(err.errors?.[0]?.message || "mistaken code");
+      }
+    };
 
 
 
   return (
-    <div className="bg-[url(/SignUpImage.png)] bg-cover h-full p-10">
+    <div className="bg-[url(/SignUpImage.png)] bg-cover h-220 p-10 flex justify-center ">
+      {!verification && (
         <div className=" p-10 bg-white p-8 rounded-lg shadow-xl w-full max-w-sm mx-auto">
           <h2
             className="text-2xl font-bold mb-6 text-center"
@@ -187,7 +230,7 @@ function Signup() {
 
             <button
               type="submit"
-              className="w-full text-white py-2 rounded-md font-bold transition-colors duration-300"
+              className="w-full text-white py-2 rounded-md font-bold transition-colors duration-300 cursor-pointer"
               style={{ backgroundColor: hover ? "#153654" : "#1A3D63" }}
               onMouseOver={() => setHover(true)}
               onMouseOut={() => setHover(false)}
@@ -199,8 +242,51 @@ function Signup() {
             )}
           </form>
         </div>
-    
-      
+      )}
+      :
+      {verification && (
+        <div className="mt-20 bg-white w-100 h-100 rounded-lg shadow-2xl">
+          <div className="">
+            <h1
+              className="text-4xl p-2 mt-5 ml-10"
+              style={{ color: "#1A3D63" }}
+            >
+              Almost there!
+            </h1>
+            <h1 className="ml-10 -mt-3 p-2">Let's verify your account</h1>
+          </div>
+
+          <form onSubmit={verificar} className="-mt-6">
+            <div className="m-10 p-2">
+              <label htmlFor="code" className="block">
+                Type your code
+              </label>
+              <input
+                value={code}
+                id="code"
+                type="text"
+                className="border-2 w-full text-center mt-5 border-gray-300 rounded-lg block h-10 text-lg p-5"
+                placeholder="eg. 123456"
+                onChange={(e) => setCode(e.target.value)}
+              />
+              <button
+                className="mt-10 text-center rounded-lg cursor-pointer"
+                style={{
+                  backgroundColor: "#1A3D63",
+                  color: "white",
+                  width: "100px",
+                  height: "40px",
+                }}
+              >
+                Verify
+              </button>
+            </div>
+          </form>
+          {errorMsg && (
+            <p className="text-red-500 text-center mt-2x">{errorMsg}</p>
+          )}
+        </div>
+      )}
     </div>
   );
 }

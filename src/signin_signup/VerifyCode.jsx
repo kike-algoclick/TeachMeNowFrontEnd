@@ -1,7 +1,6 @@
 import React from "react";
 import { useState } from "react";
 
-
 export function VerifyCode(){
 
      const [errorMsg, setErrorMsg] = useState("");
