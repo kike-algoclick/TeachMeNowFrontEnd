@@ -28,22 +28,25 @@ function App() {
     return (
       <>
         <ClerkProvider publishableKey={clerkPubKey}>
-          <Navbar />
           <Router>
-            <Routes>
-              <Route path="/" element={<Landingpage />} />
-              <Route path="/Login" element={<Login />} />
-              <Route path="/Signup" element={<Signup />} />
-              <Route path="/CuestionarioA" element={<Preguntas />} />
-              <Route path="/LandingAlumno" element={<LandingAlumno />} />
-              <Route path="/LandingMaestro" element={<MainPage />} />
-              <Route path="/Plans" element={<Planes />} />
-              <Route path="/Redirect" element={<SignUpRedirect />} />
-              <Route path="TestMaestro" element={<TestParaMaestros/>}/>
-            </Routes>
-          </Router>
+            <Navbar />
+            <div className="mt-18">
+              <Routes>
+                <Route path="/" element={<Landingpage />} />
+                <Route path="/Login" element={<Login />} />
+                <Route path="/Signup" element={<Signup />} />
+                <Route path="/CuestionarioA" element={<Preguntas />} />
+                <Route path="/LandingAlumno" element={<LandingAlumno />} />
+                <Route path="/LandingMaestro" element={<MainPage />} />
+                <Route path="/Plans" element={<Planes />} />
+                <Route path="/Redirect" element={<SignUpRedirect />} />
+                <Route path="TestMaestro" element={<TestParaMaestros />} />
+                <Route path="/navbar" element={<Navbar />} />
+              </Routes>
+            </div>
 
-          <Footer />
+            <Footer />
+          </Router>
         </ClerkProvider>
       </>
     );
