@@ -17,42 +17,42 @@ export function Test() {
           </div>
 
           <div className="content">
-            <h1 className="title">Evaluación de estilos de aprendizaje</h1>
+            <h1 className="title">Assessment of learning styles</h1>
             <p className="subtitle">
-              <b>Descubre tu estilo de aprendizaje</b>
+              <b>Discover your learning style</b>
             </p>
             <div className="Cuadrito">
               <p className="description">
-                Cada persona aprende de forma diferente. Comprender tu estilo de
-                aprendizaje preferido puede ayudarte a estudiar con mayor
-                eficacia y a retener mejor la información.
+                Each person learns in a different way. Understanding your
+                 preferred learning style can help you study more effectively 
+                 and retain information better.
               </p>
             </div>
             <div className="grid">
               <div className="info-box">
-                <h3>¿Qué descubriras?</h3>
+                <h3>What will you discover?</h3>
                 <ul className="Check">
-                  <li>Tu principal estilo de aprendizaje</li>
-                  <li>Estrategias de estudio personalizadas</li>
-                  <li>Cómo aprovechar tus fortalezas de aprendizaje</li>
-                  <li>Formas de mejorar en áreas desafiantes</li>
+                  <li>Your main learning style</li>
+                  <li>Customized study strategies</li>
+                  <li>How to leverage your learning strengths</li>
+                  <li>Ways to improve in challenging areas</li>
                 </ul>
 
-                <h3>Sobre el Test</h3>
+                <h3>About the Test</h3>
                 <ul>
-                  <li>20 preguntas</li>
-                  <li>Aproximadamente 3–5 minutos</li>
+                  <li>20 questions</li>
+                  <li>Approximately 3–5 minutes</li>
                   <li>
-                    Este cuestionario fue creando basandonos en el Test{" "}
+                    This questionnaire was created based on the Test.{" "}
                     <b>CHAEA</b>.
                   </li>
-                  <li>Resultados al instante</li>
+                  <li>Instant results</li>
                 </ul>
               </div>
 
               <div className="right-box">
                 <p className="welcome">
-                  Bienvenido a{" "}
+                  Welcome to {" "}
                   <a href="#">
                     <img
                       src="/Captura de pantalla_13-8-2025_222029_www.figma.com.jpeg"
@@ -63,7 +63,7 @@ export function Test() {
                 <a href="#">
                   <img src={robot} alt="" className="robot" />
                 </a>
-                <button className="start-btn">Empezar Test</button>
+                <button className="start-btn">Start Test</button>
               </div>
             </div>
           </div>

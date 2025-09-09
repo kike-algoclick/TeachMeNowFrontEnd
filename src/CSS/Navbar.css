@@ -31,7 +31,8 @@ cursor: pointer;
     animation: fadeIn 0.8s ease-in;
     position:fixed;
     z-index: 200;
-    gap: 10px;    
+    gap: 10px;
+
 }
  
  

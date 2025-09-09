@@ -16,7 +16,7 @@ export function Resultados() {
       {/* Resultados */}
       <section className="results-hero">
         <div className="results-left">
-          <h2 className="results-title">Tus Resultados</h2>
+          <h2 className="results-title">Your Results</h2>
         </div>
     
         <div className="Medialuna">
@@ -24,7 +24,7 @@ export function Resultados() {
           <img src={Robot}alt="Robot" className="robot-image" />
           </div>
            <div className="suggestions-header">
-           <h3>¡Hola!</h3>
+           <h3>Hello</h3>
         </div>
         </div>
 
@@ -38,32 +38,31 @@ export function Resultados() {
         {/* Explicación general */}
         <div className="suggestion-card big-card">
           <p>
-            Tu forma de aprender se basa principalmente en{" "}
-            <strong>escuchar y procesar información verbal</strong>. 
-            Esto significa que tu memoria y comprensión se activan más cuando recibes 
-            <em> explicaciones orales</em>, participas en <em>discusiones</em> o escuchas 
-            <em> ejemplos</em>.  
-            El estilo <strong>visual</strong> también es importante para ti, ya que los 
-            elementos gráficos y esquemas refuerzan lo que escuchas.
+            Your way of learning is mainly based on{" "}
+            <strong>listen to and process verbal information</strong>. 
+            This means that your memory and understanding are activated more when you receive
+            <em> oral explanations</em>, you participate in <em>discussions</em> or you listen
+            <em> examples</em>.  
+            The style <strong>visual</strong> It is also important for you, as graphic elements and diagrams reinforce what you hear.
           </p>
 
            <br />
 
-            <h4>🎧 Recomendaciones para aprovechar tu estilo auditivo:</h4>
+            <h4>🎧 Recommendations to take advantage of your auditory style:</h4>
             <ul>
-              <li>Participa activamente en discusiones, grupos de estudio y presentaciones.</li>
-              <li>Explica en voz alta lo que aprendes, incluso si es para ti mismo.</li>
-              <li>Usa rimas, canciones o acrónimos para memorizar conceptos.</li>
+              <li>Participate actively in discussions, study groups, and presentations.</li>
+              <li>Explain out loud what you are learning, even if it's just for yourself.</li>
+              <li>Use rhymes, songs, or acronyms to memorize concepts.</li>
             </ul>
 
             <br />
 
-            <h4>👀 Estrategias para fortalecer tu estilo visual:</h4>
+            <h4>👀 Strategies to strengthen your visual style:</h4>
             <ul>
-              <li>Agrega diagramas, tablas o mapas mentales a tus apuntes.</li>
-              <li>Usa colores para resaltar conceptos clave.</li>
-              <li>Busca videos o animaciones que complementen las explicaciones orales.</li>
-              <li>Organiza la información en esquemas claros y estructurados.</li>
+              <li>Add diagrams, tables, or mind maps to your notes.</li>
+              <li>Use colors to highlight key concepts.</li>
+              <li>Look for videos or animations that complement the oral explanations.</li>
+              <li>Organize the information in clear and structured diagrams.</li>
             </ul>
         </div>
       </section>

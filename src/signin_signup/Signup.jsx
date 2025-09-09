@@ -26,6 +26,7 @@ function Signup() {
   const [verification, setVerification] = useState(false);  
    const [code, setCode] = useState("");
   const { isSignedIn } = useAuth(); //Para chequear que no haya un login actual.
+  const navigate = useNavigate();
   
 
   //Si la conección con Clerk no está lista, da error
@@ -100,10 +101,10 @@ function Signup() {
           await setActive({ session: completeSignUp.createdSessionId });
           console.log("✅ Registro completo, redirigiendo...");
           if(role =="student"){
-            useNavigate('/LandingAlumno')
+            navigate('/LandingAlumno')
           }
           if(role == "teacher"){
-           useNavigate('/LangingMaestro')
+           navigate('/LandingMaestro')
           }
         } else {
           console.warn(
@@ -211,7 +212,7 @@ function Signup() {
                     : "bg-gray-100 text-gray-700"
                 }`}
               >
-                Soy estudiante
+                I'm student
               </button>
               <button
                 type="button"
@@ -222,7 +223,7 @@ function Signup() {
                     : "bg-gray-100 text-gray-700"
                 }`}
               >
-                Soy Maestro
+                I'm Teacher
               </button>
             </div>
 

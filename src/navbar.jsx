@@ -21,26 +21,26 @@ export function Navbar() {
 
   return (
     <>
-      <div className="TeachNav navy w-full">
-        <div className="Logo">
-          <Link to="/">
-            <img src={logo} alt="TeachMeNowLogo" />
-          </Link>
-        </div>
-        <nav className="options">
-
-         <ul>
+      {!isSignedIn && (
+        <div className="TeachNav navy w-full">
+          <div className="Logo">
             <Link to="/">
-              <li>Home</li>
+              <img src={logo} alt="TeachMeNowLogo" />
             </Link>
-            <li>About us</li>
-            <Link to="/Plans">
-              <li>Explore Premium</li>
-            </Link>
-            <li>Tools</li>
-          </ul>
-        </nav>
-        {!isSignedIn && (
+          </div>
+          <nav className="options">
+            <ul>
+              <Link to="/">
+                <li>Home</li>
+              </Link>
+              <li>About us</li>
+              <Link to="/Plans">
+                <li>Explore Premium</li>
+              </Link>
+              <li>Tools</li>
+            </ul>
+          </nav>
+
           <div className="flex justify-center gap-5">
             <Link to="/Login">
               <button className="sign">Log in</button>
@@ -49,18 +49,49 @@ export function Navbar() {
               <button className="sign">Sign up</button>
             </Link>
           </div>
-        )}:{isSignedIn && (
-          <div className="flex justify-center gap-5">
-            <SignOutButton style={{cursor: "pointer",
-    fontWeight: "500",
-    color: "#2c3e50",
-    padding: "8px 12px",
-    borderRadius: "20px",
-    transition: "backgroundColor 0.3s ease, color 0.3s ease"
-}}></SignOutButton>
+        </div>
+      )}
+      :
+      {isSignedIn && (
+        <div className="TeachNav navy w-full">
+          <div className="Logo">
+            <Link
+              to={userRole === "teacher" ? "/LandingMaestro" : "/LandingAlumno"}
+            >
+              <img src={logo} alt="TeachMeNowLogo" />
+            </Link>
           </div>
-        )}
-      </div>
+          <nav className="options">
+            <ul>
+              <Link
+                to={
+                  userRole === "teacher" ? "/LandingMaestro" : "/LandingAlumno"
+                }
+              >
+                <li>Home</li>
+              </Link>
+              <li>About us</li>
+              <Link to="/Plans">
+                <li>Explore Premium</li>
+              </Link>
+              <li>Tools</li>
+            </ul>
+          </nav>
+
+          <div className="flex justify-center gap-5">
+            <SignOutButton
+              style={{
+                cursor: "pointer",
+                fontWeight: "500",
+                color: "#2c3e50",
+                padding: "8px 12px",
+                borderRadius: "20px",
+                transition: "backgroundColor 0.3s ease, color 0.3s ease",
+              }}
+            ></SignOutButton>
+          </div>
+        </div>
+      )}
     </>
   );
 }
