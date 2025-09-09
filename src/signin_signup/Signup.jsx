@@ -100,10 +100,10 @@ function Signup() {
           await setActive({ session: completeSignUp.createdSessionId });
           console.log("✅ Registro completo, redirigiendo...");
           if(role =="student"){
-            windows.location.href('/LandingAlumno')
+            useNavigate('/LandingAlumno')
           }
           if(role == "teacher"){
-            windows.location.href('/LandingMaestro')
+           useNavigate('/LangingMaestro')
           }
         } else {
           console.warn(

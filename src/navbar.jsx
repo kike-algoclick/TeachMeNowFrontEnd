@@ -7,13 +7,16 @@ import { useAuth } from "@clerk/clerk-react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { useUser } from "@clerk/clerk-react";
+import { useState } from "react";
 
 
 
-export function Navbar({role}) {
+export function Navbar() {
   const {user} = useUser();
   const userRole = user?.publicMetaData?.role;
   const {isSignedIn} = useAuth()
+  const [role, setRole] = useState()
+  
   
 
   return (
@@ -25,7 +28,8 @@ export function Navbar({role}) {
           </Link>
         </div>
         <nav className="options">
-          <ul>
+
+         <ul>
             <Link to="/">
               <li>Home</li>
             </Link>
@@ -45,9 +49,7 @@ export function Navbar({role}) {
               <button className="sign">Sign up</button>
             </Link>
           </div>
-        )}
-
-        {isSignedIn && (
+        )}:{isSignedIn && (
           <div className="flex justify-center gap-5">
             <SignOutButton style={{cursor: "pointer",
     fontWeight: "500",
