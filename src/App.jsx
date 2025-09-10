@@ -16,6 +16,7 @@ import { SignUpRedirect } from "./signin_signup/SignUpRedirect.jsx";
 import { TestParaMaestros } from "./teacher_pages/TestParaMaestros.jsx";
 import PerfilMaestro from "./teacher_pages/PerfilMaestro.jsx";
 import PerfilAlumno from "./student_pages/PerfilAlumno.jsx";
+import AboutUs from "./About_Us/AboutUs.jsx";
 
 
 
@@ -46,6 +47,7 @@ function App() {
                 <Route path="/navbar" element={<Navbar/>} />
               <Route path="/ProfileM" element={<PerfilMaestro/>}/>
               <Route path="/ProfileA" element={<PerfilAlumno/>}/>
+              <Route path="/AboutUs" element={<AboutUs/>}/>
               </Routes>
             </div>
 

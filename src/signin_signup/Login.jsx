@@ -3,7 +3,7 @@ import '../CSS/Login.css'
 import {Link} from 'react-router-dom'
 import { SignIn, useSignIn } from "@clerk/clerk-react";
 import { useState } from "react";
-
+import { useNavigate } from "react-router-dom";
 
 
 function Login(){
@@ -31,11 +31,27 @@ const form = await signIn.create({
   password: password
 });
 
-if (form.status === "complete") {
-  await setActive({ session: form.createdSessionId })
-} else {
-  console.log("Estado Login:", form);
-}
+  if (form.status === "complete") {
+    await setActive({ session: form.createdSessionId });
+
+    // ← Obtener el rol del usuario después del login exitoso
+    const user = form.createdSessionId ? await signIn.reload() : null;
+
+    // Obtener el rol de los metadatos públicos
+    const userRole = user?.publicMetadata?.role;
+
+    // Redirigir según el rol
+    if (userRole === "teacher") {
+      navigate("/LandingMaestro");
+    } else if (userRole === "student" || userRole === "alumno") {
+      navigate("/LandingAlumno");
+    } else {
+      // Rol por defecto o no definido
+      navigate("/"); // o la ruta que prefieras
+    }
+  } else {
+    console.log("Estado Login:", form);
+  }
 }
 catch(err){
   const clerkError = err?.errors?.[0]?.message;
@@ -44,7 +60,7 @@ catch(err){
   } else if (clerkError?.includes("Password is incorrect")) {
     setErrorMsg("Contraseña incorrecta");
   } else {
-    setErrorMsg("Error al iniciar sesión");
+ console.log(clerkError)
   }
 
 }

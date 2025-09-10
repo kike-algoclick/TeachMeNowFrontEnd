@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { useUser } from "@clerk/clerk-react";
 import { useState } from "react";
+import { UserButton } from "@clerk/clerk-react";
 
 
 
@@ -51,7 +52,6 @@ export function Navbar() {
           </div>
         </div>
       )}
-      :
       {isSignedIn && (
         <div className="TeachNav navy w-full">
           <div className="Logo">
@@ -70,7 +70,10 @@ export function Navbar() {
               >
                 <li>Home</li>
               </Link>
-              <li>About us</li>
+
+              <Link to="/AboutUs">
+                <li>About us</li>
+              </Link>
               <Link to="/Plans">
                 <li>Explore Premium</li>
               </Link>
@@ -89,6 +92,15 @@ export function Navbar() {
                 transition: "backgroundColor 0.3s ease, color 0.3s ease",
               }}
             ></SignOutButton>
+            <Link to="/ProfileM">
+              <div className="flex justify-center">
+                <img
+                  src={user.imageUrl}
+                  alt=""
+                  className="w-10 h-10 rounded-full"
+                />
+              </div>
+            </Link>
           </div>
         </div>
       )}

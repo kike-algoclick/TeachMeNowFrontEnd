@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import "../CSS/PerfilMaestro.css";
+import { UserButton } from '@clerk/clerk-react';
 
 const PerfilMaestro = () => {
   const allStudents = [
@@ -51,15 +52,16 @@ const PerfilMaestro = () => {
   return (
     <div className="perfil-container">
       <div className="perfil-card">
-
         {/* Profile Header */}
-        <div className="perfil-header">
-          <img
-            src="/PerfilMaestro/perfil-maestro.jpg"
-            alt="Teacher's profile"
-            className="foto-perfil"
+        <div className="perfil-header ml-10">
+          <UserButton
+            appearance={{
+              elements: {
+                avatarBox: "scale-300", // Tamaño del avatar
+              },
+            }}
           />
-          <div className="perfil-info">
+          <div className="perfil-info ml-8">
             <h3 className="nombre">Maria Lopez</h3>
             <p className="profesion">Mathematics Teacher</p>
             <p className="descripcion">Teaching with passion and dedication</p>
@@ -126,8 +128,10 @@ const PerfilMaestro = () => {
         </div>
 
         {/* Students + Generate Code Section en cajitas */}
-        <div className="students-section" style={{ display: "flex", gap: "20px", flexWrap: "wrap" }}>
-          
+        <div
+          className="students-section"
+          style={{ display: "flex", gap: "20px", flexWrap: "wrap" }}
+        >
           {/* Students List en cajita */}
           <div className="card-section">
             <div className="students-list">
@@ -175,7 +179,6 @@ const PerfilMaestro = () => {
               </div>
             )}
           </div>
-
         </div>
 
         {/* Footer Buttons */}
@@ -184,7 +187,6 @@ const PerfilMaestro = () => {
           <button>👤 Edit Profile</button>
           <button>❓ Help</button>
         </div>
-
       </div>
     </div>
   );
