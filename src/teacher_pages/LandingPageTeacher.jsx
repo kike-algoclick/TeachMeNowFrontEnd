@@ -39,7 +39,7 @@ export function Landingpage() {
               <img src="/Landing_images/Alumno.jpeg" alt="" />
             </div>
             <div className="card-body">
-              <h2>Start Now</h2>
+              <h2>Student</h2>
               <p>Get started with you classes and improve your results</p>
               <button>Start Now</button>
             </div>

@@ -1,24 +1,74 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "../CSS/PerfilMaestro.css";
+import { UserButton } from '@clerk/clerk-react';
 
 const PerfilMaestro = () => {
+  const allStudents = [
+    { name: "Juan Perez", intelligence: "Kinesthetic" },
+    { name: "Maria Lopez", intelligence: "Visual" },
+    { name: "Carlos Gomez", intelligence: "Auditory" },
+    { name: "Lucia Ramirez", intelligence: "Logical" },
+    { name: "Sofia Morales", intelligence: "Interpersonal" },
+    { name: "Andres Torres", intelligence: "Naturalistic" },
+    { name: "Camila Rios", intelligence: "Linguistic" },
+    { name: "Mateo Vargas", intelligence: "Musical" },
+    { name: "Valentina Cruz", intelligence: "Spatial" },
+    { name: "Diego Herrera", intelligence: "Logical" },
+    { name: "Elena Medina", intelligence: "Kinesthetic" },
+    { name: "Samuel Castro", intelligence: "Visual" },
+    { name: "Isabella Navarro", intelligence: "Auditory" },
+    { name: "Martin Duarte", intelligence: "Naturalistic" },
+    { name: "Renata Molina", intelligence: "Interpersonal" }
+  ];
+
+  const subjects = ["Mathematics", "Science", "Social Studies"];
+
+  const INITIAL_COUNT = 2;
+  const [visibleCount, setVisibleCount] = useState(INITIAL_COUNT);
+  const [generatedCode, setGeneratedCode] = useState("");
+  const [selectedSubject, setSelectedSubject] = useState("");
+
+  const handleToggleVisible = () => {
+    setVisibleCount(prev => prev === allStudents.length ? INITIAL_COUNT : allStudents.length);
+  };
+
+  const isShowingAll = visibleCount === allStudents.length;
+
+  const handleGenerateCode = () => {
+    if (!generatedCode) {
+      const code = Math.random().toString(36).substring(2, 8).toUpperCase();
+      setGeneratedCode(code);
+      setSelectedSubject("");
+    } else {
+      setGeneratedCode(""); // Cierra la sección
+      setSelectedSubject("");
+    }
+  };
+
+  const handleSubjectChange = (e) => {
+    setSelectedSubject(e.target.value);
+  };
+
   return (
     <div className="perfil-container">
       <div className="perfil-card">
-
-        <div className="perfil-header">
-          <img
-            src="/PerfilMaestro/perfil-maestro.jpg"
-            alt="Teacher's profile"
-            className="foto-perfil"
+        {/* Profile Header */}
+        <div className="perfil-header ml-10">
+          <UserButton
+            appearance={{
+              elements: {
+                avatarBox: "scale-300", // Tamaño del avatar
+              },
+            }}
           />
-          <div className="perfil-info">
+          <div className="perfil-info ml-8">
             <h3 className="nombre">Maria Lopez</h3>
             <p className="profesion">Mathematics Teacher</p>
             <p className="descripcion">Teaching with passion and dedication</p>
           </div>
         </div>
 
+        {/* Statistics */}
         <div className="estadisticas">
           <div className="stat">
             <p>Classes Taught</p>
@@ -30,7 +80,7 @@ const PerfilMaestro = () => {
           </div>
 
           <div className="stat">
-            <p>Students</p>
+            <p>Total Students</p>
             <h2>180</h2>
           </div>
 
@@ -44,6 +94,7 @@ const PerfilMaestro = () => {
           </div>
         </div>
 
+        {/* My Classes */}
         <div className="mis-clases">
           <h3>My Classes</h3>
           <div className="clases-grid">
@@ -76,6 +127,61 @@ const PerfilMaestro = () => {
           </div>
         </div>
 
+        {/* Students + Generate Code Section en cajitas */}
+        <div
+          className="students-section"
+          style={{ display: "flex", gap: "20px", flexWrap: "wrap" }}
+        >
+          {/* Students List en cajita */}
+          <div className="card-section">
+            <div className="students-list">
+              <h3>Students</h3>
+              {allStudents.slice(0, visibleCount).map((student, index) => (
+                <div key={index} className="student-item">
+                  <p className="student-name">{student.name}</p>
+                  <p className="student-intelligence">{student.intelligence}</p>
+                </div>
+              ))}
+              <button className="btn-show-more" onClick={handleToggleVisible}>
+                {isShowingAll ? "Show less" : "Show more"}
+              </button>
+            </div>
+          </div>
+
+          {/* Generate Code en cajita */}
+          <div className="card-section">
+            <div className="students-header">
+              <button className="btn-generate" onClick={handleGenerateCode}>
+                {generatedCode ? "Close" : "Generate Code for My Class"}
+              </button>
+            </div>
+
+            {generatedCode && (
+              <div className="generated-section">
+                <p className="generated-code">
+                  <strong>Class Code:</strong> {generatedCode}
+                </p>
+                <div className="subject-select">
+                  <label htmlFor="subject">Select Subject: </label>
+                  <select
+                    id="subject"
+                    value={selectedSubject}
+                    onChange={handleSubjectChange}
+                  >
+                    <option value="">-- Choose a subject --</option>
+                    {subjects.map((subj, i) => (
+                      <option key={i} value={subj}>
+                        {subj}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+
+        {/* Footer Buttons */}
         <div className="opciones">
           <button>⚙ Settings</button>
           <button>👤 Edit Profile</button>
@@ -86,4 +192,4 @@ const PerfilMaestro = () => {
   );
 };
 
-export default PerfilMaestro; 
+export default PerfilMaestro;

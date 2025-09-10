@@ -1,27 +1,35 @@
 import React from "react";
 import './CSS/Navbar.css'
 import logo from "/logo.png";
-import { SignInButton, SignUpButton, SignOutButton } from "@clerk/clerk-react";
+import { SignOutButton } from "@clerk/clerk-react";
 import { ClerkProvider } from "@clerk/clerk-react";
 import { useAuth } from "@clerk/clerk-react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { useUser } from "@clerk/clerk-react";
+import { useState } from "react";
+import { UserButton } from "@clerk/clerk-react";
 
-
-
-const PUBLISHABLE_KEY = "pk_test_cmFyZS1lYXJ3aWctMy5jbGVyay5hY2NvdW50cy5kZXYk";
 
 
 export function Navbar() {
+  const {user} = useUser();
+  const userRole = user?.publicMetaData?.role;
+  const {isSignedIn} = useAuth()
+  const [role, setRole] = useState()
+  
+  
 
   return (
     <>
-      <div className="navbar">
-        <header className="Header">
+      {!isSignedIn && (
+        <div className="TeachNav navy w-full">
           <div className="Logo">
-            <img src={logo} alt="TeachMeNow Logo" />
+            <Link to="/">
+              <img src={logo} alt="TeachMeNowLogo" />
+            </Link>
           </div>
-          <nav className="nav">
+          <nav className="options">
             <ul>
               <Link to="/">
                 <li>Home</li>
@@ -33,16 +41,69 @@ export function Navbar() {
               <li>Tools</li>
             </ul>
           </nav>
-          <SignOutButton>
-            <button className="rounded-lg bg-blue-400 p-2 text-black">
-              SignOut
-            </button>
-          </SignOutButton>
-          <div className="profile">
-            <img src="profile-icon-design-free-vector.jpg" alt="" />
+
+          <div className="flex justify-center gap-5">
+            <Link to="/Login">
+              <button className="sign">Log in</button>
+            </Link>
+            <Link to="/signUp">
+              <button className="sign">Sign up</button>
+            </Link>
           </div>
-        </header>
-      </div>
+        </div>
+      )}
+      {isSignedIn && (
+        <div className="TeachNav navy w-full">
+          <div className="Logo">
+            <Link
+              to={userRole === "teacher" ? "/LandingMaestro" : "/LandingAlumno"}
+            >
+              <img src={logo} alt="TeachMeNowLogo" />
+            </Link>
+          </div>
+          <nav className="options">
+            <ul>
+              <Link
+                to={
+                  userRole === "teacher" ? "/LandingMaestro" : "/LandingAlumno"
+                }
+              >
+                <li>Home</li>
+              </Link>
+
+              <Link to="/AboutUs">
+                <li>About us</li>
+              </Link>
+              <Link to="/Plans">
+                <li>Explore Premium</li>
+              </Link>
+              <li>Tools</li>
+            </ul>
+          </nav>
+
+          <div className="flex justify-center gap-5">
+            <SignOutButton
+              style={{
+                cursor: "pointer",
+                fontWeight: "500",
+                color: "#2c3e50",
+                padding: "8px 12px",
+                borderRadius: "20px",
+                transition: "backgroundColor 0.3s ease, color 0.3s ease",
+              }}
+            ></SignOutButton>
+            <Link to="/ProfileM">
+              <div className="flex justify-center">
+                <img
+                  src={user.imageUrl}
+                  alt=""
+                  className="w-10 h-10 rounded-full"
+                />
+              </div>
+            </Link>
+          </div>
+        </div>
+      )}
     </>
   );
 }
