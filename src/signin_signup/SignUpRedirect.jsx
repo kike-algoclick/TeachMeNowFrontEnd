@@ -12,13 +12,13 @@ export function SignUpRedirect (){
       // Leemos el rol desde unsafeMetadata
       const userRole = user.unsafeMetadata.role;
 
-      if (userRole === "maestro") {
-        navigate("/dashboard-maestro");
-      } else if (userRole === "alumno") {
-        navigate("/dashboard-alumno");
+      if (userRole === "teacher") {
+        navigate("/main-teacher");
+      } else if (userRole === "student") {
+        navigate("/main-teacher");
       } else {
         // Fallback por si el rol no está definido
-        navigate("/dashboard");
+        navigate("/");
       }
     }
   }, [isLoaded, user, navigate]);

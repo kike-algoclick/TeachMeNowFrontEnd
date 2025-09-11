@@ -56,7 +56,7 @@ export function Navbar() {
         <div className="TeachNav navy w-full">
           <div className="Logo">
             <Link
-              to={userRole === "teacher" ? "/LandingMaestro" : "/LandingAlumno"}
+              to={userRole === "teacher" ? "/main-teacher" : "/main-teacher"}
             >
               <img src={logo} alt="TeachMeNowLogo" />
             </Link>
@@ -65,7 +65,7 @@ export function Navbar() {
             <ul>
               <Link
                 to={
-                  userRole === "teacher" ? "/LandingMaestro" : "/LandingAlumno"
+                  userRole === "teacher" ? "/main-teacher" : "/main-teacher"
                 }
               >
                 <li>Home</li>

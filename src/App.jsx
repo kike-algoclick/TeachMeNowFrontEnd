@@ -7,7 +7,7 @@ import { Preguntas } from "./student_pages/Cuestionario.jsx";
 import Signup from './signin_signup/Signup.jsx'
 import { Resultados } from "./student_pages/Resultados.jsx";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { MainPage } from "./teacher_pages/MainPageT.jsx";
+import MainPageT from "./teacher_pages/MainPageT.jsx"; 
 import { Landingpage } from "./teacher_pages/LandingPageTeacher.jsx";
 import { ClerkProvider } from "@clerk/clerk-react";
 import { LandingAlumno } from "./student_pages/LandingAlumno.jsx";
@@ -22,8 +22,8 @@ import AboutUs from "./About_Us/AboutUs.jsx";
 
 
 function App() {
-
   const clerkPubKey = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
+  
   if (!clerkPubKey) {
     throw new Error("Missing Publishable Key");
   }
@@ -40,7 +40,7 @@ function App() {
                 <Route path="/Signup" element={<Signup />} />
                 <Route path="/CuestionarioA" element={<Preguntas />} />
                 <Route path="/LandingAlumno" element={<LandingAlumno />} />
-                <Route path="/LandingMaestro" element={<MainPage />} />
+                <Route path="/LandingMaestro" element={<Landingpage />} />
                 <Route path="/Plans" element={<Planes />} />
                 <Route path="/Redirect" element={<SignUpRedirect />} />
                 <Route path="TestMaestro" element={<TestParaMaestros />} />
@@ -48,6 +48,7 @@ function App() {
               <Route path="/ProfileM" element={<PerfilMaestro/>}/>
               <Route path="/ProfileA" element={<PerfilAlumno/>}/>
               <Route path="/AboutUs" element={<AboutUs/>}/>
+            <Route path="/main-teacher" element={<MainPageT/>}/>  
               </Routes>
             </div>
 

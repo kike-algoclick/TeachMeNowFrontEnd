@@ -33,11 +33,8 @@ export function Planes() {
             </p>
             <ul className="space-y-2 text-sm text-[#1A3D63]">
               <li>✔ Conduct tests for your students to understand their learning style.</li>
-              <li>✔ Plan limited classes.</li>
+              <li>✔ Plan limited classes (8 per week)</li>
               <li>✔ Create limited presentations.</li>
-              <li>✔ Create limited quizzes.</li>
-              <li>✔ Video recommendations.</li>
-              <li>✔ Use of a random spinner.</li>
             </ul>
           </div>
           <button className="mt-6 bg-[#1A3D63] text-white py-2 rounded-lg font-medium hover:bg-primary">
@@ -66,7 +63,6 @@ export function Planes() {
               <li>✔ Creating unlimited presentations.</li>
               <li>✔ Creating unlimited quizzes.</li>
               <li>✔ Video recommendations.</li>
-              <li>✔ Use of random roulette.</li>
             </ul>
           </div>
           <button className="mt-6 bg-[#1A3D63] text-white py-2 rounded-lg font-medium hover:bg-primary">
@@ -90,12 +86,13 @@ export function Planes() {
               Everything that TeachMeNow pro includes for more people:
             </p>
             <ul className="space-y-2 text-sm text-[#1A3D63]">
+              <li>✔ Full and unlimited access to our tools</li>
               <li>✔ Performing tests for your students to understand their learning style.</li>
               <li>✔ Planning unlimited classes.</li>
               <li>✔ Creating unlimited presentations.</li>
-              <li>✔ Creating unlimited quizzes.</li>
-              <li>✔ Video recommendations.</li>
-              <li>✔ Use of random roulette.</li>
+              <li>✔ Creating unlimited quizzes</li>
+              <li>✔ Video recommendations</li>
+              <li>✔ Real time assistance from IA </li>
             </ul>
           </div>
           <button className="mt-6 bg-[#1A3D63] text-white py-2 rounded-lg font-medium hover:bg-primary">
