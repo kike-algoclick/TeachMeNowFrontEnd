@@ -1,7 +1,11 @@
 import React from 'react';
 import "../CSS/PerfilAlumno.css";
+import { useUser } from '@clerk/clerk-react';
 
 const PerfilAlumno = () => {
+
+  const {user} = useUser();
+  
   return (
     <div className="perfil-alumno">
       <div className="perfil-header">
@@ -11,7 +15,9 @@ const PerfilAlumno = () => {
           className="foto-perfil"
         />
         <div className="perfil-info">
-          <h3 className="nombre">Juan Perez</h3>
+          <h3 className="nombre">
+            {(user?.unsafeMetadata?.firstName + " " + user?.unsafeMetadata?.lastName)}
+          </h3>
           <p className="profesion">7th Grade</p>
           <p className="descripcion">Learning flexibly</p>
         </div>

@@ -42,7 +42,7 @@ function Signup() {
        if (!isLoaded)return null;
 
        if (isSignedIn && role == "teacher") {
-         window.location.href = '/LandingMaestro'
+         window.location.href = '/main-teacher'
        }
        else if (isSignedIn && role == "maestro"){
         window.location.href = "/LandingAlumno";
@@ -100,11 +100,11 @@ function Signup() {
         if (completeSignUp.status === "complete") {
           await setActive({ session: completeSignUp.createdSessionId });
           console.log("✅ Registro completo, redirigiendo...");
-          if(role =="student"){
+          if(role ==="student"){
             navigate('/LandingAlumno')
           }
-          if(role == "teacher"){
-           navigate('/LandingMaestro')
+          if(role === "teacher"){
+           navigate('/main-teacher')
           }
         } else {
           console.warn(

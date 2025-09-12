@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import "../CSS/PerfilMaestro.css";
-import { UserButton } from '@clerk/clerk-react';
+import { UserButton, useUser } from '@clerk/clerk-react';
 
 const PerfilMaestro = () => {
   const allStudents = [
@@ -27,6 +27,9 @@ const PerfilMaestro = () => {
   const [visibleCount, setVisibleCount] = useState(INITIAL_COUNT);
   const [generatedCode, setGeneratedCode] = useState("");
   const [selectedSubject, setSelectedSubject] = useState("");
+  const {user} = useUser()
+  const userRol = user?.unsafeMetadata?.role
+
 
   const handleToggleVisible = () => {
     setVisibleCount(prev => prev === allStudents.length ? INITIAL_COUNT : allStudents.length);
@@ -62,7 +65,11 @@ const PerfilMaestro = () => {
             }}
           />
           <div className="perfil-info ml-8">
-            <h3 className="nombre">Maria Lopez</h3>
+            <h3 className="nombre">
+              {user?.unsafeMetadata?.firstName +
+                " " +
+                user?.unsafeMetadata?.lastName}
+            </h3>
             <p className="profesion">Mathematics Teacher</p>
             <p className="descripcion">Teaching with passion and dedication</p>
           </div>

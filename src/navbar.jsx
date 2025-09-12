@@ -14,9 +14,12 @@ import { UserButton } from "@clerk/clerk-react";
 
 export function Navbar() {
   const {user} = useUser();
-  const userRole = user?.publicMetaData?.role;
+  const userRole = user?.unsafeMetadata?.role;
   const {isSignedIn} = useAuth()
   const [role, setRole] = useState()
+ 
+
+
   
   
 
@@ -34,7 +37,9 @@ export function Navbar() {
               <Link to="/">
                 <li>Home</li>
               </Link>
-              <li>About us</li>
+              <Link to="/AboutUs">
+                <li>About us</li>
+              </Link>
               <Link to="/Plans">
                 <li>Explore Premium</li>
               </Link>
@@ -56,7 +61,7 @@ export function Navbar() {
         <div className="TeachNav navy w-full">
           <div className="Logo">
             <Link
-              to={userRole === "teacher" ? "/main-teacher" : "/main-teacher"}
+              to={userRole === "teacher" ? "/main-teacher" : "/LandingAlumno"}
             >
               <img src={logo} alt="TeachMeNowLogo" />
             </Link>
@@ -64,9 +69,7 @@ export function Navbar() {
           <nav className="options">
             <ul>
               <Link
-                to={
-                  userRole === "teacher" ? "/main-teacher" : "/main-teacher"
-                }
+                to={userRole === "teacher" ? "/main-teacher" : "/LandingAlumno"}
               >
                 <li>Home</li>
               </Link>
@@ -77,7 +80,11 @@ export function Navbar() {
               <Link to="/Plans">
                 <li>Explore Premium</li>
               </Link>
-              <li>Tools</li>
+              {userRole === "student" && (
+                <Link to="/inicio-test">
+                  <li>Test</li>
+                </Link>
+              )}
             </ul>
           </nav>
 
@@ -92,15 +99,29 @@ export function Navbar() {
                 transition: "backgroundColor 0.3s ease, color 0.3s ease",
               }}
             ></SignOutButton>
-            <Link to="/ProfileM">
-              <div className="flex justify-center">
-                <img
-                  src={user.imageUrl}
-                  alt=""
-                  className="w-10 h-10 rounded-full"
-                />
-              </div>
-            </Link>
+
+            {userRole === "teacher" && (
+              <Link to="/ProfileM">
+                <div className="flex justify-center">
+                  <img
+                    src={user.imageUrl}
+                    alt=""
+                    className="w-10 h-10 rounded-full"
+                  />
+                </div>
+              </Link>
+            )}
+            {userRole === "student" && (
+              <Link to="/ProfileA">
+                <div className="flex justify-center">
+                  <img
+                    src={user.imageUrl}
+                    alt=""
+                    className="w-10 h-10 rounded-full"
+                  />
+                </div>
+              </Link>
+            )}
           </div>
         </div>
       )}

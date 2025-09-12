@@ -12,6 +12,7 @@ function Login(){
     const [password, setPassword] = useState('');
     const [hover, setHover] = useState(false);
     const [errorMsg, setErrorMsg] = useState('')
+    const navigate = useNavigate()
 
    
 
@@ -42,7 +43,7 @@ const form = await signIn.create({
 
     // Redirigir según el rol
     if (userRole === "teacher") {
-      navigate("/LandingMaestro");
+      navigate("/main-teacher");
     } else if (userRole === "student" || userRole === "alumno") {
       navigate("/LandingAlumno");
     } else {

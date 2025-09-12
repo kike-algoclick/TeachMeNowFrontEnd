@@ -21,6 +21,7 @@ import AboutUs from "./About_Us/AboutUs.jsx";
 
 
 
+
 function App() {
   const clerkPubKey = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
   
@@ -48,7 +49,8 @@ function App() {
               <Route path="/ProfileM" element={<PerfilMaestro/>}/>
               <Route path="/ProfileA" element={<PerfilAlumno/>}/>
               <Route path="/AboutUs" element={<AboutUs/>}/>
-            <Route path="/main-teacher" element={<MainPageT/>}/>  
+            <Route path="/main-teacher" element={<MainPageT/>}/> 
+            <Route path="/inicio-test" element={<Test/>}/> 
               </Routes>
             </div>
 
