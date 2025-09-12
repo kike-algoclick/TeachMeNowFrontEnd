@@ -39,12 +39,12 @@ const form = await signIn.create({
     const user = form.createdSessionId ? await signIn.reload() : null;
 
     // Obtener el rol de los metadatos públicos
-    const userRole = user?.publicMetadata?.role;
+    const userRole = user?.unsafeMetadata?.role;
 
     // Redirigir según el rol
     if (userRole === "teacher") {
       navigate("/main-teacher");
-    } else if (userRole === "student" || userRole === "alumno") {
+    } else if (userRole === "student") {
       navigate("/LandingAlumno");
     } else {
       // Rol por defecto o no definido

@@ -43,7 +43,7 @@ export function Navbar() {
               <Link to="/Plans">
                 <li>Explore Premium</li>
               </Link>
-              <li>Tools</li>
+
             </ul>
           </nav>
 
@@ -89,15 +89,8 @@ export function Navbar() {
           </nav>
 
           <div className="flex justify-center gap-5">
-            <SignOutButton
-              style={{
-                cursor: "pointer",
-                fontWeight: "500",
-                color: "#2c3e50",
-                padding: "8px 12px",
-                borderRadius: "20px",
-                transition: "backgroundColor 0.3s ease, color 0.3s ease",
-              }}
+            <SignOutButton className="sign"
+
             ></SignOutButton>
 
             {userRole === "teacher" && (
@@ -113,7 +106,7 @@ export function Navbar() {
             )}
             {userRole === "student" && (
               <Link to="/ProfileA">
-                <div className="flex justify-center">
+                <div className="flex justify-center ">
                   <img
                     src={user.imageUrl}
                     alt=""

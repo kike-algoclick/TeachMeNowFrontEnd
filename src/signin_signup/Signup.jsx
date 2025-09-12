@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import '../CSS/Signup.css'
-import { useSignUp } from "@clerk/clerk-react";
+import { useSignUp, useUser } from "@clerk/clerk-react";
 import { useAuth } from "@clerk/clerk-react";
 import { useNavigate } from "react-router-dom";
 
@@ -21,7 +21,7 @@ function Signup() {
   const [lastName, setLastName] = useState("")
   const [password, setPassword] = useState(""); //Manejar texto input password
   const [confPassword, setConfPassword]  = useState("")
-  const [role, setRole] = useState("")
+ const {user} = useUser()
   const [errorMsg, setErrorMsg] = useState("");
   const [verification, setVerification] = useState(false);  
    const [code, setCode] = useState("");
@@ -40,13 +40,6 @@ function Signup() {
       e.preventDefault();
       setErrorMsg("")
        if (!isLoaded)return null;
-
-       if (isSignedIn && role == "teacher") {
-         window.location.href = '/main-teacher'
-       }
-       else if (isSignedIn && role == "maestro"){
-        window.location.href = "/LandingAlumno";
-       }
 
        
 
@@ -100,12 +93,7 @@ function Signup() {
         if (completeSignUp.status === "complete") {
           await setActive({ session: completeSignUp.createdSessionId });
           console.log("✅ Registro completo, redirigiendo...");
-          if(role ==="student"){
-            navigate('/LandingAlumno')
-          }
-          if(role === "teacher"){
-           navigate('/main-teacher')
-          }
+          navigate('/Redirect')
         } else {
           console.warn(
             "⚠️ Registro no se completó, status:",

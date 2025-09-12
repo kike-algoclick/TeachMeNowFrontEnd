@@ -10,7 +10,7 @@ const PerfilAlumno = () => {
     <div className="perfil-alumno">
       <div className="perfil-header">
         <img
-          src="/PerfilAlumno/perfil-alumno.jpg"
+          src="/"
           alt="Student's photo"
           className="foto-perfil"
         />
