@@ -1,6 +1,6 @@
 import React from 'react';
 import "../CSS/PerfilAlumno.css";
-import { useUser } from '@clerk/clerk-react';
+import { useUser, UserButton } from '@clerk/clerk-react';
 
 const PerfilAlumno = () => {
 
@@ -9,11 +9,13 @@ const PerfilAlumno = () => {
   return (
     <div className="perfil-alumno">
       <div className="perfil-header">
-        <img
-          src="/"
-          alt="Student's photo"
-          className="foto-perfil"
-        />
+       <UserButton
+                   appearance={{
+                     elements: {
+                       avatarBox: "scale-300", // Tamaño del avatar
+                     },
+                   }}
+                 />
         <div className="perfil-info">
           <h3 className="nombre">
             {(user?.unsafeMetadata?.firstName + " " + user?.unsafeMetadata?.lastName)}

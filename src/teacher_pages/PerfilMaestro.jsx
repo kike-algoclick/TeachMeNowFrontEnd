@@ -59,6 +59,7 @@ const PerfilMaestro = () => {
         <div className="perfil-header ml-10">
           <UserButton
             appearance={{
+              imageUrl:"scale-200",
               elements: {
                 avatarBox: "scale-300", // Tamaño del avatar
               },
