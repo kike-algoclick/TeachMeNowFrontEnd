@@ -21,7 +21,7 @@ import p17 from "/test_alumno_images/p17.jpg"
 import p18 from "/test_alumno_images/p18.jpg"
 import p19 from "/test_alumno_images/p19.jpg"
 import p20 from "/test_alumno_images/p20.jpg"
-import alerta from "/test_alumno_images/alerta.png"
+import alerta from "/test_alumno_images/alert.png"
 
 import Rarito from "/test_alumno_images/Robo2.jpg"
 import { Form } from "react-router-dom";
@@ -64,9 +64,11 @@ export function Preguntas(){
                 <label><input type="radio" name="q2"/>Reading the recipe.</label><br />
                 <label><input type="radio" name="q2"/>Cooking it myself.</label><br/>
             </div>
-            <img src={p2} alt="asdf" className="Pregunta-img2" />
-        </div>
+            <img src={p2} alt="asdf" className="Pregunta-img" />
+        </div> 
+        </div> 
 
+        <div className="contenedor">
                 <div className="Card-preguntas">
             <div className="posicionletra">
                 <p className="Colorletra"><strong>3.In class, I understand better when:</strong></p>
@@ -77,9 +79,6 @@ export function Preguntas(){
             </div>
             <img src={p3} alt="asdf" className="Pregunta-img" />
         </div>
-        </div>
-
-    <div className="contenedor2">
         <div className="Card-preguntas">
             <div className="posicionletra">
             <p className="Colorletra"><strong>4.If I don’t understand a topic, the first thing I do is:</strong></p>
@@ -88,9 +87,10 @@ export function Preguntas(){
             <label><input type="radio" name="q4" />Read another text on the topic.</label><br />
             <label> <input type="radio" name="q4" />Try it with an exercise or experiment.</label><br />
             </div>
-        <img src={p4} alt="asdf"  className="Pregunta-img2"/>
+        <img src={p4} alt="asdf"  className="Pregunta-img"/>
         </div>
-
+    </div>
+<div className="contenedor">
         <div className="Card-preguntas">
             <div className="posicionletra2">
             <p className="Colorletra"><strong>The study materials I like the most are:</strong></p>
@@ -110,12 +110,12 @@ export function Preguntas(){
             <label><input type="radio" name="q6" />The text I read.</label><br />
             <label> <input type="radio" name="q6" />The feeling of doing it.</label><br />
             </div>
-        <img src={p6} alt="asdf"  className="Pregunta-img2"/>
+        <img src={p6} alt="asdf"  className="Pregunta-img"/>
         </div>
     </div>
 
 
-    <div className="contenedor 3">
+    <div className="contenedor">
         <div className="Card-preguntas">
             <div className="posicionletra2">
             <p className="Colorletra"><strong>7.In a workshop, I enjoy most:</strong></p>
@@ -135,9 +135,11 @@ export function Preguntas(){
             <label><input type="radio" name="q8" />I write summaries.</label><br />
             <label> <input type="radio" name="q8" />I make models or simulations.</label><br />
             </div>
-        <img src={p8} alt="asdf"  className="Pregunta-img2"/>
+        <img src={p8} alt="asdf"  className="Pregunta-img"/>
         </div>
+    </div>
 
+         <div className="contenedor">
              <div className="Card-preguntas">
             <div className="posicionletra2">
             <p className="Colorletra"><strong>9.To remember a phone number:</strong></p>
@@ -148,9 +150,6 @@ export function Preguntas(){
             </div>
         <img src={p9} alt="asdf"  className="Pregunta-img"/>
         </div>
-    </div>
-
-    <div className="Contenedor4">
         <div className="Card-preguntas">
             <div className="posicionletra">
             <p className="Colorletra"><strong>10.In my free time, I prefer:</strong></p>
@@ -159,7 +158,7 @@ export function Preguntas(){
             <label><input type="radio" name="q10" />Reading books or articles.</label><br />
             <label> <input type="radio" name="q10" />Doing sports or crafts.</label><br />
             </div>
-        <img src={p10} alt="asdf"  className="Pregunta-img2"/>
+        <img src={p10} alt="asdf"  className="Pregunta-img"/>
         </div>
     </div>
 <button 
@@ -189,7 +188,7 @@ export function Preguntas(){
 {showAlert && (
   <div className="custom-alert">
     <img src={alerta} alt="alerta" className="alert-icon" />
-    <span>Debes responder todas las preguntas antes de continuar!!</span>
+    <span>You must answer all questions before continuing!!</span>
   </div>
 )}
 
@@ -206,7 +205,7 @@ export function Preguntas(){
 
     <div className="mensaje-header">
       <h2 className="typewriter">
-        ¡Excelente trabajo! Sigue así, casi terminas tu test.
+        Great work! Keep it up, you're almost done with your test.
       </h2>
       <img src={Rarito} alt="Robot" className="robot-img" />
     </div>
@@ -231,9 +230,10 @@ export function Preguntas(){
                 <label><input type="radio" name="q12"/>Reading the manual.</label><br />
                 <label><input type="radio" name="q12"/>Testing all the functions myself.</label><br/>
             </div>
-            <img src={p12} alt="asdf" className="Pregunta-img2" />
+            <img src={p12} alt="asdf" className="Pregunta-img" />
         </div>
-
+</div>
+  <div className="contenedor">
                 <div className="Card-preguntas">
             <div className="posicionletra">
                 <p className="Colorletra"><strong>13.I remember places better because:</strong></p>
@@ -244,9 +244,7 @@ export function Preguntas(){
             </div>
             <img src={p13} alt="asdf" className="Pregunta-img" />
         </div>
-        </div>
-
-    <div className="contenedor2">
+   
         <div className="Card-preguntas">
             <div className="posicionletra">
             <p className="Colorletra"><strong>14.In a group project, I prefer:</strong></p>
@@ -255,9 +253,10 @@ export function Preguntas(){
             <label><input type="radio" name="q14" />Writing the content.</label><br />
             <label> <input type="radio" name="q14" />Handling practical activities.</label><br />
             </div>
-        <img src={p14} alt="asdf"  className="Pregunta-img2"/>
+        <img src={p14} alt="asdf"  className="Pregunta-img"/>
         </div>
-
+    </div>
+   <div className="contenedor">
         <div className="Card-preguntas">
             <div className="posicionletra2">
             <p className="Colorletra"><strong>15.I focus better when:</strong></p>
@@ -281,7 +280,7 @@ export function Preguntas(){
         </div>
     </div>
 
-    <div className="contenedor 3">
+    <div className="contenedor">
         <div className="Card-preguntas">
             <div className="posicionletra2">
             <p className="Colorletra"><strong>17.In a museum, I’m most interested in:</strong></p>
@@ -301,9 +300,10 @@ export function Preguntas(){
             <label><input type="radio" name="q18" />I write in detail.</label><br />
             <label> <input type="radio" name="q18" />I make hands-on diagrams.</label><br />
             </div>
-        <img src={p18} alt="asdf"  className="Pregunta-img2"/>
+        <img src={p18} alt="asdf"  className="Pregunta-img"/>
         </div>
-
+     </div>
+     <div className="contenedor">
              <div className="Card-preguntas">
             <div className="posicionletra2">
             <p className="Colorletra"><strong>19.To learn a new language, I prefer:</strong></p>
@@ -314,9 +314,7 @@ export function Preguntas(){
             </div>
         <img src={p19} alt="asdf"  className="Pregunta-img"/>
         </div>
-    </div>
-
-    <div className="Contenedor4">
+   
         <div className="Card-preguntas">
             <div className="posicionletra">
             <p className="Colorletra"><strong>20.When I buy something new, I use first:</strong></p>
@@ -325,10 +323,11 @@ export function Preguntas(){
             <label><input type="radio" name="q20" />The written manual.</label><br />
             <label> <input type="radio" name="q20" />I try it directly.</label><br />
             </div>
-        <img src={p20} alt="asdf"  className="Pregunta-img3"/>
+        <img src={p20} alt="asdf"  className="Pregunta-img"/>
         </div>
     </div>
-    <button className="boton-results">Ver resultados</button>
+
+    <button className="boton-results">View results</button>
         </>
     )}
      </div>

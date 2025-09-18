@@ -18,8 +18,8 @@
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
   max-width: 2500px;
   width: 98%;          /* que ocupe más ancho */
-  min-width: 1400px;   /* más ancho mínimo */
-  min-height: 1300px;  /* más alto */
+  min-width: 1100px;   /* más ancho mínimo */
+  min-height: 80px;  /* más alto */
   padding: 40px;       /* espacio interno */
   margin: 30px auto; 
   
@@ -36,49 +36,25 @@
  
 .contenedor{
   display: grid;
- grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 20px;
-  margin-top: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
+grid-template-columns: repeat(2, 2fr);
+gap: 20px;
+padding-top: 25px;
+padding-bottom: 35px;
 }
  
-.contenedor2{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 20px;
-  margin-top: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
-}
- 
-.contenedor4{
-  display: flex;
-  align-items: center;
-grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 20px;
-  margin-top: 20px;
-  margin-right: 20px;
-  margin-right: 20px;
-}
- 
- 
- 
+
  
 .Card-preguntas{
- position: relative;  
-  width: 100%;         /* ocupará todo el ancho de la columna */
+  position: flex;  
+  width: 100%;            
   height: 220px;          
   background: #fff;    
   border-radius: 12px;  
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-  margin: 15px;        
   padding: 15px;
   display: flex;
-  flex-direction: row;   /* 📌 Ahora horizontal */
-  align-items: center;   /* centra verticalmente */
-  gap: 15px;  
-  margin-right: 60px; 
+  gap: 15px;
+  margin: 0;  
  
 }
  
@@ -97,33 +73,12 @@ grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 }
  
 .Pregunta-img {
-  width: 100px;        /* ajusta tamaño de la imagen */
-  height: 100px;
+  width: 200px;        /* ajusta tamaño de la imagen */
+  height: 200px;
   object-fit: cover;
   border-radius: 12px;
 }
-.Pregunta-img2 {
-  width: 100px;        /* ajusta tamaño de la imagen */
-  height: 100px;
-  object-fit: cover;
-  border-radius: 12px;
-}
- 
-.Pregunta-img3 {
-  width: 100px;        /* ajusta tamaño de la imagen */
-  height: 100px;
-  object-fit: cover;
-  border-radius: 12px;
-}
- 
-.Contenedor4{
-    display: flex;
-    justify-content: center;
-  align-items: center;    
-  gap: 20px;
-  margin-top: 20px;
-  width: 100%;    
-}
+
  
  
  
@@ -197,7 +152,7 @@ btn-container {
  
 @keyframes typing {
   from { width: 0 }
-  to { width: 45% }
+  to { width: 57% }
 }
  
 @keyframes blink {
@@ -219,8 +174,8 @@ btn-container {
   position: fixed;
   bottom: 40px;   /* lugar en pantalla */
   right: 40px;
-  background: #1A3D63;
-  color: white;
+  background: #fff;
+  color: #1A3D63;
   font-weight: bold;
   padding: 14px 20px;
   border-radius: 12px;
