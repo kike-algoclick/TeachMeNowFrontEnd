@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import ReactMarkdown from 'react-markdown'
 import "../CSS/mainpage.css";
  
 // Importación de imágenes (solo una vez)
@@ -157,7 +158,7 @@ export default function MainPageT() {
         {/* Estado de conexión */}
         <div className="connection-status">
           {connectionStatus === "checking" && "🔄 Checking connection..."}
-          {connectionStatus === "connected" && "✅ Connected"}
+          {connectionStatus === "connected" && "Welcome to TeachMeNow Assistant"}
           {connectionStatus === "error" && "❌ Backend disconnected"}
         </div>
  
