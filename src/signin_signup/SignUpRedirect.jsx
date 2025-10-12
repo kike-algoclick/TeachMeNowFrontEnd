@@ -15,7 +15,7 @@ export function SignUpRedirect (){
       if (userRole === "teacher") {
         navigate("/main-teacher");
       } else if (userRole === "student") {
-        navigate("/main-teacher");
+        navigate("/LandingAlumno");
       } else {
         // Fallback por si el rol no está definido
         navigate("/");
