@@ -21,12 +21,13 @@ function Signup() {
   const [lastName, setLastName] = useState("")
   const [password, setPassword] = useState(""); //Manejar texto input password
   const [confPassword, setConfPassword]  = useState("")
- const {user} = useUser()
+  const {user} = useUser()
   const [errorMsg, setErrorMsg] = useState("");
   const [verification, setVerification] = useState(false);  
    const [code, setCode] = useState("");
   const { isSignedIn } = useAuth(); //Para chequear que no haya un login actual.
   const navigate = useNavigate();
+  const [role, setRole] = useState()
   
 
   //Si la conección con Clerk no está lista, da error
