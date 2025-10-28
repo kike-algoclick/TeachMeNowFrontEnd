@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 export function Landingpage() {
   return (
-    <div className="background">
+    <div className="background mt-18">
       <div className="conteiner">
         <div className="fondo"></div>
         <div className="logo">
@@ -28,7 +28,7 @@ export function Landingpage() {
             <div className="card-body">
               <h2>Teachers</h2>
               <p>Start with your students and improve your classes</p>
-              <Link to={'/Login'}>
+              <Link to={"/Login"}>
                 <button>Start Now</button>
               </Link>
             </div>
@@ -41,7 +41,9 @@ export function Landingpage() {
             <div className="card-body">
               <h2>Student</h2>
               <p>Get started with you classes and improve your results</p>
-              <button>Start Now</button>
+              <Link to={"/Login"}>
+                <button>Start Now</button>
+              </Link>
             </div>
           </div>
 
@@ -51,10 +53,10 @@ export function Landingpage() {
             </div>
             <div className="card-body">
               <h2>Principal</h2>
-              <p>
-              Start as a Principal and improve your teachers' work
-              </p>
-              <button>Start Now</button>
+              <p>Start as a Principal and improve your teachers' work</p>
+              <Link to={"/Login"}>
+                <button>Start Now</button>
+              </Link>
             </div>
           </div>
         </main>

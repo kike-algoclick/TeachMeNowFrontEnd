@@ -7,7 +7,7 @@ const PerfilAlumno = () => {
   const {user} = useUser();
   
   return (
-    <div className="perfil-alumno">
+    <div className="perfil-alumno mt-18">
       <div className="perfil-header">
        <UserButton
                    appearance={{

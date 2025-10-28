@@ -6,7 +6,7 @@ import fredy from "/test_alumno_images/tusresultados.jpg"
 
 export function Resultados() {
   return (
-    <div className="results-container">
+    <div className="results-container mt-18">
         <div className="card2">
       {/* Header */}
       <header className="header2">

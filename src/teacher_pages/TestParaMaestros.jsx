@@ -36,7 +36,7 @@ export function TestParaMaestros() {
   };
 
   return (
-    <div className="test-container">
+    <div className="test-container mt-18">
       <h1 className="titulo">Realizar Test</h1>
 
       <div className="contenedor">

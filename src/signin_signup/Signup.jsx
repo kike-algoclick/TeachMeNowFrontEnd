@@ -27,6 +27,7 @@ function Signup() {
    const [code, setCode] = useState("");
   const { isSignedIn } = useAuth(); //Para chequear que no haya un login actual.
   const navigate = useNavigate();
+  const [role, setRole] = useState()
   
 
   //Si la conección con Clerk no está lista, da error
@@ -55,6 +56,10 @@ function Signup() {
         setErrorMsg("Invalid email address");
         return;
       }
+      if(role == null){
+        setErrorMsg("Please choose a role")
+      return;
+    }
       
       
 
@@ -93,7 +98,7 @@ function Signup() {
         if (completeSignUp.status === "complete") {
           await setActive({ session: completeSignUp.createdSessionId });
           console.log("✅ Registro completo, redirigiendo...");
-          navigate('/Redirect')
+
         } else {
           console.warn(
             "⚠️ Registro no se completó, status:",
@@ -109,7 +114,7 @@ function Signup() {
 
 
   return (
-    <div className="bg-[url(/SignUpImage.png)] bg-cover h-220 p-10 flex justify-center ">
+    <div className="bg-[url(/SignUpImage.png)] bg-cover h-230 p-10 flex justify-center mt-18 ">
       {!verification && (
         <div className=" p-10 bg-white p-8 rounded-lg shadow-xl w-full max-w-sm mx-auto">
           <h2
@@ -227,7 +232,7 @@ function Signup() {
               Send
             </button>
             {errorMsg && (
-              <p className="text-red-500 text-center mt-2x">{errorMsg}</p>
+              <p className="text-red-500 text-center mt-2">{errorMsg}</p>
             )}
           </form>
         </div>
@@ -258,21 +263,22 @@ function Signup() {
                 placeholder="eg. 123456"
                 onChange={(e) => setCode(e.target.value)}
               />
-              <button
-                className="mt-10 text-center rounded-lg cursor-pointer"
-                style={{
-                  backgroundColor: "#1A3D63",
-                  color: "white",
-                  width: "100px",
-                  height: "40px",
-                }}
-              >
-                Verify
-              </button>
+              <div className="mt-3 flex place-content-center">
+                <button
+                  className="mt-10 rounded-lg cursor-pointer mb-10 text-white"
+                  style={{
+                    backgroundColor: "#1A3D63",
+                    width: "175px",
+                    height: "50px",
+                  }}
+                >
+                  Verify
+                </button>
+              </div>
             </div>
           </form>
           {errorMsg && (
-            <p className="text-red-500 text-center mt-2x">{errorMsg}</p>
+            <p className="text-red-500 text-center mt-4">{errorMsg}</p>
           )}
         </div>
       )}

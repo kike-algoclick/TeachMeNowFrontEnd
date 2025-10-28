@@ -26,15 +26,14 @@ import alerta from "/test_alumno_images/alerta.png"
 import Rarito from "/test_alumno_images/Robo2.jpg"
 import { Form } from "react-router-dom";
 
-//
 
 export function Preguntas(){
 
     const [pagina, setPagina]= useState (1);
     const [showAlert, setShowAlert] = useState(false);
     return (
-        <div className="App-grid">
-            <div className="a">
+        <div className="App-grid mt-18">
+            <div className="  ">
                 <div className="header">
                     <a href="#"><img src="/Captura de pantalla_13-8-2025_222029_www.figma.com.jpeg" alt="" /></a>
                 </div>

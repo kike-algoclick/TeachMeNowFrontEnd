@@ -266,7 +266,7 @@ export default function MainPageT() {
   };
 
   return (
-    <div className="body">
+    <div className="body mt-19">
       {/* Panel izquierdo */}
       <div className="left-panel">
         <div className="logo">

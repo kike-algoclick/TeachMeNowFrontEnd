@@ -53,7 +53,7 @@ const PerfilMaestro = () => {
   };
 
   return (
-    <div className="perfil-container">
+    <div className="perfil-container mt-18">
       <div className="perfil-card">
         {/* Profile Header */}
         <div className="perfil-header ml-10">

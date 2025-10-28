@@ -3,7 +3,7 @@ import "../CSS/teacherDesign.css";
 
 export function Test() {
   return (
-    <div className="hero-wrapper">
+    <div className="hero-wrapper mt-18">
       <div className="hero-card">
         <div className="hero-avatar">
           <img
