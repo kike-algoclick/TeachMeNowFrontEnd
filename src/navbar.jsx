@@ -24,7 +24,7 @@ export function Navbar() {
   
 
   return (
-    <>
+    <div className="w-full">
       {!isSignedIn && (
         <div className="TeachNav navy w-full">
           <div className="Logo">
@@ -43,7 +43,6 @@ export function Navbar() {
               <Link to="/Plans">
                 <li>Explore Premium</li>
               </Link>
-
             </ul>
           </nav>
 
@@ -89,9 +88,7 @@ export function Navbar() {
           </nav>
 
           <div className="flex justify-center gap-5">
-            <SignOutButton className="sign"
-
-            ></SignOutButton>
+            <SignOutButton className="sign"></SignOutButton>
 
             {userRole === "teacher" && (
               <Link to="/ProfileM">
@@ -118,6 +115,6 @@ export function Navbar() {
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 }

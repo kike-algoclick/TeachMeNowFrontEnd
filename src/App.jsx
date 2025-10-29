@@ -17,6 +17,7 @@ import { TestParaMaestros } from "./teacher_pages/TestParaMaestros.jsx";
 import PerfilMaestro from "./teacher_pages/PerfilMaestro.jsx";
 import PerfilAlumno from "./student_pages/PerfilAlumno.jsx";
 import AboutUs from "./About_Us/AboutUs.jsx";
+import Results from "./teacher_pages/TestResults.jsx";
 
 
 
@@ -35,26 +36,26 @@ function App() {
         <ClerkProvider publishableKey={clerkPubKey}>
           <Router>
             <Navbar />
-          
-              <Routes>
-                <Route path="/" element={<Landingpage />} />
-                <Route path="/Login" element={<Login />} />
-                <Route path="/Signup" element={<Signup />} />
-                <Route path="/CuestionarioA" element={<Preguntas />} />
-                <Route path="/LandingAlumno" element={<LandingAlumno />} />
-                <Route path="/LandingMaestro" element={<Landingpage />} />
-                <Route path="/Plans" element={<Planes />} />
-                <Route path="/Redirect" element={<SignUpRedirect />} />
-                <Route path="/TestMaestro" element={<TestParaMaestros />} />
-                <Route path="/navbar" element={<Navbar/>} />
-              <Route path="/ProfileM" element={<PerfilMaestro/>}/>
-              <Route path="/ProfileA" element={<PerfilAlumno/>}/>
-              <Route path="/AboutUs" element={<AboutUs/>}/>
-            <Route path="/main-teacher" element={<MainPageT/>}/> 
-            <Route path="/inicio-test" element={<Test/>}/> 
-            
-              </Routes>
-           
+
+            <Routes>
+              <Route path="/" element={<Landingpage />} />
+              <Route path="/Login" element={<Login />} />
+              <Route path="/Signup" element={<Signup />} />
+              <Route path="/CuestionarioA" element={<Preguntas />} />
+              <Route path="/LandingAlumno" element={<LandingAlumno />} />
+              <Route path="/LandingMaestro" element={<Landingpage />} />
+              <Route path="/Plans" element={<Planes />} />
+              <Route path="/Redirect" element={<SignUpRedirect />} />
+              <Route path="/TestMaestro" element={<TestParaMaestros />} />
+              <Route path="/navbar" element={<Navbar />} />
+              <Route path="/ProfileM" element={<PerfilMaestro />} />
+              <Route path="/ProfileA" element={<PerfilAlumno />} />
+              <Route path="/AboutUs" element={<AboutUs />} />
+              <Route path="/main-teacher" element={<MainPageT />} />
+              <Route path="/inicio-test" element={<Test />} />
+              <Route path="/student-results" element={<Resultados />} />
+              <Route path="/teacher-results" element={<Results/>} />
+            </Routes>
 
             <Footer />
           </Router>
