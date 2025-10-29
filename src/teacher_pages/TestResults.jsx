@@ -3,7 +3,7 @@ import "../CSS/Results.css";
 
 export default function Results() {
   return (
-    <section className="results-section">
+    <section className="results-section mt-18">
       <div className="results-card">
         <div className="results-header">
           <h2>Resultados</h2>

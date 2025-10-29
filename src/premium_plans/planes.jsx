@@ -3,7 +3,7 @@ import React from "react";
 //buttons added
 export function Planes() {
   return (
-    <div className="bg-white text-gray-800">
+    <div className="bg-white text-gray-800 mt-18">
       <section className="text-center py-10">
         <h2 className="text-3xl font-semibold">
           Plan <span className="text-[#4A7FA7]">what you want</span> with the

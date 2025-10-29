@@ -7,12 +7,12 @@ const PerfilAlumno = () => {
   const {user} = useUser();
   
   return (
-    <div className="perfil-alumno">
+    <div className="perfil-alumno mt-18">
       <div className="perfil-header">
        <UserButton
                    appearance={{
                      elements: {
-                       avatarBox: "scale-300", // Tamaño del avatar
+                       userButtonTrigger: "scale-300", // Tamaño del avatar
                      },
                    }}
                  />

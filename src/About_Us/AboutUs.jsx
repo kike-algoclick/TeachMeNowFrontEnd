@@ -1,6 +1,6 @@
 function AboutUs() {
   return (
-    <div className="min-h-screen bg-gradient-to-t from-blue-200 via-white to-blue-50">
+    <div className="min-h-screen bg-gradient-to-t from-blue-200 via-white to-blue-50 mt-20">
       <main className="container mx-auto px-6 py-16 space-y-24">
         
         {/* Misión */}
@@ -13,7 +13,7 @@ function AboutUs() {
               Our Mission
             </h2>
             <p className="text-lg leading-relaxed text-black">
-              In <span className="font-bold">TechMeNow</span> We believe that education can be dynamic, creative, and accessible. Our mission is to support teachers by providing them with resources that transform their classes into motivating and meaningful experiences.
+              In <span className="font-bold">TeachMeNow</span> We believe that education can be dynamic, creative, and accessible. Our mission is to support teachers by providing them with resources that transform their classes into motivating and meaningful experiences.
             </p>
           </div>
           <div>

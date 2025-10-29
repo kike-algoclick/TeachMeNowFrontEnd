@@ -16,7 +16,6 @@
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
   max-width: 2500px;
   width: 98%;          /* que ocupe más ancho */
-  min-width: 1400px;   /* más ancho mínimo */
   min-height: 1300px;  /* más alto */
   padding: 40px;       /* espacio interno */
   margin: 30px auto; 

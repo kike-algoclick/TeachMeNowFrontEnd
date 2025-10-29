@@ -22,7 +22,7 @@ e.preventDefault()
 setErrorMsg('')
 
 if (!email || !password) {
-  setErrorMsg("Por favor, completa todos los campos");
+  setErrorMsg("Fill out all the fields");
   return;
 } 
 
@@ -57,9 +57,9 @@ const form = await signIn.create({
 catch(err){
   const clerkError = err?.errors?.[0]?.message;
   if (clerkError?.includes("Couldn't find your account")) {
-    setErrorMsg("Correo electrónico incorrecto");
+    setErrorMsg("Wrong email address");
   } else if (clerkError?.includes("Password is incorrect")) {
-    setErrorMsg("Contraseña incorrecta");
+    setErrorMsg("Wrong password");
   } else {
  console.log(clerkError)
   }
@@ -73,7 +73,7 @@ catch(err){
     
 
     return (
-      <>
+      <div className="mt-18">
         <div className="bg-[url(/LoginImage.png)] bg-cover p-10">
           <div className="bg-white p-8 rounded-lg shadow-xl w-full max-w-sm mx-auto">
             <h2
@@ -174,7 +174,7 @@ catch(err){
             </div>
           </div>
         </div>
-      </>
+      </div>
     );
 }
 

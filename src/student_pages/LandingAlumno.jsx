@@ -8,7 +8,7 @@ import imagenes from '/LandingAlumno/imagenes.jpg'
 import escucha from '/LandingAlumno/escucha.jpg'
 export function LandingAlumno() {
   return (
-    <div className="Landing-container">
+    <div className="Landing-container mt-18">
       <div className="hero">
         <h1>
           Teach<span>Me</span>Now

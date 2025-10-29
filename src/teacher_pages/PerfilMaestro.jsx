@@ -53,15 +53,15 @@ const PerfilMaestro = () => {
   };
 
   return (
-    <div className="perfil-container">
+    <div className="perfil-container mt-18">
       <div className="perfil-card">
         {/* Profile Header */}
         <div className="perfil-header ml-10">
           <UserButton
             appearance={{
-              imageUrl:"scale-200",
               elements: {
-                avatarBox: "scale-300", // Tamaño del avatar
+             // Tamaño del avatar
+                userButtonTrigger: "scale-350",
               },
             }}
           />
