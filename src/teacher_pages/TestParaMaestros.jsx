@@ -39,7 +39,7 @@ export function TestParaMaestros() {
 
   return (
     <div className="test-container mt-19 overflow-y-scroll scrollbar-hidden">
-      <div className="w-20">
+      <div className="">
         <h1 className="titulo">Realizar Test</h1>
       </div>
 
