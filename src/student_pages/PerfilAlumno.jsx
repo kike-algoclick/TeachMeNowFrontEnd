@@ -12,7 +12,7 @@ const PerfilAlumno = () => {
        <UserButton
                    appearance={{
                      elements: {
-                       avatarBox: "scale-300", // Tamaño del avatar
+                       userButtonTrigger: "scale-300", // Tamaño del avatar
                      },
                    }}
                  />
