@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import ReactMarkdown from 'react-markdown'
+import ReactMarkdown from "react-markdown";
 import "../CSS/mainpage.css";
 
 // Importación de imágenes (solo una vez)
@@ -26,7 +26,7 @@ export default function MainPageT() {
   // Prompts predefinidos para cada herramienta
   const toolPrompts = {
     planLessons:
-      "Hello! I want to plan lessons. Please tell me:\n1. What subject or specific topic?\n2. What educational level?\n3. How many lessons do you need?\n4. Duration of each lesson?",
+      "Let's create a plan for my class",
     planLessonDetails:
       "Perfect! Let's create detailed lessons. I need:\n1. Specific topic?\n2. Age or level of students?\n3. How long should each lesson last?\n4. How many total lessons?",
     createGuides:
@@ -51,98 +51,233 @@ export default function MainPageT() {
       "Let's create an activity. Tell me:\n1. Type of activity?\n2. Topic?\n3. Duration?\n4. Objectives?\n5. Age of participants?",
   };
 
-  // ============ FUNCIÓN NUEVA PARA FORMATEAR PLANES DE LECCIONES ============
-  const formatLessonPlan = (text) => {
-    // Si no es un plan de lecciones, devolver texto normal
-    if (
-      !text.includes("**Clase") &&
-      !text.includes("**Class") &&
-      !text.includes("Actividades:") &&
-      !text.includes("Activities:")
-    ) {
-      return <p>{text}</p>;
-    }
+  // ============ COMPONENTE PARA FORMATEAR MENSAJES DE IA ============
+  const FormatAIMessage = ({ content }) => {
+    const components = {
+      // Encabezados
+      h1: ({ children }) => (
+        <h1
+          style={{
+            fontSize: "1.5rem",
+            fontWeight: "bold",
+            color: "#1a202c",
+            marginTop: "1.5rem",
+            marginBottom: "1rem",
+            borderBottom: "2px solid #3b82f6",
+            paddingBottom: "0.5rem",
+          }}
+        >
+          {children}
+        </h1>
+      ),
+      h2: ({ children }) => (
+        <h2
+          style={{
+            fontSize: "1.25rem",
+            fontWeight: "bold",
+            color: "#2d3748",
+            marginTop: "1.25rem",
+            marginBottom: "0.75rem",
+          }}
+        >
+          {children}
+        </h2>
+      ),
+      h3: ({ children }) => (
+        <h3
+          style={{
+            fontSize: "1.125rem",
+            fontWeight: "600",
+            color: "#2d3748",
+            marginTop: "1rem",
+            marginBottom: "0.5rem",
+          }}
+        >
+          {children}
+        </h3>
+      ),
 
-    // Formatear el texto con regex (soporta español e inglés)
-    let formatted = text
-      // Clases (títulos principales) - Español
-      .replace(
-        /\*\*Clase (\d+): ([^*]+)\*\*/g,
-        '<div class="class-title">📚 Clase $1: $2</div>'
-      )
-      // Clases (títulos principales) - Inglés
-      .replace(
-        /\*\*Class (\d+): ([^*]+)\*\*/g,
-        '<div class="class-title">📚 Class $1: $2</div>'
-      )
+      // Párrafos
+      p: ({ children }) => (
+        <p
+          style={{
+            color: "#78a9ffff",
+            lineHeight: "1.625",
+            marginBottom: "0.75rem",
+          }}
+        >
+          {children}
+        </p>
+      ),
 
-      // Objetivos - Español
-      .replace(
-        /\* Objetivo: ([^\n*]+)/g,
-        '<div class="section objective"><div class="section-title">🎯 Objetivo</div><div class="section-content">$1</div></div>'
-      )
-      // Objetivos - Inglés
-      .replace(
-        /\* Objective: ([^\n*]+)/g,
-        '<div class="section objective"><div class="section-title">🎯 Objective</div><div class="section-content">$1</div></div>'
-      )
+      // Listas desordenadas
+      ul: ({ children }) => (
+        <ul
+          style={{
+            listStyle: "none",
+            marginBottom: "1rem",
+            marginLeft: "1rem",
+          }}
+        >
+          {children}
+        </ul>
+      ),
 
-      // Características - Español
-      .replace(
-        /\* Características: ([^\n*]+)/g,
-        '<div class="section characteristics"><div class="section-title">📋 Características</div><div class="section-content">$1</div></div>'
-      )
-      // Características - Inglés
-      .replace(
-        /\* Characteristics: ([^\n*]+)/g,
-        '<div class="section characteristics"><div class="section-title">📋 Characteristics</div><div class="section-content">$1</div></div>'
-      )
+      // Items de lista
+      li: ({ children }) => (
+        <li
+          style={{
+            display: "flex",
+            alignItems: "flex-start",
+            marginBottom: "0.5rem",
+          }}
+        >
+          <span
+            style={{
+              color: "#3b82f6",
+              marginRight: "0.5rem",
+              marginTop: "0.25rem",
+              fontWeight: "bold",
+            }}
+          >
+            •
+          </span>
+          <span style={{ color: "#4a5568", flex: 1 }}>{children}</span>
+        </li>
+      ),
 
-      // Evaluación - Español
-      .replace(
-        /\* Evaluación: ([^\n*]+)/g,
-        '<div class="section evaluation"><div class="section-title">✅ Evaluación</div><div class="section-content">$1</div></div>'
-      )
-      // Evaluación - Inglés
-      .replace(
-        /\* Evaluation: ([^\n*]+)/g,
-        '<div class="section evaluation"><div class="section-title">✅ Evaluation</div><div class="section-content">$1</div></div>'
-      )
+      // Listas ordenadas
+      ol: ({ children }) => (
+        <ol
+          style={{
+            listStyle: "decimal",
+            listStylePosition: "inside",
+            marginBottom: "1rem",
+            marginLeft: "1rem",
+          }}
+        >
+          {children}
+        </ol>
+      ),
 
-      // Actividades individuales - Español
-      .replace(
-        /\+ ([^(]+)\((\d+) minutos?\): ([^\n+]+)/gi,
-        '<div class="activity"><div class="activity-header"><span class="activity-name">$1</span><span class="duration">⏱️ $2 min</span></div><div class="activity-description">$3</div></div>'
-      )
-      // Actividades individuales - Inglés
-      .replace(
-        /\+ ([^(]+)\((\d+) minutes?\): ([^\n+]+)/gi,
-        '<div class="activity"><div class="activity-header"><span class="activity-name">$1</span><span class="duration">⏱️ $2 min</span></div><div class="activity-description">$3</div></div>'
-      )
+      // Texto en negrita
+      strong: ({ children }) => (
+        <strong style={{ fontWeight: "bold", color: "#1a202c" }}>
+          {children}
+        </strong>
+      ),
 
-      // Título de sección de actividades - Español
-      .replace(
-        /\* Actividades:/g,
-        '<div class="section-title activities-title">📚 Actividades</div>'
-      )
-      // Título de sección de actividades - Inglés
-      .replace(
-        /\* Activities:/g,
-        '<div class="section-title activities-title">📚 Activities</div>'
-      )
+      // Texto en cursiva
+      em: ({ children }) => (
+        <em style={{ fontStyle: "italic", color: "#2d3748" }}>{children}</em>
+      ),
 
-      // Saltos de línea
-      .replace(/\n\n/g, "<br/><br/>")
-      .replace(/\n/g, "<br/>");
+      // Código en línea
+      code: ({ inline, children }) => {
+        if (inline) {
+          return (
+            <code
+              style={{
+                backgroundColor: "#f7fafc",
+                color: "#dc2626",
+                padding: "0.25rem 0.5rem",
+                borderRadius: "0.25rem",
+                fontSize: "0.875rem",
+                fontFamily: "monospace",
+              }}
+            >
+              {children}
+            </code>
+          );
+        }
+        return (
+          <code
+            style={{
+              display: "block",
+              backgroundColor: "#1a202c",
+              color: "#10b981",
+              padding: "1rem",
+              borderRadius: "0.5rem",
+              overflowX: "auto",
+              fontFamily: "monospace",
+              fontSize: "0.875rem",
+              marginBottom: "1rem",
+            }}
+          >
+            {children}
+          </code>
+        );
+      },
+
+      // Bloques de código
+      pre: ({ children }) => (
+        <pre
+          style={{
+            backgroundColor: "#1a202c",
+            color: "#10b981",
+            padding: "1rem",
+            borderRadius: "0.5rem",
+            overflowX: "auto",
+            marginBottom: "1rem",
+          }}
+        >
+          {children}
+        </pre>
+      ),
+
+      // Enlaces
+      a: ({ href, children }) => (
+        <a
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            color: "#3b82f6",
+            textDecoration: "underline",
+          }}
+        >
+          {children}
+        </a>
+      ),
+
+      // Citas en bloque
+      blockquote: ({ children }) => (
+        <blockquote
+          style={{
+            borderLeft: "4px solid #3b82f6",
+            paddingLeft: "1rem",
+            fontStyle: "italic",
+            color: "#718096",
+            margin: "1rem 0",
+            backgroundColor: "#eff6ff",
+            paddingTop: "0.5rem",
+            paddingBottom: "0.5rem",
+            borderRadius: "0 0.25rem 0.25rem 0",
+          }}
+        >
+          {children}
+        </blockquote>
+      ),
+
+      // Líneas horizontales
+      hr: () => (
+        <hr
+          style={{
+            border: "none",
+            borderTop: "1px solid #e2e8f0",
+            margin: "1.5rem 0",
+          }}
+        />
+      ),
+    };
 
     return (
-      <div
-        className="lesson-plan-formatted"
-        dangerouslySetInnerHTML={{ __html: formatted }}
-      />
+      <div className="markdown-content">
+        <ReactMarkdown components={components}>{content}</ReactMarkdown>
+      </div>
     );
   };
-  // ========================================================================
+  // ================================================================
 
   // Verificar conexión con el backend al cargar
   useEffect(() => {
@@ -277,7 +412,8 @@ export default function MainPageT() {
         {/* Estado de conexión */}
         <div className="connection-status">
           {connectionStatus === "checking" && "🔄 Checking connection..."}
-          {connectionStatus === "connected" && "Welcome to TeachMeNow Assistant"}
+          {connectionStatus === "connected" &&
+            "Welcome to TeachMeNow Assistant"}
           {connectionStatus === "error" && "❌ Backend disconnected"}
         </div>
 
@@ -288,9 +424,9 @@ export default function MainPageT() {
               <strong>
                 {message.role === "user" ? "You: " : "Assistant: "}
               </strong>
-              {/* ============ AQUÍ SE USA LA FUNCIÓN DE FORMATO ============ */}
-              {formatLessonPlan(message.content)}
-              {/* ========================================================== */}
+              {/* ============ USANDO REACTMARKDOWN PARA FORMATEAR ============ */}
+              <FormatAIMessage content={message.content} />
+              {/* ============================================================= */}
             </div>
           ))}
           {loading && (
