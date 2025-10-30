@@ -35,7 +35,7 @@ export function Footer() {
                 </Link>
                 <Link
                   to={
-                    userRole === "teacher" ? "/testmaestro" : "/inicio-test"
+                    userRole === "teacher" ? "/testmaestro" : "/cuestionarioA"
                   }
                 >
                   <p>Test</p>

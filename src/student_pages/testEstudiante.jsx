@@ -5,7 +5,7 @@ import robot from "/test_alumno_images/Robot.avif"
 export function Test() {
   return (
     <>
-      <div className="app-container body mt-18">
+      <div className="app-container body ">
         <div className="card-test mt-20">
           <div className="header">
             <a href="#">
